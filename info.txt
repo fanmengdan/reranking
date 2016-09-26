@@ -1,0 +1,3 @@
+python test.py (data=semeval-small-lowercase-nostopwords.d2v, similarity=dot)
+=============================================================================
+Squared Error over 48886 samples is 164.175105
