@@ -26,14 +26,14 @@ class LabeledLineSentence(object):
         for source, prefix in self.sources.items():
             with utils.smart_open(source) as fin:
                 for item_no, line in enumerate(fin):
-                    yield LabeledSentence(preprocessor(utils.to_unicode(line)), [prefix + '_%s' % item_no])
+                    yield LabeledSentence(preprocessor(line), [prefix + '_%s' % item_no])
     
     def to_array(self):
         self.sentences = []
         for source, prefix in self.sources.items():
             with utils.smart_open(source) as fin:
                 for item_no, line in enumerate(fin):
-                    self.sentences.append(LabeledSentence(preprocessor(utils.to_unicode(line)), [prefix + '_%s' % item_no]))
+                    self.sentences.append(LabeledSentence(preprocessor(line), [prefix + '_%s' % item_no]))
         return self.sentences
     
     def sentences_perm(self):
@@ -41,8 +41,8 @@ class LabeledLineSentence(object):
         return self.sentences
 
 """ path to FULLDATA.txt, an aggregation of all data (questions and comments) of SEMEVAL'16 dataset (TASK 3 - SUBTASK A) """
-data_file = 'FULLDATA' # 'SMALLDATA'
-data_path = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3-cqa-ql-traindev-v3.2/useful/train-DR/' + data_file + '.txt'
+data_file = 'SMALLDATA' # 'FULLDATA'
+data_path = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/' + data_file + '.txt'
 data_prefix = data_path.split('/')[-1].split('.')[0]
 
 sources = { data_path : data_prefix }

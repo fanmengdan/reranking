@@ -1,3 +1,19 @@
 python test.py (data=semeval-small-lowercase-nostopwords.d2v, similarity=dot)
 =============================================================================
-Squared Error over 48886 samples is 164.175105
+Results over 48886 samples :
+Squared Error is 0.744238
+Normalized Squared Error is 0.240103
+Random Inferered Vector - Squared Error is 0.984303
+Random Inferered Vector - Normalized Squared Error is 0.984198
+
+Results over 48886 samples :
+Squared Error is 0.744238
+Normalized Squared Error is 0.240103
+Random Inferered Vector - Squared Error is 0.983064
+Random Inferered Vector - Normalized Squared Error is 0.982881
+
+Results over 48886 samples :
+Squared Error is 0.744238
+Normalized Squared Error is 0.240103
+Random Inferered Vector - Squared Error is 0.983600
+Random Inferered Vector - Normalized Squared Error is 0.983448
