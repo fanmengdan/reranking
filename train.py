@@ -1,3 +1,5 @@
+import sys
+
 # gensim modules
 from gensim import utils
 from gensim.models import Doc2Vec
@@ -55,7 +57,8 @@ print '#1 Constructed "LabeledLineSentences"'
 # dbow_words: if set to 1 trains word-vectors (in skip-gram fashion) 
 #   simultaneous with DBOW doc-vector training;
 #   default is 0 (faster training of doc-vectors only).
-model = Doc2Vec(min_count=1, window=10, size=100, sample=1e-4, negative=5, workers=8)
+windowsize = sys.argv[1]
+model = Doc2Vec(min_count=1, window=windowsize, size=100, sample=1e-4, negative=5, workers=8)
 print '#2 Constructed "Doc2Vec" Model'
 
 """ Building the Model Vocabulary """
@@ -63,10 +66,11 @@ model.build_vocab(sentences.to_array())
 print '#3 Building Vocabulary Done'
 
 """ Training the Model """
-nepoch = 10
+nepoch = sys.argv[2]
 for epoch in range(nepoch):
     model.train(sentences.sentences_perm())
     print '#4 Training Model on %s/%s epoch Done' % ( (epoch+1), nepoch )
 
 """ Save the model for future usage """
-model.save('./models/semeval-%s-lowercase-nostopwords.d2v' % data_prefix.strip('DATA').lower())
+name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
+model.save('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)

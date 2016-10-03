@@ -1,3 +1,5 @@
+import sys
+
 # gensim modules
 from gensim import utils
 from gensim.models import Doc2Vec
@@ -13,7 +15,10 @@ from numpy.linalg import norm
 from random import shuffle
 
 """ Loading trained Doc2Vec model """
-model = Doc2Vec.load('./models/semeval-small-lowercase-nostopwords.d2v')
+windowsize = sys.argv[1]
+nepoch = sys.argv[2]
+name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
+model = Doc2Vec.load('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
 
 # """ Finding similar words """
 # print '\n\nWords similar to "bank"'
