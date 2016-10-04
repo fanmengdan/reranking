@@ -43,8 +43,11 @@ class LabeledLineSentence(object):
         return self.sentences
 
 """ path to FULLDATA.txt, an aggregation of all data (questions and comments) of SEMEVAL'16 dataset (TASK 3 - SUBTASK A) """
-data_file = 'SMALLDATA' # 'FULLDATA'
-data_path = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/' + data_file + '.txt'
+
+home = '/media/sandeshc/Windows_OS/Sandesh/'
+# data_path = home + 'MTP/Data/semeval2016-task3/useful/train-DR/FULLDATA.txt'
+data_path = home + 'MTP/Data/semeval2016-task3/useful/train-DR/SMALLDATA.txt'
+
 data_prefix = data_path.split('/')[-1].split('.')[0]
 
 sources = { data_path : data_prefix }
@@ -57,7 +60,7 @@ print '#1 Constructed "LabeledLineSentences"'
 # dbow_words: if set to 1 trains word-vectors (in skip-gram fashion) 
 #   simultaneous with DBOW doc-vector training;
 #   default is 0 (faster training of doc-vectors only).
-windowsize = sys.argv[1]
+windowsize = int(sys.argv[1])
 model = Doc2Vec(min_count=1, window=windowsize, size=100, sample=1e-4, negative=5, workers=8)
 print '#2 Constructed "Doc2Vec" Model'
 
@@ -66,7 +69,7 @@ model.build_vocab(sentences.to_array())
 print '#3 Building Vocabulary Done'
 
 """ Training the Model """
-nepoch = sys.argv[2]
+nepoch = int(sys.argv[2])
 for epoch in range(nepoch):
     model.train(sentences.sentences_perm())
     print '#4 Training Model on %s/%s epoch Done' % ( (epoch+1), nepoch )

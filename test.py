@@ -14,12 +14,6 @@ from numpy.linalg import norm
 # random
 from random import shuffle
 
-""" Loading trained Doc2Vec model """
-windowsize = sys.argv[1]
-nepoch = sys.argv[2]
-name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
-model = Doc2Vec.load('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
-
 # """ Finding similar words """
 # print '\n\nWords similar to "bank"'
 # for x in model.most_similar('bank'):
@@ -31,9 +25,18 @@ model = Doc2Vec.load('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
 """ Computing squared-error on infered Para2Vec representations """
 
 """ path to FULLDATA.txt, an aggregation of all data (questions and comments) of SEMEVAL'16 dataset (TASK 3 - SUBTASK A) """
-# data_path = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/FULLDATA.txt'
-data_path = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/SMALLDATA.txt'
+
+home = '/media/sandeshc/Windows_OS/Sandesh/'
+# data_path = home + 'MTP/Data/semeval2016-task3/useful/train-DR/FULLDATA.txt'
+data_path = home + 'MTP/Data/semeval2016-task3/useful/train-DR/SMALLDATA.txt'
+
 data_prefix = data_path.split('/')[-1].split('.')[0]
+
+""" Loading trained Doc2Vec model """
+windowsize = int(sys.argv[1])
+nepoch = int(sys.argv[2])
+name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
+model = Doc2Vec.load('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
 
 nsamp = 0
 sqerr = 0.0
