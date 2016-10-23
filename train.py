@@ -56,7 +56,7 @@ print '#1 Constructed "LabeledLineSentences"'
 
 """ Constructing Doc2Vec Model """
 # negative  : negative-sampling [https://www.quora.com/What-is-negative-sampling]
-# window--  : window size of skip-gram model [http://homepages.inf.ed.ac.uk/ballison/pdf/lrec_skipgrams.pdf]
+# window    : window size of skip-gram model [http://homepages.inf.ed.ac.uk/ballison/pdf/lrec_skipgrams.pdf]
 # dbow_words: if set to 1 trains word-vectors (in skip-gram fashion) 
 #   simultaneous with DBOW doc-vector training;
 #   default is 0 (faster training of doc-vectors only).
