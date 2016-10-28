@@ -1,0 +1,405 @@
+nohup: ignoring input
+######################## python test.py  10  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.744047
+Normalized Squared Error is 0.240198
+Random Inferered Vector - Squared Error is 0.983283
+Random Inferered Vector - Normalized Squared Error is 0.983123
+
+
+
+#######################################################################
+
+
+######################## python test.py  15  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.625238
+Normalized Squared Error is 0.252523
+Random Inferered Vector - Squared Error is 0.984204
+Random Inferered Vector - Normalized Squared Error is 0.982493
+
+
+
+#######################################################################
+
+
+######################## python test.py  20  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.615289
+Normalized Squared Error is 0.260889
+Random Inferered Vector - Squared Error is 0.984543
+Random Inferered Vector - Normalized Squared Error is 0.981779
+
+
+
+#######################################################################
+
+
+######################## python test.py  25  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.629727
+Normalized Squared Error is 0.268268
+Random Inferered Vector - Squared Error is 0.986610
+Random Inferered Vector - Normalized Squared Error is 0.983704
+
+
+
+#######################################################################
+
+
+######################## python test.py  30  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.647873
+Normalized Squared Error is 0.274794
+Random Inferered Vector - Squared Error is 0.986645
+Random Inferered Vector - Normalized Squared Error is 0.983027
+
+
+
+#######################################################################
+
+
+######################## python test.py  35  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.662400
+Normalized Squared Error is 0.278592
+Random Inferered Vector - Squared Error is 0.986475
+Random Inferered Vector - Normalized Squared Error is 0.982361
+
+
+
+#######################################################################
+
+
+######################## python test.py  40  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.676295
+Normalized Squared Error is 0.284600
+Random Inferered Vector - Squared Error is 0.988532
+Random Inferered Vector - Normalized Squared Error is 0.984905
+
+
+
+#######################################################################
+
+
+######################## python test.py  45  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.688445
+Normalized Squared Error is 0.288576
+Random Inferered Vector - Squared Error is 0.988771
+Random Inferered Vector - Normalized Squared Error is 0.985477
+
+
+
+#######################################################################
+
+
+######################## python test.py  50  10 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 0.696296
+Normalized Squared Error is 0.291162
+Random Inferered Vector - Squared Error is 0.988815
+Random Inferered Vector - Normalized Squared Error is 0.984742
+
+
+
+#######################################################################
+
+
+######################## python test.py  10  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.653727
+Normalized Squared Error is 0.359586
+Random Inferered Vector - Squared Error is 0.955079
+Random Inferered Vector - Normalized Squared Error is 0.969278
+
+
+
+#######################################################################
+
+
+######################## python test.py  15  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.136145
+Normalized Squared Error is 0.367419
+Random Inferered Vector - Squared Error is 0.964897
+Random Inferered Vector - Normalized Squared Error is 0.974148
+
+
+
+#######################################################################
+
+
+######################## python test.py  20  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.898333
+Normalized Squared Error is 0.371870
+Random Inferered Vector - Squared Error is 0.970263
+Random Inferered Vector - Normalized Squared Error is 0.977608
+
+
+
+#######################################################################
+
+
+######################## python test.py  25  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.770605
+Normalized Squared Error is 0.374273
+Random Inferered Vector - Squared Error is 0.972798
+Random Inferered Vector - Normalized Squared Error is 0.978854
+
+
+
+#######################################################################
+
+
+######################## python test.py  30  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.685465
+Normalized Squared Error is 0.377010
+Random Inferered Vector - Squared Error is 0.974175
+Random Inferered Vector - Normalized Squared Error is 0.980184
+
+
+
+#######################################################################
+
+
+######################## python test.py  35  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.637941
+Normalized Squared Error is 0.379169
+Random Inferered Vector - Squared Error is 0.975917
+Random Inferered Vector - Normalized Squared Error is 0.981203
+
+
+
+#######################################################################
+
+
+######################## python test.py  40  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.618092
+Normalized Squared Error is 0.376593
+Random Inferered Vector - Squared Error is 0.976264
+Random Inferered Vector - Normalized Squared Error is 0.980084
+
+
+
+#######################################################################
+
+
+######################## python test.py  45  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.600697
+Normalized Squared Error is 0.380887
+Random Inferered Vector - Squared Error is 0.977317
+Random Inferered Vector - Normalized Squared Error is 0.981695
+
+
+
+#######################################################################
+
+
+######################## python test.py  50  50 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 1.570260
+Normalized Squared Error is 0.386350
+Random Inferered Vector - Squared Error is 0.979472
+Random Inferered Vector - Normalized Squared Error is 0.984718
+
+
+
+#######################################################################
+
+
+######################## python test.py  10 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 4.032353
+Normalized Squared Error is 0.368810
+Random Inferered Vector - Squared Error is 0.857449
+Random Inferered Vector - Normalized Squared Error is 0.910576
+
+
+
+#######################################################################
+
+
+######################## python test.py  15 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 3.242639
+Normalized Squared Error is 0.384240
+Random Inferered Vector - Squared Error is 0.893285
+Random Inferered Vector - Normalized Squared Error is 0.927485
+
+
+
+#######################################################################
+
+
+######################## python test.py  20 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.872146
+Normalized Squared Error is 0.389574
+Random Inferered Vector - Squared Error is 0.910338
+Random Inferered Vector - Normalized Squared Error is 0.936557
+
+
+
+#######################################################################
+
+
+######################## python test.py  25 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.625848
+Normalized Squared Error is 0.390710
+Random Inferered Vector - Squared Error is 0.920591
+Random Inferered Vector - Normalized Squared Error is 0.940918
+
+
+
+#######################################################################
+
+
+######################## python test.py  30 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.461487
+Normalized Squared Error is 0.397271
+Random Inferered Vector - Squared Error is 0.928664
+Random Inferered Vector - Normalized Squared Error is 0.946576
+
+
+
+#######################################################################
+
+
+######################## python test.py  35 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.388034
+Normalized Squared Error is 0.395454
+Random Inferered Vector - Squared Error is 0.935110
+Random Inferered Vector - Normalized Squared Error is 0.949500
+
+
+
+#######################################################################
+
+
+######################## python test.py  40 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.310473
+Normalized Squared Error is 0.398316
+Random Inferered Vector - Squared Error is 0.943076
+Random Inferered Vector - Normalized Squared Error is 0.956583
+
+
+
+#######################################################################
+
+
+######################## python test.py  45 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.246970
+Normalized Squared Error is 0.399220
+Random Inferered Vector - Squared Error is 0.945695
+Random Inferered Vector - Normalized Squared Error is 0.957628
+
+
+
+#######################################################################
+
+
+######################## python test.py  50 100 #######################
+#######################################################################
+
+
+cccResults over 48886 samples :
+Squared Error is 2.166453
+Normalized Squared Error is 0.405534
+Random Inferered Vector - Squared Error is 0.953289
+Random Inferered Vector - Normalized Squared Error is 0.963818
+
+
+
+#######################################################################
+

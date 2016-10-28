@@ -1,0 +1,1740 @@
+nohup: ignoring input
+#######################################################################
+######################## python train.py  10  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  15  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  20  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  25  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  30  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  35  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  40  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  45  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  50  10 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/10 epoch Done
+#4 Training Model on 2/10 epoch Done
+#4 Training Model on 3/10 epoch Done
+#4 Training Model on 4/10 epoch Done
+#4 Training Model on 5/10 epoch Done
+#4 Training Model on 6/10 epoch Done
+#4 Training Model on 7/10 epoch Done
+#4 Training Model on 8/10 epoch Done
+#4 Training Model on 9/10 epoch Done
+#4 Training Model on 10/10 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  10  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  15  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  20  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  25  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  30  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  35  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  40  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  45  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  50  50 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/50 epoch Done
+#4 Training Model on 2/50 epoch Done
+#4 Training Model on 3/50 epoch Done
+#4 Training Model on 4/50 epoch Done
+#4 Training Model on 5/50 epoch Done
+#4 Training Model on 6/50 epoch Done
+#4 Training Model on 7/50 epoch Done
+#4 Training Model on 8/50 epoch Done
+#4 Training Model on 9/50 epoch Done
+#4 Training Model on 10/50 epoch Done
+#4 Training Model on 11/50 epoch Done
+#4 Training Model on 12/50 epoch Done
+#4 Training Model on 13/50 epoch Done
+#4 Training Model on 14/50 epoch Done
+#4 Training Model on 15/50 epoch Done
+#4 Training Model on 16/50 epoch Done
+#4 Training Model on 17/50 epoch Done
+#4 Training Model on 18/50 epoch Done
+#4 Training Model on 19/50 epoch Done
+#4 Training Model on 20/50 epoch Done
+#4 Training Model on 21/50 epoch Done
+#4 Training Model on 22/50 epoch Done
+#4 Training Model on 23/50 epoch Done
+#4 Training Model on 24/50 epoch Done
+#4 Training Model on 25/50 epoch Done
+#4 Training Model on 26/50 epoch Done
+#4 Training Model on 27/50 epoch Done
+#4 Training Model on 28/50 epoch Done
+#4 Training Model on 29/50 epoch Done
+#4 Training Model on 30/50 epoch Done
+#4 Training Model on 31/50 epoch Done
+#4 Training Model on 32/50 epoch Done
+#4 Training Model on 33/50 epoch Done
+#4 Training Model on 34/50 epoch Done
+#4 Training Model on 35/50 epoch Done
+#4 Training Model on 36/50 epoch Done
+#4 Training Model on 37/50 epoch Done
+#4 Training Model on 38/50 epoch Done
+#4 Training Model on 39/50 epoch Done
+#4 Training Model on 40/50 epoch Done
+#4 Training Model on 41/50 epoch Done
+#4 Training Model on 42/50 epoch Done
+#4 Training Model on 43/50 epoch Done
+#4 Training Model on 44/50 epoch Done
+#4 Training Model on 45/50 epoch Done
+#4 Training Model on 46/50 epoch Done
+#4 Training Model on 47/50 epoch Done
+#4 Training Model on 48/50 epoch Done
+#4 Training Model on 49/50 epoch Done
+#4 Training Model on 50/50 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  10 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  15 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  20 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  25 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  30 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  35 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  40 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  45 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+######################## python train.py  50 100 ######################
+#######################################################################
+
+
+ccc#1 Constructed "LabeledLineSentences"
+#2 Constructed "Doc2Vec" Model
+#3 Building Vocabulary Done
+#4 Training Model on 1/100 epoch Done
+#4 Training Model on 2/100 epoch Done
+#4 Training Model on 3/100 epoch Done
+#4 Training Model on 4/100 epoch Done
+#4 Training Model on 5/100 epoch Done
+#4 Training Model on 6/100 epoch Done
+#4 Training Model on 7/100 epoch Done
+#4 Training Model on 8/100 epoch Done
+#4 Training Model on 9/100 epoch Done
+#4 Training Model on 10/100 epoch Done
+#4 Training Model on 11/100 epoch Done
+#4 Training Model on 12/100 epoch Done
+#4 Training Model on 13/100 epoch Done
+#4 Training Model on 14/100 epoch Done
+#4 Training Model on 15/100 epoch Done
+#4 Training Model on 16/100 epoch Done
+#4 Training Model on 17/100 epoch Done
+#4 Training Model on 18/100 epoch Done
+#4 Training Model on 19/100 epoch Done
+#4 Training Model on 20/100 epoch Done
+#4 Training Model on 21/100 epoch Done
+#4 Training Model on 22/100 epoch Done
+#4 Training Model on 23/100 epoch Done
+#4 Training Model on 24/100 epoch Done
+#4 Training Model on 25/100 epoch Done
+#4 Training Model on 26/100 epoch Done
+#4 Training Model on 27/100 epoch Done
+#4 Training Model on 28/100 epoch Done
+#4 Training Model on 29/100 epoch Done
+#4 Training Model on 30/100 epoch Done
+#4 Training Model on 31/100 epoch Done
+#4 Training Model on 32/100 epoch Done
+#4 Training Model on 33/100 epoch Done
+#4 Training Model on 34/100 epoch Done
+#4 Training Model on 35/100 epoch Done
+#4 Training Model on 36/100 epoch Done
+#4 Training Model on 37/100 epoch Done
+#4 Training Model on 38/100 epoch Done
+#4 Training Model on 39/100 epoch Done
+#4 Training Model on 40/100 epoch Done
+#4 Training Model on 41/100 epoch Done
+#4 Training Model on 42/100 epoch Done
+#4 Training Model on 43/100 epoch Done
+#4 Training Model on 44/100 epoch Done
+#4 Training Model on 45/100 epoch Done
+#4 Training Model on 46/100 epoch Done
+#4 Training Model on 47/100 epoch Done
+#4 Training Model on 48/100 epoch Done
+#4 Training Model on 49/100 epoch Done
+#4 Training Model on 50/100 epoch Done
+#4 Training Model on 51/100 epoch Done
+#4 Training Model on 52/100 epoch Done
+#4 Training Model on 53/100 epoch Done
+#4 Training Model on 54/100 epoch Done
+#4 Training Model on 55/100 epoch Done
+#4 Training Model on 56/100 epoch Done
+#4 Training Model on 57/100 epoch Done
+#4 Training Model on 58/100 epoch Done
+#4 Training Model on 59/100 epoch Done
+#4 Training Model on 60/100 epoch Done
+#4 Training Model on 61/100 epoch Done
+#4 Training Model on 62/100 epoch Done
+#4 Training Model on 63/100 epoch Done
+#4 Training Model on 64/100 epoch Done
+#4 Training Model on 65/100 epoch Done
+#4 Training Model on 66/100 epoch Done
+#4 Training Model on 67/100 epoch Done
+#4 Training Model on 68/100 epoch Done
+#4 Training Model on 69/100 epoch Done
+#4 Training Model on 70/100 epoch Done
+#4 Training Model on 71/100 epoch Done
+#4 Training Model on 72/100 epoch Done
+#4 Training Model on 73/100 epoch Done
+#4 Training Model on 74/100 epoch Done
+#4 Training Model on 75/100 epoch Done
+#4 Training Model on 76/100 epoch Done
+#4 Training Model on 77/100 epoch Done
+#4 Training Model on 78/100 epoch Done
+#4 Training Model on 79/100 epoch Done
+#4 Training Model on 80/100 epoch Done
+#4 Training Model on 81/100 epoch Done
+#4 Training Model on 82/100 epoch Done
+#4 Training Model on 83/100 epoch Done
+#4 Training Model on 84/100 epoch Done
+#4 Training Model on 85/100 epoch Done
+#4 Training Model on 86/100 epoch Done
+#4 Training Model on 87/100 epoch Done
+#4 Training Model on 88/100 epoch Done
+#4 Training Model on 89/100 epoch Done
+#4 Training Model on 90/100 epoch Done
+#4 Training Model on 91/100 epoch Done
+#4 Training Model on 92/100 epoch Done
+#4 Training Model on 93/100 epoch Done
+#4 Training Model on 94/100 epoch Done
+#4 Training Model on 95/100 epoch Done
+#4 Training Model on 96/100 epoch Done
+#4 Training Model on 97/100 epoch Done
+#4 Training Model on 98/100 epoch Done
+#4 Training Model on 99/100 epoch Done
+#4 Training Model on 100/100 epoch Done
+
+
+
+#######################################################################
+

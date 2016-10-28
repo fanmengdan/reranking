@@ -2,8 +2,7 @@
 ###################
 *.pyc
 
-# Output #
-##########
-models/
-out/
+# Ignores #
+###########
 dwnld/
+models/
