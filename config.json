@@ -1,0 +1,25 @@
+// all entries must end with ','
+// all dir paths must end with '/'
+{
+    "TRAIN_DR":
+    {
+        "dataPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/",
+    },
+    "DOC2VEC":
+    {
+        "modelName" : "semeval-full-lc-ns-10w-5e.d2v",
+        "modelPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/",
+    },
+    "TRAIN_NN":
+    {
+        "dataPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-NN/",
+        "fileList" : [
+            "SemEval2016-Task3-CQA-QL-dev-subtaskA.xml",
+            "SemEval2016-Task3-CQA-QL-train-part1-subtaskA.xml",
+            "SemEval2016-Task3-CQA-QL-train-part2-subtaskA.xml",
+            "SemEval2015-Task3-CQA-QL-dev-reformatted-excluding-2016-questions-cleansed.xml",
+            "SemEval2015-Task3-CQA-QL-test-reformatted-excluding-2016-questions-cleansed.xml",
+            "SemEval2015-Task3-CQA-QL-train-reformatted-excluding-2016-questions-cleansed.xml",
+            ],
+    },
+}

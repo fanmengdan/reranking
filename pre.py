@@ -1,15 +1,14 @@
+import json
 from xml.dom import minidom
 
 print '\n===================== DATA INTEGRITY TEST : STARTING... =====================\n'
 
-fileList = [ "SemEval2016-Task3-CQA-QL-train-part1-subtaskA.xml", "SemEval2016-Task3-CQA-QL-train-part2-subtaskA.xml", "SemEval2016-Task3-CQA-QL-dev-subtaskA.xml", \
-"SemEval2015-Task3-CQA-QL-train-reformatted-excluding-2016-questions-cleansed.xml", "SemEval2015-Task3-CQA-QL-dev-reformatted-excluding-2016-questions-cleansed.xml", \
-"SemEval2015-Task3-CQA-QL-test-reformatted-excluding-2016-questions-cleansed.xml" ]
-
-datapath = '/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-NN/'
+config = json.load(open('config.json', 'r'))
+dataPath = config['TRAIN_NN']['dataPath']
+fileList = config['TRAIN_NN']['fileList']
 
 for xmlFile in fileList:
-    doc = minidom.parse(datapath + xmlFile)
+    doc = minidom.parse(dataPath + xmlFile)
     x = doc.getElementsByTagName("Thread")
     y = doc.getElementsByTagName("RelQuestion")
     print xmlFile, (len(x), len(y))
