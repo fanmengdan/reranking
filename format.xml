@@ -1,12 +1,12 @@
 <Thread THREAD_SEQUENCE="Qxx_Ryy">
     <RelQuestion \
         RELQ_ID="Qxx_Ryy" \
-        RELQ_RANKING_ORDER="4" \
-        RELQ_CATEGORY="Advice and Help" \
-        RELQ_DATE="2013-05-02 19:43:00" \
         RELQ_USERID="Uzz" \
         RELQ_USERNAME="username" \
-        RELQ_RELEVANCE2ORGQ="PerfectMatch/Relevant/Irrelevant">
+        RELQ_CATEGORY="Advice and Help" \
+        RELQ_DATE="2013-05-02 19:43:00" \
+        ! RELQ_RANKING_ORDER="4" \
+        ! RELQ_RELEVANCE2ORGQ="PerfectMatch/Relevant/Irrelevant">
             <RelQSubject> text </RelQSubject>
             <RelQBody> text </RelQBody>
     </RelQuestion>

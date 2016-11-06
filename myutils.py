@@ -16,6 +16,7 @@ def preprocessor(sentence):
     return word_list
 
 """ implements consine similarity metric for two vectors """
+""" vectors are normalized before computing dot product """
 def consine(vec_a, vec_b):
     vec_a /= norm(vec_a)
     vec_b /= norm(vec_b)
