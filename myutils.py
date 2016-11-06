@@ -14,3 +14,10 @@ def preprocessor(sentence):
     # generating 'word_list' excluding all 'stopwords'
     word_list = [ w for w in sentence if w not in cached_stopwords ]
     return word_list
+
+""" implements consine similarity metric for two vectors """
+def consine(vec_a, vec_b):
+    vec_a /= norm(vec_a)
+    vec_b /= norm(vec_b)
+    sim = dot(vec_a, vec_b)
+    return sim
