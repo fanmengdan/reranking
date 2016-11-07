@@ -18,7 +18,7 @@ do
 done
 
 ######################## VALIDATION ACCURACY ########################
-python scorer/ev.py 2016/gold/dev-train-subtaskA.2016.relevancy 2016/pred/validation-subtaskA.2016.pred
+python test/scorer/ev.py test/2016/gold/dev-train-subtaskA.2016.relevancy test/2016/pred/validation-subtaskA.2016.pred > out/validation.accuracy 
 
 ######################### TESTING ACCURACY #########################
-python scorer/ev.py 2016/gold/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.relevancy 2016/pred/test-subtaskA.2016.pred
+python test/scorer/ev.py test/2016/gold/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.relevancy test/2016/pred/test-subtaskA.2016.pred > out/testing.accuracy

@@ -1,0 +1,41 @@
+
+*** Official score (MAP for SYS): 0.5417
+
+
+******************************
+*** Classification results ***
+******************************
+
+Acc = 0.5000
+P   = 0.4215
+R   = 0.6185
+F1  = 0.5014
+
+
+********************************
+*** Detailed ranking results ***
+********************************
+
+IR  -- Score for the output of the IR system (baseline).
+SYS -- Score for the output of the tested system.
+
+           IR   SYS
+MAP   : 0.5953 0.5417
+AvgRec: 0.7260 0.6740
+MRR   :  67.83  60.19
+              IR    SYS              IR    SYS              IR    SYS            IR  SYS
+REC-1@01:  53.21  39.76  ACC@01:  53.21  39.76  AC1@01:   0.55   0.41  AC2@01:  174  130
+REC-1@02:  70.03  64.22  ACC@02:  49.85  42.66  AC1@02:   0.55   0.47  AC2@02:  326  279
+REC-1@03:  79.20  77.98  ACC@03:  49.34  42.10  AC1@03:   0.59   0.50  AC2@03:  484  413
+REC-1@04:  85.02  84.71  ACC@04:  47.71  42.28  AC1@04:   0.62   0.55  AC2@04:  624  553
+REC-1@05:  87.77  89.91  ACC@05:  45.87  43.12  AC1@05:   0.66   0.62  AC2@05:  750  705
+REC-1@06:  90.83  92.05  ACC@06:  45.06  42.25  AC1@06:   0.73   0.68  AC2@06:  884  829
+REC-1@07:  91.44  93.88  ACC@07:  43.38  41.94  AC1@07:   0.79   0.76  AC2@07:  993  960
+REC-1@08:  92.97  94.50  ACC@08:  42.24  41.06  AC1@08:   0.85   0.83  AC2@08: 1105 1074
+REC-1@09:  94.80  95.41  ACC@09:  41.28  40.88  AC1@09:   0.92   0.91  AC2@09: 1215 1203
+REC-1@10:  96.33  96.33  ACC@10:  40.64  40.64  AC1@10:   1.00   1.00  AC2@10: 1329 1329
+
+REC-1 - percentage of questions with at least 1 correct answer in the top @X positions (useful for tasks where questions have at most one correct answer)
+ACC   - accuracy, i.e., number of correct answers retrieved at rank @X normalized by the rank and the total number of questions
+AC1   - the number of correct answers at @X normalized by the number of maximum possible answers (perfect re-ranker)
+AC2   - the absolute number of correct answers at @X
