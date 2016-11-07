@@ -1,6 +1,10 @@
 # gensim
 from gensim import utils
 
+# numpy
+from numpy import dot
+from numpy.linalg import norm
+
 # nltk-corpus
 from nltk.corpus import stopwords
 cached_stopwords = set( stopwords.words("english") )

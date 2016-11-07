@@ -1,9 +1,13 @@
 import json
 from xml.dom import minidom
 
+# gensim modules
+from gensim.models import Doc2Vec
+
 # pre-processing utilities
 from myutils import preprocessor, consine
 
+DB = '<< DEBUG >>'
 config = json.load(open('config.json', 'r'))
 
 def loadDoc2Vec(mode):
@@ -28,11 +32,15 @@ def predictOne(doc2vec, data, output):
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
-            scores.append( ( consine(q_v, c_v), j ) )
-        scores = sorted(scores, reverse=True)
-        for rank, score in enumerate(scores):
+            score = ( 1.0 + consine(q_v, c_v) ) / 2.0;
+            scores.append( [ score, j, 0 ] )
+        scores = sorted(scores, key=lambda score: score[0], reverse=True)
+        for i in range(len(scores)):
+            scores[i][2] = i + 1
+        scores = sorted(scores, key=lambda score: score[1])
+        for score in scores:
             pred = predictOneAux(score[0])
-            out.write('\t'.join([q[0], cl[score[1]], str(rank+1), str(score[0]), pred]))
+            out.write('\t'.join([q[0], cl[score[1]][0], str(score[2]), str(score[0]), pred]))
             out.write('\n')
     out.close()
 
@@ -47,13 +55,15 @@ def constructData(dataPath, fileList):
     questions = []
     commentsL = []
     for xmlFile in fileList:
+        print DB, dataPath + xmlFile
         doc = minidom.parse(dataPath + xmlFile)
         threads = doc.getElementsByTagName("Thread")
-        for thread in threads:
+        for tid, thread in enumerate(threads):
             # constructing the question string
             relQ = thread.getElementsByTagName('RelQuestion')[0]
             Qid = relQ.getAttribute('RELQ_ID')
-            body = relQ.getElementsByTagName('RelQBody')[0]._get_firstChild().data
+            bodyQ = relQ.getElementsByTagName('RelQBody')[0]
+            body = bodyQ._get_firstChild().data if bodyQ._get_firstChild() is not None else ''
             subj = relQ.getElementsByTagName('RelQSubject')[0]._get_firstChild().data
             questions.append( (Qid, subj + ' ' + body) )
             # constructing the list of comments
@@ -67,6 +77,7 @@ def constructData(dataPath, fileList):
     return zip(questions, commentsL)
 
 if __name__ == '__main__':
+    print '== IMPORT DOC2VEC MODEL =='
     doc2vec = loadDoc2Vec('small')
     # """ TRAIN MODE """
     # print '======= TRAIN MODE ======='
@@ -79,13 +90,13 @@ if __name__ == '__main__':
     dataPath = config['VALIDATION']['path']
     fileList = config['VALIDATION']['files']
     data = constructData(dataPath, fileList)
-    output = datapath + config['VALIDATION']['predictions']
+    output = dataPath + config['VALIDATION']['predictions']
     predictOne(doc2vec, data, output)
     """ TEST MODE """
     print '======= TEST MODE ======='
     dataPath = config['TEST_NN']['path']
     fileList = config['TEST_NN']['2016']['files']
     data = constructData(dataPath, fileList)
-    output = dataPath + config['TEST_NN']['2016']['predicitons']
+    output = dataPath + config['TEST_NN']['2016']['predictions']
     predictOne(doc2vec, data, output)
     print '======== FINISHED ========'
