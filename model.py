@@ -78,7 +78,7 @@ def constructData(dataPath, fileList):
 
 if __name__ == '__main__':
     print '== IMPORT DOC2VEC MODEL =='
-    doc2vec = loadDoc2Vec('small')
+    doc2vec = loadDoc2Vec('full')
     # """ TRAIN MODE """
     # print '======= TRAIN MODE ======='
     # dataPath = config['TRAIN_NN']['path']
