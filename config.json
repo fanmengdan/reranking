@@ -3,17 +3,25 @@
 {
     "TRAIN_DR":
     {
-        "dataPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/",
+        "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-DR/",
     },
     "DOC2VEC":
     {
-        "modelName" : "semeval-full-lc-ns-10w-5e.d2v",
-        "modelPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/",
+        "small" :
+        {
+            "name" : "semeval-small-lc-ns-20w-10e.d2v",
+            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/",
+        },
+        "full" :
+        {
+            "name" : "semeval-full-lc-ns-10w-5e.d2v",
+            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/",
+        },
     },
     "TRAIN_NN":
     {
-        "dataPath" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-NN/",
-        "fileList" : [
+        "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/Data/semeval2016-task3/useful/train-NN/",
+        "files" : [
             "SemEval2016-Task3-CQA-QL-dev-subtaskA.xml",
             "SemEval2016-Task3-CQA-QL-train-part1-subtaskA.xml",
             "SemEval2016-Task3-CQA-QL-train-part2-subtaskA.xml",
@@ -21,5 +29,22 @@
             "SemEval2015-Task3-CQA-QL-test-reformatted-excluding-2016-questions-cleansed.xml",
             "SemEval2015-Task3-CQA-QL-train-reformatted-excluding-2016-questions-cleansed.xml",
             ],
+    },
+    "TEST_NN":
+    {
+        "path" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/test/",
+        "2016" :
+        {
+            "files" : [ "SemEval2016-Task3-CQA-QL-test-subtaskA-input.xml" ],
+            "goldLabels" : "gold/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.relevancy",
+            "predictions" : "pred/subtaskA.2016.pred",
+            "randBaseline" : "pred/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.pred",
+        },
+        "2017" :
+        {
+            "files": [ "" ],
+            "goldLabels" : "gold/",
+            "predictions" : "pred/subtaskA.2017.pred",
+        },
     },
 }

@@ -5,12 +5,10 @@ from xml.dom import minidom
 from myutils import preprocessor, consine
 
 config = json.load(open('config.json', 'r'))
-dataPath = config['TRAIN_NN']['dataPath']
-fileList = config['TRAIN_NN']['fileList']
 
-def loadDoc2Vec():
-    modelPath = config['DOC2VEC']['modelPath']
-    modelName = config['DOC2VEC']['modelName']
+def loadDoc2Vec(mode):
+    modelPath = config['DOC2VEC'][mode]['path']
+    modelName = config['DOC2VEC'][mode]['name']
     doc2vec = Doc2Vec.load(modelPath + modelName)
     return doc2vec
 
@@ -21,19 +19,20 @@ def predictOne(doc2vec, data):
         q_w = preprocessor(q)
         q_v = doc2vec.infer_vector(q_w)
         for j, c in enumerate(cl):
-            c_w = preprocessor(c[0])
+            c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             score.append( ( consine(q_v, c_v), j ) )
         score = sorted(score)
         score.reverse()
+        # TODO : PRINT OUT RESULTS
 
-def constructData():
+def constructData(dataPath, fileList):
     """ constructs question and related comments data """
     # returns data = zip(questions, commentsL)
-    # questions : list of questions
-    #   ( [q1 q2 ... qN])
-    # commentsL : list of list of (comment, label) pairs 
-    #   ( [ [(c1, l1) (c2, l2) ... (cK1, lK1)] ... [(c1, l1) (c2, l2) ... (cKN, lKN)] ])
+    # questions : list of (questionId, question) pairs
+    #   ( [(qid1, q1) (qid2, q2) ... (qidN, qN)] )
+    # commentsL : list of list of (commentId, comment, label) pairs
+    #   ( [ [(cid1, c1, l1) (cid2, c2, l2) ... (cidK1, cK1, lK1)] ... [(cid1, c1, l1) (cid2, c2, l2) ... (cidKN, cKN, lKN)] ] )
     labels = []
     questions = []
     commentsL = []
@@ -56,6 +55,14 @@ def constructData():
     return zip(questions, commentsL)
 
 if __name__ == '__main__':
-    doc2vec = loadDoc2Vec()
-    data = constructData()
+    doc2vec = loadDoc2Vec('small')
+    # TRAIN MODE
+    dataPath = config['TRAIN_NN']['path']
+    fileList = config['TRAIN_NN']['files']
+    data = constructData(dataPath, fileList)
+    predictOne(doc2vec, data)
+    # TEST MODE
+    dataPath = config['TEST_NN']['path']
+    fileList = config['TEST_NN']['2016']['files']
+    data = constructData(dataPath, fileList)
     predictOne(doc2vec, data)
