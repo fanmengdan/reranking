@@ -30,6 +30,18 @@
             "SemEval2015-Task3-CQA-QL-train-reformatted-excluding-2016-questions-cleansed.xml",
             ],
     },
+    "VALIDATION":
+    {
+        "path" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/test/",
+        "files" : [
+            "data/SemEval2016-Task3-CQA-QL-dev-subtaskA.xml",
+            "data/SemEval2016-Task3-CQA-QL-train-part1-subtaskA.xml",
+            "data/SemEval2016-Task3-CQA-QL-train-part2-subtaskA.xml",
+            ],
+        "goldLabels" : "gold/dev-train-subtaskA.2016.relevancy",
+        "predictions" : "pred/validation-subtaskA.2016.pred",
+        "randBaseline" : "pred/dev-train-subtaskA.2016.pred",
+    },
     "TEST_NN":
     {
         "path" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/test/",
@@ -37,14 +49,14 @@
         {
             "files" : [ "SemEval2016-Task3-CQA-QL-test-subtaskA-input.xml" ],
             "goldLabels" : "gold/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.relevancy",
-            "predictions" : "pred/subtaskA.2016.pred",
+            "predictions" : "pred/test-subtaskA.2016.pred",
             "randBaseline" : "pred/SemEval2016-Task3-CQA-QL-test-subtaskA.xml.subtaskA.pred",
         },
         "2017" :
         {
             "files": [ "" ],
             "goldLabels" : "gold/",
-            "predictions" : "pred/subtaskA.2017.pred",
+            "predictions" : "pred/test-subtaskA.2017.pred",
         },
     },
 }

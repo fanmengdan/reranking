@@ -12,19 +12,29 @@ def loadDoc2Vec(mode):
     doc2vec = Doc2Vec.load(modelPath + modelName)
     return doc2vec
 
-def predictOne(doc2vec, data):
+def predictOneAux(score):
+    if score >= 0.5:
+        return 'true'
+    return 'false'
+
+def predictOne(doc2vec, data, output):
     """ Answer Reranking with rank ~ cosine(q_i, a_i)^(-1) """
     # data : zip(questions, commentsL) ... see 'constructData'
+    out = open(output, 'w')
     for q, cl in data:
-        q_w = preprocessor(q)
+        scores = []
+        q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
-            score.append( ( consine(q_v, c_v), j ) )
-        score = sorted(score)
-        score.reverse()
-        # TODO : PRINT OUT RESULTS
+            scores.append( ( consine(q_v, c_v), j ) )
+        scores = sorted(scores, reverse=True)
+        for rank, score in enumerate(scores):
+            pred = predictOneAux(score[0])
+            out.write('\t'.join([q[0], cl[score[1]], str(rank+1), str(score[0]), pred]))
+            out.write('\n')
+    out.close()
 
 def constructData(dataPath, fileList):
     """ constructs question and related comments data """
@@ -42,27 +52,40 @@ def constructData(dataPath, fileList):
         for thread in threads:
             # constructing the question string
             relQ = thread.getElementsByTagName('RelQuestion')[0]
+            Qid = relQ.getAttribute('RELQ_ID')
             body = relQ.getElementsByTagName('RelQBody')[0]._get_firstChild().data
             subj = relQ.getElementsByTagName('RelQSubject')[0]._get_firstChild().data
-            questions.append(subj + ' ' + body)
+            questions.append( (Qid, subj + ' ' + body) )
             # constructing the list of comments
             comments = []
             for relC in thread.getElementsByTagName('RelComment'):
+                Cid = relC.getAttribute('RELC_ID')
                 label = relC.getAttribute('RELC_RELEVANCE2RELQ')
                 comment = relC.getElementsByTagName('RelCText')[0]._get_firstChild().data
-                comments.append( (comment, label) )
+                comments.append( (Cid, comment, label) )
             commentsL.append(comments)
     return zip(questions, commentsL)
 
 if __name__ == '__main__':
     doc2vec = loadDoc2Vec('small')
-    # TRAIN MODE
-    dataPath = config['TRAIN_NN']['path']
-    fileList = config['TRAIN_NN']['files']
+    # """ TRAIN MODE """
+    # print '======= TRAIN MODE ======='
+    # dataPath = config['TRAIN_NN']['path']
+    # fileList = config['TRAIN_NN']['files']
+    # data = constructData(dataPath, fileList)
+    # # TODO : TRAIN CODE
+    """ VALIDATION MODE """
+    print '======= VALIDATION ======='
+    dataPath = config['VALIDATION']['path']
+    fileList = config['VALIDATION']['files']
     data = constructData(dataPath, fileList)
-    predictOne(doc2vec, data)
-    # TEST MODE
+    output = datapath + config['VALIDATION']['predictions']
+    predictOne(doc2vec, data, output)
+    """ TEST MODE """
+    print '======= TEST MODE ======='
     dataPath = config['TEST_NN']['path']
     fileList = config['TEST_NN']['2016']['files']
     data = constructData(dataPath, fileList)
-    predictOne(doc2vec, data)
+    output = dataPath + config['TEST_NN']['2016']['predicitons']
+    predictOne(doc2vec, data, output)
+    print '======== FINISHED ========'
