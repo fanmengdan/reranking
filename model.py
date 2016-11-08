@@ -32,6 +32,7 @@ def trainNN(doc2vec, data):
     mlp = MLPClassifier( solver = 'adam', \
         hidden_layer_sizes = (100,), \
         early_stopping = False, \
+        activation = 'relu', \
         random_state = 1, \
         max_iter = 1000, \
         verbose = True )
