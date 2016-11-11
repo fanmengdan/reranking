@@ -9,7 +9,8 @@
 * pre.py        : preprocess library for 'subtask-A' data
 * model.py      : model implementations for 'subtask-A'
 * config.json   : json config file (system specific parameters)
-* run.sh        : shell script useful for batch runs
+* doc2vec.sh    : shell script for batch runs of doc2vec model training
+* model.sh      : shell script for batch runs of neuralnet model training
 * out/          : results folder (output)
 * papers/       : base research papers
 * test/         : test data and results
