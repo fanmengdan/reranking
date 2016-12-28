@@ -22,3 +22,8 @@
 | out/        | results folder (output)                                 |
 | papers/     | base research papers                                    |
 | test/       | test data and results                                   |
+
+# TODO
+
+Testing on Yahoo Answers Dataset
+Testing with DBOW model, along with current DM model
