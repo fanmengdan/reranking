@@ -55,13 +55,16 @@ sentences = LabeledLineSentence(sources)
 print '#1 Constructed "LabeledLineSentences"'
 
 """ Constructing Doc2Vec Model """
+# dm        : 1 implies PV-DM, 0 imples PV-DBOW
 # negative  : negative-sampling [https://www.quora.com/What-is-negative-sampling]
 # window    : window size of skip-gram model [http://homepages.inf.ed.ac.uk/ballison/pdf/lrec_skipgrams.pdf]
 # dbow_words: if set to 1 trains word-vectors (in skip-gram fashion) 
 #   simultaneous with DBOW doc-vector training;
 #   default is 0 (faster training of doc-vectors only).
+mode = sys.argv[4]
+val_dm = int(mode == "dm")
 windowsize = int(sys.argv[1])
-model = Doc2Vec(min_count=1, window=windowsize, size=100, sample=1e-4, negative=5, workers=8)
+model = Doc2Vec(dm=val_dm, dbow_words=(1-val_dm), min_count=1, window=windowsize, size=100, sample=1e-4, negative=5, workers=8)
 print '#2 Constructed "Doc2Vec" Model'
 
 """ Building the Model Vocabulary """
@@ -69,11 +72,13 @@ model.build_vocab(sentences.to_array())
 print '#3 Building Vocabulary Done'
 
 """ Training the Model """
-nepoch = int(sys.argv[2])
-for epoch in range(nepoch):
+max_epoch = int(sys.argv[2])
+epoch_list = [ int(e) - 1 for e in sys.argv[3].split(',') ]
+for epoch in range(max_epoch):
     model.train(sentences.sentences_perm())
-    print '#4 Training Model on %s/%s epoch Done' % ( (epoch+1), nepoch )
-
-""" Save the model for future usage """
-name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
-model.save('./models/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
+    print '#4 Training Model on %s/%s epoch Done' % ( epoch + 1, max_epoch )
+    if epoch not in epoch_list:
+        continue
+    """ Save the model for future usage """
+    name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, epoch + 1 )
+    model.save('./models/' + mode + '/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
