@@ -25,5 +25,5 @@
 
 # TODO
 
-Testing on Yahoo Answers Dataset
-Testing with DBOW model, along with current DM model
+* Testing with DBOW model, along with current DM model
+* Testing on Yahoo Answers Dataset
