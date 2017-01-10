@@ -7,12 +7,12 @@
     {
         "small" :
         {
-            "name" : "semeval-small-lc-ns-20w-10e.d2v",
+            "name" : "dm/semeval-small-lc-ns-20w-10e.d2v",
             "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/"
         },
         "full" :
         {
-            "name" : "semeval-full-lc-ns-10w-5e.d2v",
+            "name" : "dm/semeval-full-lc-ns-10w-5e.d2v",
             "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/"
         }
     },

@@ -1,8 +1,10 @@
+import sys
 import json
 from xml.dom import minidom
 
 # numpy
 import numpy as np
+from numpy.linalg import norm
 
 # gensim modules
 from gensim.models import Doc2Vec
@@ -27,12 +29,28 @@ def transformLabel(label):
         return [1, 0]
     return [0, 1]
 
+param = {}
+def populateParam():
+    hns = [500, 250, 100, 50]
+    solver = sys.argv[1]
+    activation = sys.argv[2]
+    hlt = []
+    for i in range(3):
+        x = int(sys.argv[i + 3])
+        if x < 4:
+            hlt.append(hns[x])
+    param['solver'] = solver
+    param['activation'] = activation
+    param['hidden'] = tuple(hlt)
+    # print solver, activation, hlt
+
 def trainNN(doc2vec, data):
     """ Train MLP """
-    mlp = MLPClassifier( solver = 'adam', \
-        hidden_layer_sizes = (100,), \
+    mlp = MLPClassifier( solver = param['solver'], \
+        hidden_layer_sizes = param['hidden'], \
+        activation = param['activation'], \
+        learning_rate = 'adaptive', \
         early_stopping = False, \
-        activation = 'relu', \
         random_state = 1, \
         max_iter = 1000, \
         verbose = True )
@@ -41,9 +59,11 @@ def trainNN(doc2vec, data):
     for q, cl in data:
         q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
+        q_v /= norm(q_v)
         for c in cl:
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
+            c_v /= norm(c_v)
             X.append(np.append(q_v, c_v))
             Y.append(transformLabel(c[2]))
     mlp.fit(X, Y)
@@ -57,10 +77,12 @@ def predictAux(q_v, c_v, mlp):
             return (score, 'true')
         return (score, 'false')
     """ mlp prediction """
+    q_v /= norm(q_v)
+    c_v /= norm(c_v)
     pred = mlp.predict_proba([ np.append(q_v, c_v) ])[0]
     if pred[0] > pred[1]:
-        return pred[0], 'true'
-    return pred[1], 'false'
+        return (0.5 + 0.5 * pred[0]), 'true'
+    return (0.5 - 0.5 * pred[1]), 'false'
 
 def predict(doc2vec, data, output, mlp = None):
     """ Answer Reranking with rank ~ cosine(q_i, a_i)^(-1) """
@@ -92,11 +114,13 @@ def constructData(dataPath, fileList):
     # commentsL : list of list of (commentId, comment, label) pairs
     #   ( [ [(cid1, c1, l1) (cid2, c2, l2) ... (cidK1, cK1, lK1)] ... [(cid1, c1, l1) (cid2, c2, l2) ... (cidKN, cKN, lKN)] ] )
     print DB, 'DATA IMPORT STARTED'
+    sys.stdout.flush()
     labels = []
     questions = []
     commentsL = []
     for xmlFile in fileList:
         print DB, dataPath + xmlFile
+        sys.stdout.flush()
         doc = minidom.parse(dataPath + xmlFile)
         threads = doc.getElementsByTagName("Thread")
         for tid, thread in enumerate(threads):
@@ -117,19 +141,24 @@ def constructData(dataPath, fileList):
                 comments.append( (Cid, comment, label) )
             commentsL.append(comments)
     print DB, 'DATA IMPORT FINISHED'
+    sys.stdout.flush()
     return zip(questions, commentsL)
 
 if __name__ == '__main__':
+    populateParam()
     print '== IMPORT DOC2VEC MODEL =='
+    sys.stdout.flush()
     doc2vec = loadDoc2Vec('full')
     """ TRAIN MODE """
     print '======= TRAIN MODE ======='
+    sys.stdout.flush()
     dataPath = config['TRAIN_NN']['path']
     fileList = config['TRAIN_NN']['files']
     data = constructData(dataPath, fileList)
     mlp = trainNN(doc2vec, data)
     """ VALIDATION MODE """
     print '======= VALIDATION ======='
+    sys.stdout.flush()
     dataPath = config['VALIDATION']['path']
     fileList = config['VALIDATION']['files']
     data = constructData(dataPath, fileList)
@@ -137,9 +166,11 @@ if __name__ == '__main__':
     predict(doc2vec, data, output, mlp)
     """ TEST MODE """
     print '======= TEST MODE ======='
+    sys.stdout.flush()
     dataPath = config['TEST_NN']['path']
     fileList = config['TEST_NN']['2016']['files']
     data = constructData(dataPath, fileList)
     output = dataPath + config['TEST_NN']['2016']['predictions']
     predict(doc2vec, data, output, mlp)
     print '======== FINISHED ========'
+    sys.stdout.flush()
