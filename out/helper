@@ -1,0 +1,49 @@
+Regex for filtering out the test results
+========================================
+#* python test.py[\s\w`~!@#$%^&\*()_\+\-\[\]{}=;:'",<\.>/?\n]*?#+ python
+
+Regex for creating "results.csv"
+================================
+Find What: #.*python test.py ([ 0-9]+?) ([ 0-9]+?) #*\n#*\n\n\nResults over ([0-9]+) samples :\nSquared Error is (.*)\nNormalized Squared Error is (.*)\nRandom Inferered Vector - Squared Error is (.*)\nRandom Inferered Vector - Normalized Squared Error is (.*)
+Replace With: $1,$2,$3,$4,$5,$6,$7
+
+God mode Regex
+==============
+[\s\w`~!@#$%^&\*()_\+\-\[\]{}=;:'",<\.>/?\n]*?
+
+Post-process '.accuracy' into '.csv'
+===================================
+mp = ['500', '250', '100', '50', '-']
+
+def process(inp, oup):
+    for no, line in enumerate(inp):
+        if no:
+            x = line.split(',')
+            x[4] = '$' + mp[int(x[4])]
+            x[5] = mp[int(x[5])]
+            x[6] = mp[int(x[6])] + '$'
+            line = ','.join(x)
+        oup.write(line)
+    oup.close()
+
+process(open('validation.accuracy', 'r'), open('validation.csv', 'w'))
+process(open('testing.accuracy', 'r'), open('testing.csv', 'w'))
+
+Find What: \$(.*),(.*),(.*)\$
+Replace With: ($1 $2 $3)
+
+Best Result So-far
+==================
+mode    normalized solver  activation   hidden
+dbow    YES         adam    relu    (500 50 -)
+
+map     avgrec      mrr     p      r     f1     acc       time
+0.6993  0.8106  76.94   0.5998  0.5741  0.5867  0.6713  139.2 @Testing
+0.8966  0.9851  91.05   0.9041  0.9131  0.9086  0.9325  139.2 @Validation
+
+mode    normalized solver  activation   hidden
+dm      YES         sgd    relu    (500 250 50)
+
+map     avgrec      mrr     p      r     f1     acc       time
+0.6286  0.7586   72.08 0.5227  0.5546   0.5382    0.6131 538.98 @Testing
+0.7391  0.8801   81.19 0.6639  0.7139   0.6880    0.7622 538.98 @Validation
