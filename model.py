@@ -51,13 +51,14 @@ def getAverageCV(doc2vec, cl):
         c_w = preprocessor(c[1])
         c_v = doc2vec.infer_vector(c_w)
         c_v /= norm(c_v)
+        if ac_v is None:
+            ac_v = [0] * len(c_v)
         for i in range( len(c_v) ):
-            if ac_v is None:
-                ac_v = [0] * len(c_v)
             ac_v[i] += c_v[i]
-    ac_v = [ float(x)/len(cl) for x in ac_v ]
-    ac_v /= norm(ac_v)
-    return ac_v
+    if ac_v is not None:
+        ac_v = [ float(x)/len(cl) for x in ac_v ]
+        ac_v /= norm(ac_v)
+    return ac_v if ac_v is not None else []
 
 def trainNN(doc2vec, data):
     """ Train MLP """
