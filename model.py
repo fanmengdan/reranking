@@ -75,7 +75,7 @@ def trainNN(doc2vec, data):
         q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
         q_v /= norm(q_v)
-        ac_v = getAverageCV(cl)
+        ac_v = getAverageCV(doc2vec, cl)
         for c in cl:
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
@@ -108,7 +108,7 @@ def predict(doc2vec, data, output, mlp = None):
         scores = []
         q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
-        ac_v = getAverageCV(cl)
+        ac_v = getAverageCV(doc2vec, cl)
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
