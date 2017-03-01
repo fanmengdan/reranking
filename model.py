@@ -80,7 +80,7 @@ def trainNN(doc2vec, data):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             c_v /= norm(c_v)
-            X.append(np.append(q_v, c_v, ac_v))
+            X.append(np.append( np.append(q_v, c_v), ac_v ))
             Y.append(transformLabel(c[2]))
     mlp.fit(X, Y)
     return mlp
@@ -95,7 +95,7 @@ def predictAux(q_v, c_v, ac_v, mlp):
     """ mlp prediction """
     q_v /= norm(q_v)
     c_v /= norm(c_v)
-    pred = mlp.predict_proba([ np.append(q_v, c_v, ac_v) ])[0]
+    pred = mlp.predict_proba([ np.append( np.append(q_v, c_v), ac_v ) ])[0]
     if pred[0] > pred[1]:
         return (0.5 + 0.5 * pred[0]), 'true'
     return (0.5 - 0.5 * pred[1]), 'false'
