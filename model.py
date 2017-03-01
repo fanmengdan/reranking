@@ -44,6 +44,21 @@ def populateParam():
     param['hidden'] = tuple(hlt)
     # print solver, activation, hlt
 
+def getAverageCV(doc2vec, cl):
+    """ get (norm-ed) average comment vector """
+    ac_v = None
+    for c in cl:
+        c_w = preprocessor(c[1])
+        c_v = doc2vec.infer_vector(c_w)
+        c_v /= norm(c_v)
+        for i in range( len(c_v) ):
+            if ac_v is None:
+                ac_v = [0] * len(c_v)
+            ac_v[i] += c_v[i]
+    ac_v = [ float(x)/len(cl) for x in ac_v ]
+    ac_v /= norm(ac_v)
+    return ac_v
+
 def trainNN(doc2vec, data):
     """ Train MLP """
     mlp = MLPClassifier( solver = param['solver'], \
@@ -60,16 +75,17 @@ def trainNN(doc2vec, data):
         q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
         q_v /= norm(q_v)
+        ac_v = getAverageCV(cl)
         for c in cl:
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             c_v /= norm(c_v)
-            X.append(np.append(q_v, c_v))
+            X.append(np.append(q_v, c_v, ac_v))
             Y.append(transformLabel(c[2]))
     mlp.fit(X, Y)
     return mlp
 
-def predictAux(q_v, c_v, mlp):
+def predictAux(q_v, c_v, ac_v, mlp):
     if mlp is None:
         """ cosine similarity """
         score = ( 1.0 + consine(q_v, c_v) ) / 2.0
@@ -79,7 +95,7 @@ def predictAux(q_v, c_v, mlp):
     """ mlp prediction """
     q_v /= norm(q_v)
     c_v /= norm(c_v)
-    pred = mlp.predict_proba([ np.append(q_v, c_v) ])[0]
+    pred = mlp.predict_proba([ np.append(q_v, c_v, ac_v) ])[0]
     if pred[0] > pred[1]:
         return (0.5 + 0.5 * pred[0]), 'true'
     return (0.5 - 0.5 * pred[1]), 'false'
@@ -92,10 +108,11 @@ def predict(doc2vec, data, output, mlp = None):
         scores = []
         q_w = preprocessor(q[1])
         q_v = doc2vec.infer_vector(q_w)
+        ac_v = getAverageCV(cl)
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
-            score, pred = predictAux(q_v, c_v, mlp)
+            score, pred = predictAux(q_v, c_v, ac_v, mlp)
             scores.append( [ score, j, 0, pred ] )
         scores = sorted(scores, key=lambda score: score[0], reverse=True)
         for i in range(len(scores)):
