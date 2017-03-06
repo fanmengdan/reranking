@@ -1,4 +1,4 @@
-mode,normalized,avg_ans,spl_feat,solver,activation,hidden,map,avgrec,mrr,p,r,f1,acc,time
+mode,normalized,avg_ans,spl_feat,solver,activation,hidden1,hidden2,hidden3,map,avgrec,mrr,p,r,f1,acc,time
 dm,NO,NO,NO,sgd,relu,0,0,0,0.5216,0.6565,57.65,0.5065,0.5591,0.5315,0.5994,2124.30
 dm,NO,NO,NO,sgd,relu,0,0,1,0.5112,0.6458,56.57,0.5100,0.5350,0.5222,0.6021,1604.07
 dm,NO,NO,NO,sgd,relu,0,0,2,0.5129,0.6520,56.75,0.5207,0.5478,0.5339,0.6113,1571.56
