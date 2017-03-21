@@ -1,0 +1,522 @@
+\documentclass[12pt, a4paper, oneside]{Thesis} % Paper size, default font size and one-sided paper
+\usepackage{wrapfig}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{amsmath}
+
+
+\usepackage{lineno,hyperref}
+\modulolinenumbers[5]
+
+
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{stackengine}
+\usepackage{url}
+\usepackage{numprint}
+\usepackage{caption}
+ 	 	
+\usepackage{booktabs}  
+\usepackage{siunitx}
+%\usepackage[showframe=false]{geometry}
+\usepackage{subfigure}
+
+\nprounddigits{3}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\setstackEOL{\#}
+\setstackgap{L}{12pt}
+
+% Mychapter : No "Chapter X" at start, No numbering in TOC
+\newcommand{\mychapter}[2]{
+    \setcounter{chapter}{#1}
+    \setcounter{section}{0}
+    \chapter*{#2}
+    \addcontentsline{toc}{chapter}{#2}
+    \lhead{\emph{#2}}
+}
+
+% Enables row styling (ex. make whole row bold texted)
+\newcolumntype{`}{>{\global\let\currentrowstyle\relax}}
+\newcolumntype{^}{>{\currentrowstyle}}
+\newcommand{\rowstyle}[1]
+{\gdef\currentrowstyle{#1}%
+  #1\ignorespaces
+}
+
+% To have continious table numbering
+\usepackage{chngcntr}
+\counterwithout{table}{chapter}
+
+\usepackage{adjustbox}
+
+%\usepackage{subcaption} %incompatible with subfig
+\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
+\usepackage{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' v
+
+\hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoyingv`	
+
+\thesistitle{Semantic similarity in Q\&A using Deep learning techniques}
+\supervisor{Professor Pawan Goyal}
+\degree{Masters of Technology}
+\degreemajor{Computer Science and Engineering}
+\authors{Sandesh C}
+\rollno{12CS30041}
+\university{IIT Kharagpur}
+\department{Dept. of Computer Science and Engg.}
+\unisite{http://www.iitkgp.ac.in}
+\depsite{http://www.cse.iitkgp.ac.in}
+\placeshrt{Kharagpur}
+\placelng{Kharagpur - 721302, India}
+\datesub{April XX, 2017}
+\datesig{April XX, 2017}
+\semsub{Spring Semester, 2016-17}
+%\keywords{Deep learning in Q\&A}
+\coursecd{Master's Thesis Project }
+
+\title{\ttitle} % Defines the thesis title - don't touch this
+\begin{document}
+%\makeatletter
+%\renewcommand*{\NAT@nmfmt}[1]{\textsc{#1}}
+%\makeatother
+
+% prints author names as small caps
+
+
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+
+\setstretch{1.6} % Line spacing of 1.6 (double line spacing)
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+%\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+\maketitle
+%\titlepg % Add a gap in the Contents, for aesthetics
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	DECLARATION PAGE
+%	Your institution may give you a different text to place here
+%----------------------------------------------------------------------------------------
+
+
+\Declaration% Add a gap in the Contents, for aesthetics
+
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATE PAGE
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Certificate} % Add the "Abstract" page entry to the Contents
+
+\certificate{\addtocontents{toc}{}} % Add a gap in the Contents, for aesthetics
+
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT PAGE
+%----------------------------------------------------------------------------------------
+
+\addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
+
+\abstract{\addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
+
+Enter content here. 
+}
+
+\clearpage % Start a new page
+
+
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+
+\acknowledgements{\addtocontents{toc}{}%\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+Enter acknowledgement content here.
+
+}
+\clearpage % Start a new page
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+
+\pagestyle{fancy} % The page style headers have been "empty" all this time, now use the "fancy" headers as defined before to bring them back
+
+\lhead{\emph{Contents}} % Set the left side page header to "Contents"
+\tableofcontents % Write out the Table of Contents
+
+\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+
+\clearpage % Start a new page
+
+\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+
+\lhead{\emph{Abbreviations}} % Set the left side page header to "Abbreviations"
+\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+{
+\textbf{CQA} & \textbf{C}ommunity \textbf{Q}uestion \textbf{A}nswering \\
+\textbf{QL} & \textbf{Q}atar \textbf{L}iving \\
+\textbf{SGD} & \textbf{S}tochastic \textbf{G}radient \textbf{D}escent \\
+\textbf{PV} & \textbf{P}aragraph \textbf{V}ector \\
+\textbf{CBOW} & \textbf{C}ontinious \textbf{B}ag-\textbf{O}f-\textbf{W}ords \\
+\textbf{DM} & \textbf{D}istributed \textbf{M}emory \\
+\textbf{DBOW} & \textbf{D}istributed \textbf{B}ag-\textbf{O}f-\textbf{W}ords \\
+\textbf{MAP} & \textbf{M}ean \textbf{A}veraged \textbf{P}recision \\
+\textbf{MRR} & \textbf{M}ean \textbf{R}eciprocal \textbf{R}ate \\
+\textbf{AvgRec} & \textbf{Av}era\textbf{g}e \textbf{Rec}all \\
+\textbf{P} & \textbf{P}recision \\
+\textbf{R} & \textbf{R}ecall \\
+\textbf{Acc} & \textbf{Acc}uraccy \\
+%\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
+}
+
+%----------------------------------------------------------------------------------------
+%	PHYSICAL CONSTANTS/OTHER DEFINITIONS
+%----------------------------------------------------------------------------------------
+%
+%\clearpage % Start a new page
+%
+%\lhead{\emph{Physical Constants}} % Set the left side page header to "Physical Constants"
+%
+%\listofconstants{lrcl} % Include a list of Physical Constants (a four column table)
+%{
+%Speed of Light & $c$ & $=$ & $2.997\ 924\ 58\times10^{8}\ \mbox{ms}^{-\mbox{s}}$ (exact)\\
+%% Constant Name & Symbol & = & Constant Value (with units) \\
+%}
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
+
+%\clearpage % Start a new page
+%
+%\lhead{\emph{Symbols}} % Set the left side page header to "Symbols"
+%
+%\listofnomenclature{lll} % Include a list of Symbols (a two column table)
+%{
+%$D^{el}$ & elasticity tensor \\
+%$\sigma$ & stress tensor \\
+%$ \varepsilon $ & strain tensor \\
+%% Symbol & Name & Unit \\
+%
+%}
+
+%----------------------------------------------------------------------------------------
+%	DEDICATION
+%----------------------------------------------------------------------------------------
+%
+%\setstretch{1.3} % Return the line spacing back to 1.3
+%
+%\pagestyle{empty} % Page style needs to be empty for this page
+%
+%\dedicatory{For/Dedicated to/To my\ldots} % Dedication text
+%
+%\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - CHAPTERS
+%----------------------------------------------------------------------------------------
+
+\mainmatter % Begin numeric (1,2,3...) page numbering
+
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+
+% Include the chapters of the thesis as separate files from the Chapters folder
+% Uncomment the lines as you write the chapters
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\mychapter{1}{Introduction}
+
+\section{Introduction}
+
+CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar Living\footnote{http://www.qatarliving.com/}, are gaining popularity online. These forums are seldom moderated, quite open, and thus they typically have little restrictions, if any, on who can post and who can answer a question. On the positive side, this means that one can freely ask any question and can then expect some good, honest answers. On the negative side, it takes effort to go through all possible answers and to make sense of them. For example, it is not unusual for a question to have hundreds of answers, which makes it very time-consuming for the user to inspect and to winnow through them all. The present work is intended to help automate the process of finding good answers to questions in a community-created discussion forum, by automatically ranking the existing answers.
+
+\section{SemEval Task -- 3}
+
+\textbf{SemEval Tasks}\footnote{http://alt.qcri.org/semeval2017/} (Semantic Evaluation) are an ongoing series of evaluations of computational semantic analysis systems. The \textbf{SemEval Task 3} in particular deals with semantic comparison for words and texts in the domain of Community Question Answering (CQA). In essence, the main CQA task can be defined as follows: \textit{“given (i) a new question and (ii) a large collection of question-comment threads created by a user community, rank the comments that are most useful for answering the new question”}.
+
+\subsection{Subtask A -- Question-Comment Similarity}
+In this project we address the CQA task by exploiting the semantic similarity in Q\&A using Deep learning techniques. In particular we focus on a single subtask under \textbf{SemEval - Task 3}, namely the \textbf{Subtask A}. \\ \\
+\textbf{Subtask A} \textit{Given a question from a question-comment thread, rank the comments as per their relevance (similarity) with respect to the question}.
+
+\section{Thesis Organization}
+% TODO
+
+%----------------------------------------------------------------------------------------
+%	LITERATURE SURVEY
+%----------------------------------------------------------------------------------------
+
+\mychapter{2}{Literature Survey}
+
+The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and answer passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
+
+In recent years, many advanced models have been developed for automating answer selection, producing a large body of work. For instance, \cite{wang2007jeopardy} proposed a probabilistic quasi synchronous grammar to learn syntactic transformations from the question to the candidate answers; \cite{heilman2010tree} used an algorithm based on Tree Edit Distance (TED) to learn tree transformations in pairs; \cite{wang2010probabilistic} developed a probabilistic model to learn tree-edit operations on dependency parse trees; and \cite{yao2013answer} applied linear chain CRFs with features derived from TED to automatically learn associations between questions and candidate answers. One interesting aspect of the above research is the need for syntactic structures; this is also corroborated in [\cite{severyn2012structural}; \cite{severyn2013automatic}]. Note that answer selection can use models for textual entailment, semantic similarity, and for natural language inference in general.
+
+Although recently quite a few work in this domain have started to adopt Deep Learning Techniques to solve the problem of answer re-ranking. For eg. \cite{lin2015icrc} treated the answer selection task as a sequence labeling problem and proposed recurrent convolutional neural networks to recognize good comments. In a follow-up work, \cite{zhou2015answer} included long-short term memory (LSTM) units in their convolutional neural network to learn the classification sequence for the thread. In parallel, \cite{barron2015thread} exploited the dependencies between the thread comments to tackle the same task. This was done by designing features that look globally at the thread and by applying structured prediction models, such as Conditional Random Fields \cite{lafferty2001conditional}.
+
+This research direction was further extended by \cite{joty2015global}, who used the output structure at the thread level in order to make more consistent global decisions. For this purpose, they modeled the relations between pairs of comments at any distance in the thread, and they combined the predictions of local classifiers in a graph-cut and in an ILP frameworks.
+
+Finally, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
+
+Thus influenced by the trend we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity; building on the success of previous attempts.
+
+
+%----------------------------------------------------------------------------------------
+%	APPROACH
+%----------------------------------------------------------------------------------------
+
+\mychapter{3}{Approach}
+
+For this task, we adopt a neural approach to open-domain non-factoid QA developed by \cite{bogdanova2016we}, which focused on “answer re-ranking”, i.e. given a list of candidate answers to a question, order the answers according to their relevance to the question. The approach is very simple and requires no feature engineering. Question-answer pairs are represented by concatenated distributed representation vectors and a multilayer perceptron is used to compute the score for an answer (the probability of an answer being the best answer to the question). Despite its simplicity, their work achieved state-of-the-art performance on the Yahoo! Answers dataset of manner or How questions introduced by \cite{jansen2014discourse}. This improved performance was attributed to the use of paragraph vector representations instead of averaging over word vectors, and to the use of suitable data for training these representations. This project aims at improving the simplistic model proposed by \cite{bogdanova2016we} with a few enhancements to achieve state-of-art performance at the \textbf{SemEval Task 3 - Subtask A} of finding Question -- Comment similarity.
+
+Paragraph Vectors (\cite{le2014distributed}) are hence used for quantifying the question-answer text documents. Paragraph Vector is an unsupervised framework that learns continuous distributed vector representations for pieces of texts. The texts can be of variable-length, ranging from sentences to documents. The name Paragraph Vector is to emphasize the fact that the method can be applied to variable-length pieces of texts, anything from a phrase or sentence to a large document. In this model, the vector representation is trained to be useful for predicting words in a paragraph. More precisely, we concatenate the paragraph vector with several word vectors from a paragraph and predict the following word in the given context. Both word vectors and paragraph vectors are trained by the stochastic gradient descent and backpropagation. Furthermore the following two subsections shall shed some light on the approach adopted to solve the different subtasks developing on the Paragraph Vector representations of the question-answer text documents.
+
+\section{Learning Algorithm}
+\label{section:learning-algo}
+
+We use a simple feedforward neural network, i.e. a multilayer perceptron, to predict the best answer just like in \cite{bogdanova2016we}. As shown in Figure 1 [TODO], the first layer of the network is a projection layer that transforms question-answer pairs into their vector representations. The vector representation for a question-answer pair (q, a) is a concatenation of the distributed representations q and a for the question and the answer respectively. Each representation is a real-valued vector of a fixed dimensionality d, which is a parameter to be tuned. The projection layer is concatenated with another d dimensional vector, namely the averaged distributed representation of all the answers to the question q. This is further concatenated with another set of features generated from the pair (q, a) as described in \autoref{section:super-features}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+
+This layer is then followed by one or more hidden layers, the number of layers and units in each of these layers are also parameters to be experimentally tuned. We consider the activation function as well to be a parameter to be tuned by exprimentation. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not best answer) and positive (i.e. best answer) classes respectively. For each question, all its user-generated answers are ranked according to their probability of being the best answer, as predicted by the network.
+
+Given a question-answer pair (q, a), the possible values for the ground-truth label are 1 (best answer) and 0 (not a best answer). The network is trained by minimizing the L2-regularized cross-entropy loss function between the ground-truth labels and the network predictions on the training set. We use either stochastic gradient descent (SGD) or Adam solver and early stopping to minimize the loss over the training set.
+
+\section{Document Representations}
+
+This approach requires question-answer pairs to be represented as a fixed-size vector. We experimentally evaluate the Paragraph Vector model (PV) proposed by \cite{le2014distributed}. The PV is an extension of the widely used continuous bag-of-words (CBOW) and skip-gram word embedding models, known as word2vec. However, in contrast to CBOW and skip-gram models that only learn word embeddings, the PV is able to learn representations for pieces of text of arbitrary length, e.g. sentences, paragraphs or documents. The PV includes (1) the distributed memory (DM) model, that predicts the next word using the concatenation of the previous words and the paragraph vector, that is shared among all words in the same paragraph (or sentence); (2) the distributed bag-of-words (DBOW) model, that – similar to the skip-gram model – predicts words randomly sampled from the paragraph, given the paragraph vector. We experiment with both DM and DBOW models. Also, note that we shall use the terms paragraph vector (PV) and document vector/representation interchangeably.
+
+\section{Syntactic--Features}
+\label{section:super-features}
+% [TODO]
+
+
+%----------------------------------------------------------------------------------------
+%	EXPERIMENTS
+%----------------------------------------------------------------------------------------
+
+\mychapter{4}{Experiments}
+
+\section{Data}
+
+Though \cite{bogdanova2016we} experiments with the \textit{Yahoo! Answers dataset}\footnote{http://webscope.sandbox.yahoo.com/}, we have used the data provided as a part of the popular \textbf{SemEval Task 3} for \textbf{Subtask A} (2016 \& 2015). \autoref{table:data} contains the statistics about the forementioned dataset. This dataset contains about 42K (q, a) pairs to learn from; spreading over about 5.4K questions. We shall refer to this data as the CQA-QL corpus in future. Further we also use a large unannotated dataset, released by the same source, from Qatar Living with 189,941 questions and 1,894,456 comments, which is used for unsupervised learning/training domain-specific word/document embeddings. \\
+
+\setcounter{table}{0}
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`l^r^r^r^r^r^r}
+\rowstyle{\bfseries}
+Category 			&	Train 		&	Train		&	Train+Dev+Test		&	Dev		&	Test		&	Total	\\
+\rowstyle{\bfseries}
+					&	(Part-I)		&	(Part-II)	&	(from SemEval 2015)	&			&			&			\\
+\\\hline\\
+\rowstyle{\bfseries}
+Questions			&	1,411		&	379			&	2,480+291+319		&	244		&	327		&	5,451	\\\\
+\rowstyle{\bfseries}
+Comments				&	14,110		&	3,790		&	14,893+1,529+1,876	&	2,440	&	3,270	&	41,908	\\
+\rowstyle{\itshape}
+-Good				&	5,287		&	1,364		&	7,418+813+946		&	818		&	1,329	&	17,975	\\
+\rowstyle{\itshape}
+-Bad					&	6,362		&	1,777		&	5,971+544+774		&	1,209	&	1,485	&	18,122	\\
+\rowstyle{\itshape}
+-Potentially			&	2,461		&	649			&	1,504+172+156		&	413		&	456		&	5,811	\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)}
+\label{table:data}
+\end{table}
+
+\section{Experimental Setup}
+
+We use the gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} implementation of DM and DBOW paragraph vector models. The data for training the unsupervised \textit{doc2vec} model (PV model) is the forementioned large unannotated dataset from Qatar Living forums. Each paragraph (q or a) was converted to lowercase, tokenized by space character and cleaned of stop words before training \textit{doc2vec} models. The parameters of training these models being the window size (maximum distance between the predicted word and context words used for prediction within a document) and number of epochs of training, were cross-validated to give low errors on the training dataset. We further use normalized versions of the document vector representations thus generated, to be fed as inputs to the feedforward neural network described in \autoref{section:learning-algo}. \\ \\
+For the implementation of the feedforward neural network as described in \autoref{section:learning-algo}, we shall use the popular python library \textit{scikit-learn\footnote{http://scikit-learn.org/stable/index.html}}'s \textit{MLPClassifier}\footnote{http://scikit-learn.org/stable/modules/generated/sklearn.neural\_network.MLPClassifier.html}.
+
+\section{Results}
+
+\subsection{Document Vector Representations}
+
+For training each question/answer text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/answer text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/answer text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/answer text. The squared errors are computed for both normalized and unnormalized document vectors. For comparison purposes normalized and unnormalized squared error between any two random document vector is tabulated beside these errors (averaged over as many iterations as the number of question/answer text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW prove to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments is tabulated under \autoref{appendix:A}.
+
+%\setcounter{table}{1}
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category 			&	Window 	&	Epochs	&	Squared	&	Normalized	&	Sq. Error	&	Norm. Sq. Error	&	Ratio\\
+\rowstyle{\bfseries}
+					&	Size		&			&	Error	&	Sq. Error (A)	&	(Random)		&	(Random)	(B)		&	(B/A)\\
+\\\hline\\
+PV-DBOW & 10 & 5 & 10.79 & 0.12 & 0.56 & 0.80 & 6.74\\
+PV-DBOW & 10 & 10 & 13.16 & 0.12 & 0.61 & 0.82 & 6.61\\
+PV-DM & 10 & 5 & 0.66 & 0.21 & 0.98 & 0.99 & 4.67\\
+PV-DM & 15 & 10 & 0.93 & 0.22 & 0.98 & 0.98 & 4.47\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Training document vector representations PV-DM and PV-DBOW -- Best results}
+\label{table:pv-train-best}
+\end{table}
+
+\subsection{SemEval Task 3 -- Subtask A}
+
+The training data comprises of 38,638 comments spanning over 5,124 questions. The neural net input is a tuple of the form $(q, a, avg\_ans_q, ft_{(q,a)})$, where, \\
+\hspace*{1cm}$avg\_ans_q$ is (normalized) average over the PV of all answers to question q \\
+\hspace*{1cm}$ft_{(q,a)}$ is feature vector corresp. to the pair (q,a) as described in \autoref{section:super-features}
+\\\\
+\textbf{SemEval Task 3} has as an official evaluation measure used to rank the participating systems, the metric of Mean Average Precision (MAP), calculated for the ten comments a participating system has ranked highest. Further metrics such as Mean Reciprocal Rank (MRR) and Average Recall (AvgRec) for top-10 results; Precision (P), Recall (R), F\textsubscript{1} (with respect to the Good/Relevant class) and Accuracy (Acc) are also reported.
+
+\subsubsection{Preliminary experiments with (q, a) inputs}
+
+Intially experiments were conducted with only (q, a) pair as input to the neural nets. The nets were trained using multiple solvers, activation functions, hidden layer configurations. The best performance for each parameter configuration is as tabulated in \autoref{table:ann-stage-1-best}, while the complete results are tabulated in \autoref{appendix:B}.
+
+%\setcounter{table}{2}
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+PV-DBOW & Adam & logistic & 0.7049 & 0.8292 & 77.62 & 0.6601 & 0.5508 & 0.6005 & 0.7021 \\
+PV-DBOW & SGD & relu & 0.7019 & 0.8251 & 77.16 & 0.6327 & 0.5937 & 0.6126 & 0.6948 \\
+PV-DBOW & SGD & logistic & 0.7018 & 0.8242 & 77.32 & 0.6412 & 0.5877 & 0.6133 & 0.6988 \\
+PV-DBOW & SGD & tanh & 0.7009 & 0.8245 & 76.62 & 0.6339 & 0.5914 & 0.6119 & 0.6951 \\
+PV-DBOW & Adam & relu & 0.6993 & 0.8106 & 76.94 & 0.5998 & 0.5741 & 0.5867 & 0.6713 \\
+PV-DBOW & Adam & tanh & 0.698 & 0.8231 & 76.35 & 0.6386 & 0.5546 & 0.5936 & 0.6914 \\
+PV-DM & SGD & relu & 0.6578 & 0.7855 & 74.58 & 0.5793 & 0.5357 & 0.5567 & 0.6532 \\
+PV-DM & SGD & logistic & 0.5671 & 0.6922 & 64.02 & 0 & 0 & 0 & 0.5936 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Preliminary experiments using only $(q, a)$ inputs -- Best results.}
+\label{table:ann-stage-1-best}
+\end{table}
+
+PV-DBOW clearly outperforms PV-DM representations in these preliminary runs. Building on this, further experiments where conducted using only the PV-DBOW representations.
+
+\subsubsection{Improvement with inclusion of Average Answer}
+
+Additionally to capture the relative goodness of an answer with respect to other answers to the same question, $avg\_ans_q$ (normalized post averaging over the PV of all answers to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+PV-DBOW & SGD & relu & 0.7306 & 0.8416 & 79.61 & 0.6607 & 0.5786 & 0.6169 & 0.708 \\
+PV-DBOW & SGD & tanh & 0.7188 & 0.8343 & 79.11 & 0.6684 & 0.5658 & 0.6129 & 0.7095 \\
+PV-DBOW & SGD & logistic & 0.7179 & 0.8346 & 79.13 & 0.6652 & 0.553 & 0.6039 & 0.7052 \\
+PV-DBOW & Adam & logistic & 0.7177 & 0.8342 & 78.96 & 0.6635 & 0.5726 & 0.6147 & 0.7083 \\
+PV-DBOW & Adam & tanh & 0.7169 & 0.8339 & 78.64 & 0.655 & 0.5771 & 0.6136 & 0.7046 \\
+PV-DBOW & Adam & relu & 0.7161 & 0.8263 & 79.45 & 0.6298 & 0.6005 & 0.6148 & 0.6942 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Experiments using $(q, a, avg\_ans_q)$ inputs -- Best results.}
+\label{table:ann-stage-2-best}
+\end{table}
+
+Clearly there is a significant improvement in MAP scores after inclusion of the averaged answer for each question as an input feature. Further experiments thus is done inclusive of $avg\_ans_q$ in the input tuple.
+
+\subsubsection{Further improvement with Syntactic Features}
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+%%%%%%%%%%%%%%%%%% DATA HERE %%%%%%%%%%%%%%%%%%%%%%%%%%
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- Best results.}
+\label{table:ann-stage-3-best}
+\end{table}
+
+\section{Analysis}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\mychapter{5}{Conclusions}
+
+
+%----------------------------------------------------------------------------------------
+%	THESIS CONTENT - APPENDICES
+%----------------------------------------------------------------------------------------
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\appendix % Cue to tell LaTeX that the following 'chapters' are Appendices
+
+% Include the appendices of the thesis as separate files from the Appendices folder
+% Uncomment the lines as you write the Appendices
+
+\input{Appendices/AppendixA}
+\input{Appendices/AppendixB}
+\input{Appendices/AppendixC}
+\input{Appendices/AppendixD}
+
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+\backmatter
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+%\nocite{*}
+\label{Bibliography}
+
+\lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
+
+\bibliographystyle{apalike} % Use the "custom" BibTeX style for formatting the Bibliography
+
+\bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
+
+\end{document}  

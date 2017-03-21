@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: apalike.bst
+Database file #1: Bibliography.bib
+Warning--empty journal in bogdanova2016we
+Warning--can't use both volume and number fields in moschitti2007exploiting
+You've used 24 entries,
+            1935 wiz_defined-function locations,
+            601 strings with 8676 characters,
+and the built_in function-call counts, 12692 in all, are:
+= -- 1330
+> -- 426
+< -- 40
++ -- 142
+- -- 142
+* -- 922
+:= -- 1915
+add.period$ -- 81
+call.type$ -- 24
+change.case$ -- 190
+chr.to.int$ -- 24
+cite$ -- 26
+duplicate$ -- 608
+empty$ -- 940
+format.name$ -- 190
+if$ -- 2763
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 24
+newline$ -- 122
+num.names$ -- 72
+pop$ -- 245
+preamble$ -- 1
+purify$ -- 190
+quote$ -- 0
+skip$ -- 495
+stack$ -- 0
+substring$ -- 950
+swap$ -- 221
+text.length$ -- 27
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 144
+warning$ -- 2
+while$ -- 109
+width$ -- 0
+write$ -- 326
+(There were 2 warnings)

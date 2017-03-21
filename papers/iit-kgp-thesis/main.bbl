@@ -1,0 +1,152 @@
+\begin{thebibliography}{}
+
+\bibitem[Barr{\'o}n-Cedeno et~al., 2015]{barron2015thread}
+Barr{\'o}n-Cedeno, A., Filice, S., Da~San~Martino, G., Joty, S.~R.,
+  M{\`a}rquez, L., Nakov, P., and Moschitti, A. (2015).
+\newblock Thread-level information for comment classification in community
+  question answering.
+\newblock In {\em ACL (2)}, pages 687--693. Citeseer.
+
+\bibitem[Bogdanova and Foster, 2016]{bogdanova2016we}
+Bogdanova, D. and Foster, J. (2016).
+\newblock This is how we do it: Answer reranking for open-domain how questions
+  with paragraph vectors and minimal feature engineering.
+
+\bibitem[Heilman and Smith, 2010]{heilman2010tree}
+Heilman, M. and Smith, N.~A. (2010).
+\newblock Tree edit models for recognizing textual entailments, paraphrases,
+  and answers to questions.
+\newblock In {\em Human Language Technologies: The 2010 Annual Conference of
+  the North American Chapter of the Association for Computational Linguistics},
+  pages 1011--1019. Association for Computational Linguistics.
+
+\bibitem[Jansen et~al., 2014]{jansen2014discourse}
+Jansen, P., Surdeanu, M., and Clark, P. (2014).
+\newblock Discourse complements lexical semantics for non-factoid answer
+  reranking.
+\newblock In {\em ACL (1)}, pages 977--986.
+
+\bibitem[Jeon et~al., 2005]{jeon2005finding}
+Jeon, J., Croft, W.~B., and Lee, J.~H. (2005).
+\newblock Finding similar questions in large question and answer archives.
+\newblock In {\em Proceedings of the 14th ACM international conference on
+  Information and knowledge management}, pages 84--90. ACM.
+
+\bibitem[Joty et~al., 2015]{joty2015global}
+Joty, S.~R., Barr{\'o}n-Cedeno, A., Da~San~Martino, G., Filice, S.,
+  M{\`a}rquez, L., Moschitti, A., and Nakov, P. (2015).
+\newblock Global thread-level inference for comment classification in community
+  question answering.
+\newblock In {\em EMNLP}, pages 573--578.
+
+\bibitem[Lafferty et~al., 2001]{lafferty2001conditional}
+Lafferty, J., McCallum, A., Pereira, F., et~al. (2001).
+\newblock Conditional random fields: Probabilistic models for segmenting and
+  labeling sequence data.
+\newblock In {\em Proceedings of the eighteenth international conference on
+  machine learning, ICML}, volume~1, pages 282--289.
+
+\bibitem[Le and Mikolov, 2014]{le2014distributed}
+Le, Q.~V. and Mikolov, T. (2014).
+\newblock Distributed representations of sentences and documents.
+\newblock In {\em ICML}, volume~14, pages 1188--1196.
+
+\bibitem[Lin and Wang, 2015]{lin2015icrc}
+Lin, X. Z. B. H.~J. and Wang, Y. X.~X. (2015).
+\newblock Icrc-hit: A deep learning based comment sequence labeling system for
+  answer selection challenge.
+\newblock {\em SemEval-2015}, 210.
+
+\bibitem[Moschitti, 2008]{moschitti2008kernel}
+Moschitti, A. (2008).
+\newblock Kernel methods, syntax and semantics for relational text
+  categorization.
+\newblock In {\em Proceedings of the 17th ACM conference on Information and
+  knowledge management}, pages 253--262. ACM.
+
+\bibitem[Moschitti et~al., 2007]{moschitti2007exploiting}
+Moschitti, A., Quarteroni, S., Basili, R., and Manandhar, S. (2007).
+\newblock Exploiting syntactic and shallow semantic kernels for question answer
+  classification.
+\newblock In {\em Annual meeting-association for computational linguistics},
+  volume~45, page 776.
+
+\bibitem[Radlinski and Joachims, 2005]{radlinski2005query}
+Radlinski, F. and Joachims, T. (2005).
+\newblock Query chains: learning to rank from implicit feedback.
+\newblock In {\em Proceedings of the eleventh ACM SIGKDD international
+  conference on Knowledge discovery in data mining}, pages 239--248. ACM.
+
+\bibitem[Severyn and Moschitti, 2012]{severyn2012structural}
+Severyn, A. and Moschitti, A. (2012).
+\newblock Structural relationships for large-scale learning of answer
+  re-ranking.
+\newblock In {\em Proceedings of the 35th international ACM SIGIR conference on
+  Research and development in information retrieval}, pages 741--750. ACM.
+
+\bibitem[Severyn and Moschitti, 2013]{severyn2013automatic}
+Severyn, A. and Moschitti, A. (2013).
+\newblock Automatic feature engineering for answer selection and extraction.
+\newblock In {\em EMNLP}, volume~13, pages 458--467.
+
+\bibitem[Severyn and Moschitti, 2015]{severyn2015learning}
+Severyn, A. and Moschitti, A. (2015).
+\newblock Learning to rank short text pairs with convolutional deep neural
+  networks.
+\newblock In {\em Proceedings of the 38th International ACM SIGIR Conference on
+  Research and Development in Information Retrieval}, pages 373--382. ACM.
+
+\bibitem[Shafiq~Joty and Nakov, 2016]{shafiq2016joint}
+Shafiq~Joty, L. and Nakov, P. (2016).
+\newblock Joint learning with global inference for comment classification in
+  community question answering.
+\newblock In {\em Proceedings of NAACL-HLT}, pages 703--713.
+
+\bibitem[Shen and Lapata, 2007]{shen2007using}
+Shen, D. and Lapata, M. (2007).
+\newblock Using semantic roles to improve question answering.
+\newblock In {\em EMNLP-CoNLL}, pages 12--21.
+
+\bibitem[Surdeanu et~al., 2008]{surdeanu2008learning}
+Surdeanu, M., Ciaramita, M., and Zaragoza, H. (2008).
+\newblock Learning to rank answers on large online qa collections.
+\newblock In {\em ACL}, volume~8, pages 719--727.
+
+\bibitem[Tymoshenko et~al., 2016]{tymoshenko2016convolutional}
+Tymoshenko, K., Bonadiman, D., and Moschitti, A. (2016).
+\newblock Convolutional neural networks vs. convolution kernels: Feature
+  engineering for answer sentence reranking.
+\newblock In {\em Proceedings of NAACL-HLT}, pages 1268--1278.
+
+\bibitem[Tymoshenko and Moschitti, 2015]{tymoshenko2015assessing}
+Tymoshenko, K. and Moschitti, A. (2015).
+\newblock Assessing the impact of syntactic and semantic structures for answer
+  passages reranking.
+\newblock In {\em Proceedings of the 24th ACM International on Conference on
+  Information and Knowledge Management}, pages 1451--1460. ACM.
+
+\bibitem[Wang and Manning, 2010]{wang2010probabilistic}
+Wang, M. and Manning, C.~D. (2010).
+\newblock Probabilistic tree-edit models with structured latent variables for
+  textual entailment and question answering.
+\newblock In {\em Proceedings of the 23rd International Conference on
+  Computational Linguistics}, pages 1164--1172. Association for Computational
+  Linguistics.
+
+\bibitem[Wang et~al., 2007]{wang2007jeopardy}
+Wang, M., Smith, N.~A., and Mitamura, T. (2007).
+\newblock What is the jeopardy model? a quasi-synchronous grammar for qa.
+\newblock In {\em EMNLP-CoNLL}, volume~7, pages 22--32.
+
+\bibitem[Yao et~al., 2013]{yao2013answer}
+Yao, X., Van~Durme, B., Callison-Burch, C., and Clark, P. (2013).
+\newblock Answer extraction as sequence tagging with tree edit distance.
+\newblock In {\em HLT-NAACL}, pages 858--867. Citeseer.
+
+\bibitem[Zhou et~al., 2015]{zhou2015answer}
+Zhou, X., Hu, B., Chen, Q., Tang, B., and Wang, X. (2015).
+\newblock Answer sequence learning with neural networks for answer selection in
+  community question answering.
+\newblock {\em arXiv preprint arXiv:1506.06490}.
+
+\end{thebibliography}

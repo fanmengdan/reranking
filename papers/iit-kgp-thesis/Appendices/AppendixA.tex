@@ -1,0 +1,43 @@
+\chapter{Training PV-DM and PV-DBOW}
+\lhead{\emph{Training PV-DM and PV-DBOW}}
+\label{appendix:A}
+
+%\setcounter{table}{5}
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category 			&	Window 	&	Epochs	&	Squared	&	Normalized	&	Sq. Error	&	Norm. Sq. Error	&	Ratio\\
+\rowstyle{\bfseries}
+					&	Size		&			&	Error	&	Sq. Error (A)	&	(Random)		&	(Random)	(B)		&	(B/A)\\
+\\\hline\\
+PV-DBOW & 10 & 5 & 10.791 & 0.118 & 0.560 & 0.799 & 6.738 \\
+PV-DBOW & 10 & 10 & 13.159 & 0.124 & 0.606 & 0.821 & 6.614 \\
+PV-DBOW & 15 & 5 & 10.790 & 0.127 & 0.564 & 0.796 & 6.263 \\
+PV-DBOW & 15 & 10 & 13.077 & 0.132 & 0.607 & 0.818 & 6.193 \\
+PV-DBOW & 20 & 5 & 10.749 & 0.134 & 0.569 & 0.794 & 5.910 \\
+PV-DBOW & 20 & 10 & 12.932 & 0.140 & 0.611 & 0.816 & 5.822 \\
+PV-DM & 10 & 5 & 0.664 & 0.211 & 0.985 & 0.987 & 4.671 \\
+PV-DM & 15 & 10 & 0.929 & 0.219 & 0.981 & 0.983 & 4.472 \\
+PV-DM & 15 & 5 & 0.670 & 0.229 & 0.984 & 0.984 & 4.291 \\
+PV-DM & 20 & 10 & 0.830 & 0.229 & 0.982 & 0.982 & 4.284 \\
+PV-DM & 25 & 10 & 0.780 & 0.235 & 0.983 & 0.982 & 4.168 \\
+PV-DM & 20 & 5 & 0.706 & 0.239 & 0.984 & 0.981 & 4.092 \\
+PV-DM & 15 & 20 & 1.597 & 0.241 & 0.970 & 0.976 & 4.034 \\
+PV-DM & 25 & 5 & 0.735 & 0.248 & 0.984 & 0.980 & 3.951 \\
+PV-DM & 20 & 20 & 1.434 & 0.247 & 0.974 & 0.977 & 3.947 \\
+PV-DM & 25 & 20 & 1.339 & 0.251 & 0.976 & 0.978 & 3.890 \\
+PV-DM & 15 & 30 & 2.062 & 0.261 & 0.954 & 0.963 & 3.687 \\
+PV-DM & 20 & 30 & 1.867 & 0.266 & 0.962 & 0.968 & 3.637 \\
+PV-DM & 25 & 30 & 1.741 & 0.270 & 0.966 & 0.971 & 3.595 \\
+PV-DM & 10 & 1 & 0.964 & 0.333 & 0.988 & 0.979 & 2.936 \\
+PV-DM & 15 & 1 & 0.975 & 0.357 & 0.988 & 0.971 & 2.717 \\
+PV-DM & 20 & 1 & 0.979 & 0.374 & 0.988 & 0.969 & 2.592 \\
+PV-DM & 25 & 1 & 0.981 & 0.384 & 0.988 & 0.967 & 2.515 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Training document vector representations PV-DM and PV-DBOW -- All results}
+\label{table:pv-train-full}
+\end{table}
