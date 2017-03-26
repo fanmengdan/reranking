@@ -63,8 +63,9 @@ print '#1 Constructed "LabeledLineSentences"'
 #   default is 0 (faster training of doc-vectors only).
 mode = sys.argv[4]
 val_dm = int(mode == "dm")
+dimension = int(sys.argv[5])
 windowsize = int(sys.argv[1])
-model = Doc2Vec(dm=val_dm, dbow_words=(1-val_dm), min_count=1, window=windowsize, size=100, sample=1e-4, negative=5, workers=8)
+model = Doc2Vec(dm=val_dm, dbow_words=(1-val_dm), min_count=1, window=windowsize, size=dimension, sample=1e-4, negative=5, workers=8)
 print '#2 Constructed "Doc2Vec" Model'
 
 """ Building the Model Vocabulary """
@@ -81,4 +82,4 @@ for epoch in range(max_epoch):
         continue
     """ Save the model for future usage """
     name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, epoch + 1 )
-    model.save('./models/' + mode + '/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
+    model.save('./models/' + mode + '/' + str(dimension) + 'd' +  '/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)

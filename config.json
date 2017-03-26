@@ -8,12 +8,12 @@
         "small" :
         {
             "name" : "semeval-small-lc-ns-20w-10e.d2v",
-            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/dm/"
+            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/dm/100d/"
         },
         "full" :
         {
             "name" : "semeval-full-lc-ns-10w-5e.d2v",
-            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/dbow/"
+            "path" : "/media/sandeshc/Windows_OS/Sandesh/MTP/WS/rerank-server/models/dbow/100d/"
         }
     },
     "TRAIN_NN":

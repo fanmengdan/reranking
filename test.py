@@ -34,10 +34,11 @@ data_prefix = data_path.split('/')[-1].split('.')[0]
 
 """ Loading trained Doc2Vec model """
 windowsize = int(sys.argv[1])
+dimension = int(sys.argv[4])
 nepoch = int(sys.argv[2])
 mode = sys.argv[3]
 name_tuple = ( data_prefix.strip('DATA').lower(), windowsize, nepoch )
-model = Doc2Vec.load('./models/' + mode + '/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
+model = Doc2Vec.load('./models/' + mode + '/' + str(dimension) + 'd' + '/semeval-%s-lc-ns-%dw-%de.d2v' % name_tuple)
 
 nsamp = 0
 sqerr = 0.0
@@ -77,7 +78,7 @@ print 'Normalized Squared Error is %lf' % (nsqerr/nsamp)**0.5
 print 'Random Inferered Vector - Squared Error is %lf' % (rsqerr/nsamp)**0.5
 print 'Random Inferered Vector - Normalized Squared Error is %lf' % (rnsqerr/nsamp)**0.5
 
-record = [mode, windowsize, nepoch, nsamp, (sqerr/nsamp)**0.5, (nsqerr/nsamp)**0.5, (rsqerr/nsamp)**0.5, (rnsqerr/nsamp)**0.5]
+record = [mode, dimension, windowsize, nepoch, nsamp, (sqerr/nsamp)**0.5, (nsqerr/nsamp)**0.5, (rsqerr/nsamp)**0.5, (rnsqerr/nsamp)**0.5]
 
 out = open('out/test-' + data_prefix.strip('DATA').lower() + '.log', 'a')
 out.write(','.join([str(x) for x in record]) + '\n')
