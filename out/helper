@@ -19,15 +19,15 @@ def process(inp, oup):
     for no, line in enumerate(inp):
         if no:
             x = line.split(',')
-            x[4] = '$' + mp[int(x[4])]
-            x[5] = mp[int(x[5])]
-            x[6] = mp[int(x[6])] + '$'
+            x[7] = '$' + mp[int(x[7])]
+            x[8] = mp[int(x[8])]
+            x[9] = mp[int(x[9])] + '$'
             line = ','.join(x)
         oup.write(line)
     oup.close()
 
-process(open('validation.accuracy', 'r'), open('validation.csv', 'w'))
-process(open('testing.accuracy', 'r'), open('testing.csv', 'w'))
+process(open('validation.accuracy.csv', 'r'), open('validation.csv', 'w'))
+process(open('testing.accuracy.csv', 'r'), open('testing.csv', 'w'))
 
 Find What: \$(.*),(.*),(.*)\$
 Replace With: ($1 $2 $3)
