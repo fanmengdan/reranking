@@ -14,7 +14,7 @@ POS_TAGS = [ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", \
     "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "#", "$", "''", "(", ")", ",", ".", ":", "``" ]
 
 def auxAdd(x, y):
-    if x in None:
+    if x is None:
         return y
     x += y
     return x
