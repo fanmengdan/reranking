@@ -116,5 +116,7 @@ def getFeatures(model, q_w, c_w, config):
     feature_vector.append(float(len(q_w))/len(c_w))
 
     # Question and comment author same ? (SKIPPED)
-
+    # Answer rank in the thread (SKIPPED)
+    # Question category (SKIPPED)
+    
     return feature_vector
