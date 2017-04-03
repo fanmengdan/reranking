@@ -13,6 +13,7 @@
 | myutils.py  | utility library                                         |
 | pre.py      | preprocess library for 'subtask-A' data                 |
 | model.py    | model implementations for 'subtask-A'                   |
+| features.py | semantic and metadata featues implem.                   |
 |             |                                                         |
 | config.json | json config file (system specific parameters)           |
 |             |                                                         |
@@ -22,8 +23,3 @@
 | out/        | results folder (output)                                 |
 | papers/     | base research papers                                    |
 | test/       | test data and results                                   |
-
-# TODO
-
-* Testing with DBOW model, along with current DM model
-* Testing on Yahoo Answers Dataset

@@ -56,5 +56,10 @@
             "goldLabels" : "2017/gold/",
             "predictions" : "2017/pred/test-subtaskA.2017.pred"
         }
+    },
+    "POS_TAG":
+    {
+        "classpath" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/downloads/stanford-postagger-2016-10-31/",
+        "modelpath" : "models/english-bidirectional-distsim.tagger"
     }
 }
