@@ -25,7 +25,7 @@ def getFeatures(model, q_w, c_w, config):
     # q_w   : words of question text
     # c_w   : words of comment text
     feature_vector = []
-    
+
     ## Semantic features (x52)
 
     # Question to Comment similarity (x1)
@@ -35,22 +35,24 @@ def getFeatures(model, q_w, c_w, config):
             q_cv = model[w]
         else:
             q_cv += model[w]
-    q_cv = [ float(x)/len(q_w) for x in q_cv ]
     c_cv = None
     for w in c_w:
         if c_cv is None:
             c_cv = model[w]
         else:
             c_cv += model[w]
-    c_cv = [ float(x)/len(c_w) for x in c_cv ]
-    feature_vector.append(cosine(q_cv, c_cv))
+    if q_cv is not None and c_cv is not None:
+        q_cv = [ float(x)/len(q_w) for x in q_cv ]
+        c_cv = [ float(x)/len(c_w) for x in c_cv ]
+        feature_vector.append(cosine(q_cv, c_cv))
+    else:
+        feature_vector.append(0)
 
     # Maximized similarity (x5)
-    maxsims = []
+    maxsims = [ 0.0 ] * 5
     for w in c_w:
         hq.heappush(maxsims, cosine(q_cv, model[w]))
-        if len(maxsims) > 5:
-            hq.heappop(maxsims)
+        hq.heappop(maxsims)
     maxsims = sorted(maxsims, reverse=True)
 
     cntsim = 0
@@ -77,7 +79,7 @@ def getFeatures(model, q_w, c_w, config):
     tagger = StanfordPOSTagger(modelpath, classpath)
     tag_qw = tagger.tag(q_w)
     tag_cw = tagger.tag(c_w)
-    
+
     dict_t = { 'q' : {}, 'c' : {} }
     for tag in POS_TAGS:
         dict_t['q'][tag] = [ None, 0 ]
@@ -89,10 +91,10 @@ def getFeatures(model, q_w, c_w, config):
         dict_t['c'][w_tag[1]][1] += 1
         dict_t['c'][w_tag[1]][0] = auxAdd(dict_t['c'][w_tag[1]][0], model[w_tag[0]])
     for tag in POS_TAGS:
-        if dict_t['q'][tag] == [ None, 0 ]:
+        if dict_t['q'][tag][0] == None:
             feature_vector.append(0)
             continue
-        if dict_t['c'][tag] == [ None, 0 ]:
+        if dict_t['c'][tag][0] == None:
             feature_vector.append(0)
             continue
         avg_tq = [ float(x) / dict_t['q'][tag][1] for x in dict_t['q'][tag][0] ]
@@ -119,5 +121,5 @@ def getFeatures(model, q_w, c_w, config):
     # Question and comment author same ? (SKIPPED)
     # Answer rank in the thread (SKIPPED)
     # Question category (SKIPPED)
-    
+
     return feature_vector
