@@ -19,9 +19,9 @@ def preprocessor(sentence):
     word_list = [ w for w in sentence if w not in cached_stopwords ]
     return word_list
 
-""" implements consine similarity metric for two vectors """
+""" implements cosine similarity metric for two vectors """
 """ vectors are normalized before computing dot product """
-def consine(vec_a, vec_b):
+def cosine(vec_a, vec_b):
     vec_a /= norm(vec_a)
     vec_b /= norm(vec_b)
     sim = dot(vec_a, vec_b)

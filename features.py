@@ -2,7 +2,7 @@
 import heapq as hq
 
 # pre-processing utilities
-from myutils import consine
+from myutils import cosine
 
 # Standford POS Tagger
 # CLASSPATH env-var contains path to JAR

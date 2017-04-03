@@ -10,7 +10,7 @@ from numpy.linalg import norm
 from gensim.models import Doc2Vec
 
 # pre-processing utilities
-from myutils import preprocessor, consine
+from myutils import preprocessor, cosine
 
 # MultiLayerPerceptron
 from sklearn.neural_network import MLPClassifier
@@ -93,7 +93,7 @@ def trainNN(doc2vec, data):
 def predictAux(q_v, c_v, ac_v, f_v, mlp):
     if mlp is None:
         """ cosine similarity """
-        score = ( 1.0 + consine(q_v, c_v) ) / 2.0
+        score = ( 1.0 + cosine(q_v, c_v) ) / 2.0
         if score >= 0.5:
             return (score, 'true')
         return (score, 'false')
