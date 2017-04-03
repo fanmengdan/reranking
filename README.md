@@ -23,3 +23,7 @@
 | out/        | results folder (output)                                 |
 | papers/     | base research papers                                    |
 | test/       | test data and results                                   |
+
+# TODO
+* Cite SemanticZ for Semantic and Metadata features
+* Stanford POS Tagger citation
