@@ -59,7 +59,8 @@
     },
     "POS_TAG":
     {
-        "classpath" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/downloads/stanford-postagger-2016-10-31/",
-        "modelpath" : "models/english-bidirectional-distsim.tagger"
+        "path" : "/home/sandeshc/Desktop/WS/mtp/ws/rerank/downloads/stanford-postagger-2016-10-31/",
+        "jar" : "stanford-postagger.jar",
+        "model" : "models/english-bidirectional-distsim.tagger"
     }
 }

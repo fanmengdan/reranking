@@ -71,8 +71,9 @@ def getFeatures(model, q_w, c_w, config):
     feature_vector.append(sum(alisims)/len(alisims))
 
     # Part of speech (POS) based word vector similarities (x45)
-    classpath = config['POS_TAG']['classpath']
-    modelpath = classpath + config['POS_TAG']['modelpath']
+    path = config['POS_TAG']['path']
+    classpath = path + config['POS_TAG']['jar']
+    modelpath = path + config['POS_TAG']['model']
     tagger = StanfordPOSTagger(modelpath, classpath)
     tag_qw = tagger.tag(q_w)
     tag_cw = tagger.tag(c_w)
