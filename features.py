@@ -78,10 +78,10 @@ def getFeatures(model, q_w, c_w, config):
     tag_qw = tagger.tag(q_w)
     tag_cw = tagger.tag(c_w)
     
-    dict_t = {}
+    dict_t = { 'q' : {}, 'c' : {} }
     for tag in POS_TAGS:
-        dict_t['q'][tag] = ( None, 0 )
-        dict_t['c'][tag] = ( None, 0 )
+        dict_t['q'][tag] = [ None, 0 ]
+        dict_t['c'][tag] = [ None, 0 ]
     for w_tag in tag_qw:
         dict_t['q'][w_tag[1]][1] += 1
         dict_t['q'][w_tag[1]][0] = auxAdd(dict_t['q'][w_tag[1]][0], model[w_tag[0]])
@@ -89,10 +89,10 @@ def getFeatures(model, q_w, c_w, config):
         dict_t['c'][w_tag[1]][1] += 1
         dict_t['c'][w_tag[1]][0] = auxAdd(dict_t['c'][w_tag[1]][0], model[w_tag[0]])
     for tag in POS_TAGS:
-        if dict_t['q'][tag] == ( None, 0 ):
+        if dict_t['q'][tag] == [ None, 0 ]:
             feature_vector.append(0)
             continue
-        if dict_t['c'][tag] == ( None, 0 ):
+        if dict_t['c'][tag] == [ None, 0 ]:
             feature_vector.append(0)
             continue
         avg_tq = [ float(x) / dict_t['q'][tag][1] for x in dict_t['q'][tag][0] ]
