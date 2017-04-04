@@ -47,3 +47,7 @@ dm      YES         sgd    relu    (500 250 50)
 map     avgrec      mrr     p      r     f1     acc       time
 0.6286  0.7586   72.08 0.5227  0.5546   0.5382    0.6131 538.98 @Testing
 0.7391  0.8801   81.19 0.6639  0.7139   0.6880    0.7622 538.98 @Validation
+
+Cleaning text data
+==================
+https://gist.github.com/a-paxton/40fd496bba6edcb8cb87

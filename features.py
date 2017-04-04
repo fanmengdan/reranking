@@ -121,7 +121,7 @@ def getFeatures(model, q_w, c_w, rank, config):
     feature_vector.append(float(len(c_w))/len(q_w))
 
     # Answer rank in the thread (x1)
-    feature_vector.append(rank)
+    feature_vector.append(rank + 1)
 
     # Question and comment author same ? (SKIPPED)
     # Question category (SKIPPED)

@@ -1,3 +1,6 @@
+# regex
+import re
+
 # gensim
 from gensim import utils
 
@@ -14,6 +17,8 @@ cached_stopwords = set( stopwords.words("english") )
 def preprocessor(sentence):
     # convert 'sentence' to unicode
     sentence = utils.to_unicode(sentence)
+    # remove numerics, special characters (except '?')
+    sentence = re.sub('[!"#%\'()*+,-./:;<=>@\[\]^_{|}~1234567890`\\\]', ' ', sentence)
     sentence = sentence.lower().split()
     # generating 'word_list' excluding all 'stopwords'
     word_list = [ w for w in sentence if w not in cached_stopwords ]
