@@ -20,10 +20,12 @@ def auxAdd(x, y):
     return x
 
 """ Get semantic and metadata features """
-def getFeatures(model, q_w, c_w, config):
+def getFeatures(model, q_w, c_w, rank, config):
     # model : doc2vec model trained on corpus
     # q_w   : words of question text
     # c_w   : words of comment text
+    # rank  : rank of comment in forum
+    # config: config dictionary
     feature_vector = []
 
     ## Semantic features (x52)
@@ -91,10 +93,10 @@ def getFeatures(model, q_w, c_w, config):
         dict_t['c'][w_tag[1]][1] += 1
         dict_t['c'][w_tag[1]][0] = auxAdd(dict_t['c'][w_tag[1]][0], model[w_tag[0]])
     for tag in POS_TAGS:
-        if dict_t['q'][tag][0] == None:
+        if dict_t['q'][tag][1] == 0:
             feature_vector.append(0)
             continue
-        if dict_t['c'][tag][0] == None:
+        if dict_t['c'][tag][1] == 0:
             feature_vector.append(0)
             continue
         avg_tq = [ float(x) / dict_t['q'][tag][1] for x in dict_t['q'][tag][0] ]
@@ -104,7 +106,7 @@ def getFeatures(model, q_w, c_w, config):
     # Word clusters (WC) similarity (SKIPPED)
     # LDA topic similarity (SKIPPED)
 
-    ## Metadata features (x4)
+    ## Metadata features (x5)
 
     # Comment contains a question mark (x1)
     feature_vector.append(True in [ '?' in w for w in c_w ])
@@ -116,10 +118,12 @@ def getFeatures(model, q_w, c_w, config):
     feature_vector.append(len(q_w))
 
     # Question to comment length (x1)
-    feature_vector.append(float(len(q_w))/len(c_w))
+    feature_vector.append(float(len(c_w))/len(q_w))
+
+    # Answer rank in the thread (x1)
+    feature_vector.append(rank)
 
     # Question and comment author same ? (SKIPPED)
-    # Answer rank in the thread (SKIPPED)
     # Question category (SKIPPED)
 
     return feature_vector

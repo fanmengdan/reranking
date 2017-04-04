@@ -80,11 +80,11 @@ def trainNN(doc2vec, data):
         q_v = doc2vec.infer_vector(q_w)
         q_v /= norm(q_v)
         ac_v = getAverageCV(doc2vec, cl)
-        for c in cl:
+        for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             c_v /= norm(c_v)
-            f_v = getFeatures(doc2vec, q_w, c_w, config)
+            f_v = getFeatures(doc2vec, q_w, c_w, j, config)
             X.append(np.append( np.append(q_v, c_v), np.append(ac_v, f_v) ))
             Y.append(transformLabel(c[2]))
     mlp.fit(X, Y)
@@ -117,7 +117,7 @@ def predict(doc2vec, data, output, mlp = None):
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
-            f_v = getFeatures(doc2vec, q_w, c_w, config)
+            f_v = getFeatures(doc2vec, q_w, c_w, j, config)
             score, pred = predictAux(q_v, c_v, ac_v, f_v, mlp)
             scores.append( [ score, j, 0, pred ] )
         scores = sorted(scores, key=lambda score: score[0], reverse=True)
