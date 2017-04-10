@@ -22,6 +22,12 @@ def auxAdd(x, y):
 
 tagger_cache = {}
 
+def TC_H(wl):
+    # hash function
+    # wl : list of words
+    # return : string
+    return '#'.join(wl)
+
 """ Get semantic and metadata features """
 def getFeatures(model, q_w, c_w, rank, config):
     # model : doc2vec model trained on corpus
@@ -85,11 +91,12 @@ def getFeatures(model, q_w, c_w, rank, config):
     config_java(options='-Xms4096M -Xmx4096M', verbose=False)
 
     global tagger_cache
-    if tagger_cache.get(q_w) is None:
+    tc_h = TC_H(q_w)
+    if tagger_cache.get(tc_h) is None:
         tag_qw = tagger.tag(q_w)
-        tagger_cache[q_w] = tag_qw
+        tagger_cache[tc_h] = tag_qw
     else:
-        tag_qw = tagger_cache[q_w]
+        tag_qw = tagger_cache[tc_h]
     tag_cw = tagger.tag(c_w)
 
     dict_t = { 'q' : {}, 'c' : {} }
