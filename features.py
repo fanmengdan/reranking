@@ -7,6 +7,7 @@ from myutils import cosine
 # Standford POS Tagger
 # CLASSPATH env-var contains path to JAR
 from nltk.tag import StanfordPOSTagger
+from nltk.internals import config_java
 
 POS_TAGS = [ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", \
     "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", \
@@ -18,6 +19,8 @@ def auxAdd(x, y):
         return y
     x += y
     return x
+
+tagger_cache = {}
 
 """ Get semantic and metadata features """
 def getFeatures(model, q_w, c_w, rank, config):
@@ -79,7 +82,14 @@ def getFeatures(model, q_w, c_w, rank, config):
     classpath = path + config['POS_TAG']['jar']
     modelpath = path + config['POS_TAG']['model']
     tagger = StanfordPOSTagger(modelpath, classpath)
-    tag_qw = tagger.tag(q_w)
+    config_java(options='-Xms4096M -Xmx4096M', verbose=False)
+
+    global tagger_cache
+    if tagger_cache.get(q_w) is None:
+        tag_qw = tagger.tag(q_w)
+        tagger_cache[q_w] = tag_qw
+    else:
+        tag_qw = tagger_cache[q_w]
     tag_cw = tagger.tag(c_w)
 
     dict_t = { 'q' : {}, 'c' : {} }
