@@ -13,7 +13,8 @@
 | myutils.py  | utility library                                         |
 | pre.py      | preprocess library for 'subtask-A' data                 |
 | model.py    | model implementations for 'subtask-A'                   |
-| features.py | semantic and metadata featues implem.                   |
+| features.py | semantic and metadata features implem.                  |
+| postag.py   | helper py script for POS tagging and caching results    |
 |             |                                                         |
 | config.json | json config file (system specific parameters)           |
 |             |                                                         |
@@ -27,3 +28,5 @@
 # TODO
 * Cite SemanticZ for Semantic and Metadata features
 * Stanford POS Tagger citation
+* Cite SemEval for Datasets (test, train sources might be different)
+* Update the thesis Appendix A and (PV-DBOW vs PV-DM)'s PV-DBOW results ?
