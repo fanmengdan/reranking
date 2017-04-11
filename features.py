@@ -1,13 +1,10 @@
+import json
+
 # min-heap library
 import heapq as hq
 
 # pre-processing utilities
-from myutils import cosine
-
-# Standford POS Tagger
-# CLASSPATH env-var contains path to JAR
-from nltk.tag import StanfordPOSTagger
-from nltk.internals import config_java
+from myutils import cosine, stringToTags
 
 POS_TAGS = [ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", \
     "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", \
@@ -20,20 +17,14 @@ def auxAdd(x, y):
     x += y
     return x
 
-tagger_cache = {}
-
-def TC_H(wl):
-    # hash function
-    # wl : list of words
-    # return : string
-    return '#'.join(wl)
+tagger_cache = json.load(open('tagger_cache.json', 'r'))
 
 """ Get semantic and metadata features """
-def getFeatures(model, q_w, c_w, rank, config):
+def getFeatures(model, q_w, c_w, meta, config):
     # model : doc2vec model trained on corpus
     # q_w   : words of question text
     # c_w   : words of comment text
-    # rank  : rank of comment in forum
+    # meta  : contains rank, Qid, Cid
     # config: config dictionary
     feature_vector = []
 
@@ -84,20 +75,9 @@ def getFeatures(model, q_w, c_w, rank, config):
     feature_vector.append(sum(alisims)/len(alisims))
 
     # Part of speech (POS) based word vector similarities (x45)
-    path = config['POS_TAG']['path']
-    classpath = path + config['POS_TAG']['jar']
-    modelpath = path + config['POS_TAG']['model']
-    tagger = StanfordPOSTagger(modelpath, classpath)
-    config_java(options='-Xms4096M -Xmx4096M', verbose=False)
-
     global tagger_cache
-    tc_h = TC_H(q_w)
-    if tagger_cache.get(tc_h) is None:
-        tag_qw = tagger.tag(q_w)
-        tagger_cache[tc_h] = tag_qw
-    else:
-        tag_qw = tagger_cache[tc_h]
-    tag_cw = tagger.tag(c_w)
+    tag_qw = stringToTags( tagger_cache[meta['qid']] )
+    tag_cw = stringToTags( tagger_cache[meta['cid']] )
 
     dict_t = { 'q' : {}, 'c' : {} }
     for tag in POS_TAGS:
@@ -138,7 +118,7 @@ def getFeatures(model, q_w, c_w, rank, config):
     feature_vector.append(float(len(c_w))/len(q_w))
 
     # Answer rank in the thread (x1)
-    feature_vector.append(rank + 1)
+    feature_vector.append(meta['rank'] + 1)
 
     # Question and comment author same ? (SKIPPED)
     # Question category (SKIPPED)

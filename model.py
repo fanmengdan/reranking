@@ -1,6 +1,5 @@
 import sys
 import json
-from xml.dom import minidom
 
 # numpy
 import numpy as np
@@ -10,7 +9,7 @@ from numpy.linalg import norm
 from gensim.models import Doc2Vec
 
 # pre-processing utilities
-from myutils import preprocessor, cosine
+from myutils import preprocessor, cosine, constructData
 
 # MultiLayerPerceptron
 from sklearn.neural_network import MLPClassifier
@@ -18,7 +17,6 @@ from sklearn.neural_network import MLPClassifier
 # for semantic and metadata features
 from features import getFeatures
 
-DB = '<< DEBUG >>'
 config = json.load(open('config.json', 'r'))
 
 def loadDoc2Vec(mode):
@@ -84,7 +82,8 @@ def trainNN(doc2vec, data):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             c_v /= norm(c_v)
-            f_v = getFeatures(doc2vec, q_w, c_w, j, config)
+            f_v = getFeatures(doc2vec, q_w, c_w, \
+                { 'qid' : q[0], 'cid' : c[0], 'rank' : j }, config)
             X.append(np.append( np.append(q_v, c_v), np.append(ac_v, f_v) ))
             Y.append(transformLabel(c[2]))
     mlp.fit(X, Y)
@@ -117,7 +116,8 @@ def predict(doc2vec, data, output, mlp = None):
         for j, c in enumerate(cl):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
-            f_v = getFeatures(doc2vec, q_w, c_w, j, config)
+            f_v = getFeatures(doc2vec, q_w, c_w, \
+                { 'qid' : q[0], 'cid' : c[0], 'rank' : j }, config)
             score, pred = predictAux(q_v, c_v, ac_v, f_v, mlp)
             scores.append( [ score, j, 0, pred ] )
         scores = sorted(scores, key=lambda score: score[0], reverse=True)
@@ -128,44 +128,6 @@ def predict(doc2vec, data, output, mlp = None):
             out.write('\t'.join([q[0], cl[score[1]][0], str(score[2]), str(score[0]), score[3]]))
             out.write('\n')
     out.close()
-
-def constructData(dataPath, fileList):
-    """ constructs question and related comments data """
-    # returns data = zip(questions, commentsL)
-    # questions : list of (questionId, question) pairs
-    #   ( [(qid1, q1) (qid2, q2) ... (qidN, qN)] )
-    # commentsL : list of list of (commentId, comment, label) pairs
-    #   ( [ [(cid1, c1, l1) (cid2, c2, l2) ... (cidK1, cK1, lK1)] ... [(cid1, c1, l1) (cid2, c2, l2) ... (cidKN, cKN, lKN)] ] )
-    print DB, 'DATA IMPORT STARTED'
-    sys.stdout.flush()
-    labels = []
-    questions = []
-    commentsL = []
-    for xmlFile in fileList:
-        print DB, dataPath + xmlFile
-        sys.stdout.flush()
-        doc = minidom.parse(dataPath + xmlFile)
-        threads = doc.getElementsByTagName("Thread")
-        for tid, thread in enumerate(threads):
-            # constructing the question string
-            relQ = thread.getElementsByTagName('RelQuestion')[0]
-            Qid = relQ.getAttribute('RELQ_ID')
-            bodyQ = relQ.getElementsByTagName('RelQBody')[0]
-            body = bodyQ._get_firstChild().data if bodyQ._get_firstChild() is not None else ''
-            subjQ = relQ.getElementsByTagName('RelQSubject')[0]
-            subj = subjQ._get_firstChild().data if subjQ._get_firstChild() is not None else ''
-            questions.append( (Qid, subj + ' ' + body) )
-            # constructing the list of comments
-            comments = []
-            for relC in thread.getElementsByTagName('RelComment'):
-                Cid = relC.getAttribute('RELC_ID')
-                label = relC.getAttribute('RELC_RELEVANCE2RELQ')
-                comment = relC.getElementsByTagName('RelCText')[0]._get_firstChild().data
-                comments.append( (Cid, comment, label) )
-            commentsL.append(comments)
-    print DB, 'DATA IMPORT FINISHED'
-    sys.stdout.flush()
-    return zip(questions, commentsL)
 
 if __name__ == '__main__':
     populateParam()
