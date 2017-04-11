@@ -52,9 +52,10 @@
         },
         "2017" :
         {
-            "files": [ "" ],
-            "goldLabels" : "2017/gold/",
-            "predictions" : "2017/pred/test-subtaskA.2017.pred"
+            "files": [ "2017/SemEval2017-task3-English-test-subtaskA-input.xml" ],
+            "goldLabels" : "2017/gold/SemEval2017-task3-English-test-subtaskA.xml.subtaskA.relevancy",
+            "predictions" : "2017/pred/test-subtaskA.2017.pred",
+            "randBaseline" : "2017/pred/SemEval2017-task3-English-test-subtaskA.xml.subtaskA.pred"
         }
     },
     "POS_TAG":
