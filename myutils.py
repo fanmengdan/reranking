@@ -35,8 +35,10 @@ def preprocessor(sentence):
 """ implements cosine similarity metric for two vectors """
 """ vectors are normalized before computing dot product """
 def cosine(vec_a, vec_b):
-    vec_a /= norm(vec_a)
-    vec_b /= norm(vec_b)
+    if norm(vec_a):
+        vec_a /= norm(vec_a)
+    if norm(vec_b):
+        vec_b /= norm(vec_b)
     sim = dot(vec_a, vec_b)
     return sim
 
