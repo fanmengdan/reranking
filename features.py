@@ -11,7 +11,7 @@ from myutils import cosine, stringToTags
 #     "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", \
 #     "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "#", "$", "''", "(", ")", ",", ".", ":", "``" ]
 
-POS_TAGS = ['RB', 'NN', 'H', 'FW', 'VBG', '.', 'VBZ', 'NNS', 'PRP', 'VB', 'VBN', 'VBP', \
+POS_TAGS = ['RB', 'NN', 'UH', 'FW', 'VBG', '.', 'VBZ', 'NNS', 'PRP', 'VB', 'VBN', 'VBP', \
     'IN', 'JJS', 'JJ', 'CD', 'VBD', 'CC', 'RBR', 'MD', 'DT', 'NNP', 'JJR', 'WP', 'SYM', \
     'TO', 'LS', 'RP', 'WP$', 'WRB', 'WDT', 'RBS', 'PRP$', 'NNPS', 'PDT', 'POS']
 
@@ -32,7 +32,7 @@ def getFeatures(model, q_w, c_w, meta, config):
     # config: config dictionary
     feature_vector = []
 
-    ## Semantic features (x42) ### (x52)
+    ## Semantic features (x43) ### (x52)
 
     # Question to Comment similarity (x1)
     q_cv = None
@@ -78,7 +78,7 @@ def getFeatures(model, q_w, c_w, meta, config):
         alisims.append(bestsim)
     feature_vector.append(sum(alisims)/len(alisims))
 
-    # Part of speech (POS) based word vector similarities (x35) ### (x45)
+    # Part of speech (POS) based word vector similarities (x36) ### (x45)
     global tagger_cache
     tag_qw = stringToTags( tagger_cache[meta['qid']] )
     tag_cw = stringToTags( tagger_cache[meta['cid']] )
