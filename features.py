@@ -80,8 +80,8 @@ def getFeatures(model, q_w, c_w, meta, config):
 
     # Part of speech (POS) based word vector similarities (x36) ### (x45)
     global tagger_cache
-    tag_qw = stringToTags( tagger_cache[meta['qid']] )
-    tag_cw = stringToTags( tagger_cache[meta['cid']] )
+    tag_qw = stringToTags( tagger_cache[meta['qid']] ) if len(q_w) else []
+    tag_cw = stringToTags( tagger_cache[meta['cid']] ) if len(c_w) else []
 
     dict_t = { 'q' : {}, 'c' : {} }
     for tag in POS_TAGS:
@@ -119,7 +119,7 @@ def getFeatures(model, q_w, c_w, meta, config):
     feature_vector.append(len(q_w))
 
     # Question to comment length (x1)
-    feature_vector.append(float(len(c_w))/len(q_w))
+    feature_vector.append(float(len(c_w))/len(q_w) if len(q_w) else 0)
 
     # Answer rank in the thread (x1)
     feature_vector.append(meta['rank'] + 1)
