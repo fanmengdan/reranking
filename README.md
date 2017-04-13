@@ -6,24 +6,25 @@
 
 ----
 
-| File        | Description                                             |
-|:----------- |:------------------------------------------------------- |
-| train.py    | train doc2vec representations                           |
-| test.py     | test  doc2vec representations                           |
-| myutils.py  | utility library                                         |
-| pre.py      | preprocess library for 'subtask-A' data                 |
-| model.py    | model implementations for 'subtask-A'                   |
-| features.py | semantic and metadata features implem.                  |
-| postag.py   | helper py script for POS tagging and caching results    |
-|             |                                                         |
-| config.json | json config file (system specific parameters)           |
-|             |                                                         |
-| doc2vec.sh  | shell script for batch runs of doc2vec model training   |
-| model.sh    | shell script for batch runs of neuralnet model training |
-|             |                                                         |
-| out/        | results folder (output)                                 |
-| papers/     | base research papers                                    |
-| test/       | test data and results                                   |
+| File              | Description                                             |
+|:----------------- |:------------------------------------------------------- |
+| train.py          | train doc2vec representations                           |
+| test.py           | test  doc2vec representations                           |
+| myutils.py        | utility library                                         |
+| pre.py            | preprocess library for 'subtask-A' data                 |
+| model.py          | model implementations for 'subtask-A'                   |
+| features.py       | semantic and metadata features implem.                  |
+| postag.py         | helper py script for POS tagging and caching results    |
+|                   |                                                         |
+| config.json       | json config file (system specific parameters)           |
+| tagger_cache.json | json containing pos tags for train-dev-test data        |
+|                   |                                                         |
+| doc2vec.sh        | shell script for batch runs of doc2vec model training   |
+| model.sh          | shell script for batch runs of neuralnet model training |
+|                   |                                                         |
+| out/              | results folder (output)                                 |
+| papers/           | base research papers                                    |
+| test/             | test data and results                                   |
 
 # TODO
 * Cite SemanticZ for Semantic and Metadata features

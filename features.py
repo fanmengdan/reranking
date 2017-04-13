@@ -6,10 +6,14 @@ import heapq as hq
 # pre-processing utilities
 from myutils import cosine, stringToTags
 
-POS_TAGS = [ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", \
-    "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", \
-    "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", \
-    "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "#", "$", "''", "(", ")", ",", ".", ":", "``" ]
+# POS_TAGS = [ "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", \
+#     "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", \
+#     "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", \
+#     "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "#", "$", "''", "(", ")", ",", ".", ":", "``" ]
+
+POS_TAGS = ['RB', 'NN', 'H', 'FW', 'VBG', '.', 'VBZ', 'NNS', 'PRP', 'VB', 'VBN', 'VBP', \
+    'IN', 'JJS', 'JJ', 'CD', 'VBD', 'CC', 'RBR', 'MD', 'DT', 'NNP', 'JJR', 'WP', 'SYM', \
+    'TO', 'LS', 'RP', 'WP$', 'WRB', 'WDT', 'RBS', 'PRP$', 'NNPS', 'PDT', 'POS']
 
 def auxAdd(x, y):
     if x is None:
@@ -28,7 +32,7 @@ def getFeatures(model, q_w, c_w, meta, config):
     # config: config dictionary
     feature_vector = []
 
-    ## Semantic features (x52)
+    ## Semantic features (x42) ### (x52)
 
     # Question to Comment similarity (x1)
     q_cv = None
@@ -74,7 +78,7 @@ def getFeatures(model, q_w, c_w, meta, config):
         alisims.append(bestsim)
     feature_vector.append(sum(alisims)/len(alisims))
 
-    # Part of speech (POS) based word vector similarities (x45)
+    # Part of speech (POS) based word vector similarities (x35) ### (x45)
     global tagger_cache
     tag_qw = stringToTags( tagger_cache[meta['qid']] )
     tag_cw = stringToTags( tagger_cache[meta['cid']] )
