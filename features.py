@@ -23,6 +23,30 @@ def auxAdd(x, y):
 
 tagger_cache = json.load(open('tagger_cache.json', 'r'))
 
+""" filter out and track non-vocabulary words """
+def vfilter(vocab, meta, x_w, tag_xw):
+    # vocab : corpus vocabulary
+    # meta  : contains rank, Qid, Cid
+    # x_w   : question/comment word list
+    # tag_xw: postags corresp. to x_w
+    x_wp = []
+    tag_xwp = []
+
+    n = len(x_w)
+    assert n == len(tag_xw)
+    for i in range(n):
+        w = x_w[i]
+        t = tag_xw[i]
+        if w in vocab:
+            x_wp.append(w)
+            tag_xwp.append(t)
+        else:
+            print '<< features.py >>',
+            print 'non-vocabulary word', w,
+            print 'qid', meta['qid'],
+            print 'cid', meta['cid'],
+    return x_wp, tag_xwp
+
 """ Get semantic and metadata features """
 def getFeatures(model, q_w, c_w, meta, config):
     # model : doc2vec model trained on corpus
@@ -31,6 +55,13 @@ def getFeatures(model, q_w, c_w, meta, config):
     # meta  : contains rank, Qid, Cid
     # config: config dictionary
     feature_vector = []
+
+    global tagger_cache
+    tag_qw = stringToTags( tagger_cache[meta['qid']] ) if len(q_w) else []
+    tag_cw = stringToTags( tagger_cache[meta['cid']] ) if len(c_w) else []
+
+    q_w, tag_qw = vfilter(model.vocab, meta, q_w, tag_qw)
+    c_w, tag_cw = vfilter(model.vocab, meta, c_w, tag_cw)
 
     ## Semantic features (x43) ### (x52)
 
@@ -79,10 +110,6 @@ def getFeatures(model, q_w, c_w, meta, config):
     feature_vector.append(sum(alisims)/len(alisims))
 
     # Part of speech (POS) based word vector similarities (x36) ### (x45)
-    global tagger_cache
-    tag_qw = stringToTags( tagger_cache[meta['qid']] ) if len(q_w) else []
-    tag_cw = stringToTags( tagger_cache[meta['cid']] ) if len(c_w) else []
-
     dict_t = { 'q' : {}, 'c' : {} }
     for tag in POS_TAGS:
         dict_t['q'][tag] = [ None, 0 ]
