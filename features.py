@@ -32,19 +32,28 @@ def vfilter(vocab, meta, x_w, tag_xw):
     x_wp = []
     tag_xwp = []
 
-    n = len(x_w)
-    assert n == len(tag_xw)
-    for i in range(n):
+    i = 0
+    while i < len(x_w):
+        if i < len(tag_xw) and x_w[i] == tag_xw[i][0]:
+            i += 1
+            continue
+        print '<< features.py >>', '|',
+        print 'non-tagged word', ( x_w[i], ), '|',
+        print 'qid', meta['qid'], '|',
+        print 'cid', meta['cid'], '|'
+        del x_w[i]
+
+    for i in range( len(x_w) ):
         w = x_w[i]
         t = tag_xw[i]
         if w in vocab:
             x_wp.append(w)
             tag_xwp.append(t)
         else:
-            print '<< features.py >>',
-            print 'non-vocabulary word', w,
-            print 'qid', meta['qid'],
-            print 'cid', meta['cid'],
+            print '<< features.py >>', '|',
+            print 'non-vocabulary word', ( w, ), '|',
+            print 'qid', meta['qid'], '|',
+            print 'cid', meta['cid'], '|'
     return x_wp, tag_xwp
 
 """ Get semantic and metadata features """
