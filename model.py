@@ -9,7 +9,7 @@ from numpy.linalg import norm
 from gensim.models import Doc2Vec
 
 # pre-processing utilities
-from myutils import preprocessor, cosine, constructData
+from myutils import preprocessor, cosine, constructData, debug
 
 # MultiLayerPerceptron
 from sklearn.neural_network import MLPClassifier
@@ -131,31 +131,26 @@ def predict(doc2vec, data, output, mlp = None):
 
 if __name__ == '__main__':
     populateParam()
-    print '== IMPORT DOC2VEC MODEL =='
-    sys.stdout.flush()
+    debug('== IMPORT DOC2VEC MODEL ==')
     doc2vec = loadDoc2Vec('full')
     """ TRAIN MODE """
-    print '======= TRAIN MODE ======='
-    sys.stdout.flush()
+    debug('======= TRAIN MODE =======')
     dataPath = config['TRAIN_NN']['path']
     fileList = config['TRAIN_NN']['files']
     data = constructData(dataPath, fileList)
     mlp = trainNN(doc2vec, data)
     """ VALIDATION MODE """
-    print '======= VALIDATION ======='
-    sys.stdout.flush()
+    debug('======= VALIDATION =======')
     dataPath = config['VALIDATION']['path']
     fileList = config['VALIDATION']['files']
     data = constructData(dataPath, fileList)
     output = dataPath + config['VALIDATION']['predictions']
     predict(doc2vec, data, output, mlp)
     """ TEST MODE """
-    print '======= TEST MODE ======='
-    sys.stdout.flush()
+    debug('======= TEST MODE =======')
     dataPath = config['TEST_NN']['path']
     fileList = config['TEST_NN']['2016']['files']
     data = constructData(dataPath, fileList)
     output = dataPath + config['TEST_NN']['2016']['predictions']
     predict(doc2vec, data, output, mlp)
-    print '======== FINISHED ========'
-    sys.stdout.flush()
+    debug('======== FINISHED ========')

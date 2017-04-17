@@ -3,7 +3,7 @@
 import json
 
 # pre-processing utilities
-from myutils import preprocessor, tagsToString, constructData
+from myutils import preprocessor, tagsToString, constructData, debug
 
 # Standford POS Tagger
 # CLASSPATH env-var contains path to JAR
@@ -43,19 +43,19 @@ def POSTag(data):
             c_w = preprocessor(c[1])
             addToCache(c[0], c_w)
 
-print '======= TRAIN DATA ======='
+debug('======= TRAIN DATA =======')
 dataPath = config['TRAIN_NN']['path']
 fileList = config['TRAIN_NN']['files']
 data = constructData(dataPath, fileList)
 POSTag(data)
 
-print '======= TEST DATA \'16 ======='
+debug('======= TEST DATA \'16 =======')
 dataPath = config['TEST_NN']['path']
 fileList = config['TEST_NN']['2016']['files']
 data = constructData(dataPath, fileList)
 POSTag(data)
 
-print '======= TEST DATA \'17 ======='
+debug('======= TEST DATA \'17 =======')
 dataPath = config['TEST_NN']['path']
 fileList = config['TEST_NN']['2017']['files']
 data = constructData(dataPath, fileList)
@@ -63,5 +63,5 @@ POSTag(data)
 
 json.dump(tagger_cache, open('tagger_cache.json', 'w'))
 
-print '====== UNIQUE TAGS ======\n', unique_tags
-print '====== FINISHED ======'
+debug('====== UNIQUE TAGS ======\n' + str(unique_tags))
+debug('====== FINISHED ======')

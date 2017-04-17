@@ -55,6 +55,10 @@ def stringToTags(tagStr):
     return tags
 
 DB = '<< DEBUG >>'
+def debug(message):
+    print DB, message
+    sys.stdout.flush()
+
 def constructData(dataPath, fileList):
     """ constructs question and related comments data """
     # returns data = zip(questions, commentsL)
@@ -62,14 +66,12 @@ def constructData(dataPath, fileList):
     #   ( [(qid1, q1) (qid2, q2) ... (qidN, qN)] )
     # commentsL : list of list of (commentId, comment, label) pairs
     #   ( [ [(cid1, c1, l1) (cid2, c2, l2) ... (cidK1, cK1, lK1)] ... [(cid1, c1, l1) (cid2, c2, l2) ... (cidKN, cKN, lKN)] ] )
-    print DB, 'DATA IMPORT STARTED'
-    sys.stdout.flush()
+    debug('DATA IMPORT STARTED')
     labels = []
     questions = []
     commentsL = []
     for xmlFile in fileList:
-        print DB, dataPath + xmlFile
-        sys.stdout.flush()
+        debug(dataPath + xmlFile)
         doc = minidom.parse(dataPath + xmlFile)
         threads = doc.getElementsByTagName("Thread")
         for tid, thread in enumerate(threads):
@@ -89,6 +91,5 @@ def constructData(dataPath, fileList):
                 comment = relC.getElementsByTagName('RelCText')[0]._get_firstChild().data
                 comments.append( (Cid, comment, label) )
             commentsL.append(comments)
-    print DB, 'DATA IMPORT FINISHED'
-    sys.stdout.flush()
+    debug('DATA IMPORT FINISHED')
     return zip(questions, commentsL)
