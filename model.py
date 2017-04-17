@@ -27,8 +27,10 @@ def loadDoc2Vec(mode):
 
 def transformLabel(label):
     if label == 'Good':
-        return [1, 0]
-    return [0, 1]
+        retVal = [1, 0]
+    else:
+        retVal = [0, 1]
+    return np.array(retVal)
 
 param = {}
 def populateParam():
@@ -73,19 +75,25 @@ def trainNN(doc2vec, data):
         verbose = True )
     X = []
     Y = []
-    for q, cl in data:
-        q_w = preprocessor(q[1])
-        q_v = doc2vec.infer_vector(q_w)
-        q_v /= norm(q_v)
-        ac_v = getAverageCV(doc2vec, cl)
-        for j, c in enumerate(cl):
-            c_w = preprocessor(c[1])
-            c_v = doc2vec.infer_vector(c_w)
-            c_v /= norm(c_v)
-            f_v = getFeatures(doc2vec, q_w, c_w, \
-                { 'qid' : q[0], 'cid' : c[0], 'rank' : j }, config)
-            X.append(np.append( np.append(q_v, c_v), np.append(ac_v, f_v) ))
-            Y.append(transformLabel(c[2]))
+    if data is not None:
+        for q, cl in data:
+            q_w = preprocessor(q[1])
+            q_v = doc2vec.infer_vector(q_w)
+            q_v /= norm(q_v)
+            ac_v = getAverageCV(doc2vec, cl)
+            for j, c in enumerate(cl):
+                c_w = preprocessor(c[1])
+                c_v = doc2vec.infer_vector(c_w)
+                c_v /= norm(c_v)
+                f_v = getFeatures(doc2vec, q_w, c_w, \
+                    { 'qid' : q[0], 'cid' : c[0], 'rank' : j })
+                X.append(np.append( np.append(q_v, c_v), np.append(ac_v, f_v) ))
+                Y.append(transformLabel(c[2]))
+        np.savez('out/trainNN.npz', x=X, y=Y)
+    else:
+        npzfile = np.load('out/trainNN.npz')
+        X = npzfile['x']
+        Y = npzfile['y']
     mlp.fit(X, Y)
     return mlp
 
@@ -117,7 +125,7 @@ def predict(doc2vec, data, output, mlp = None):
             c_w = preprocessor(c[1])
             c_v = doc2vec.infer_vector(c_w)
             f_v = getFeatures(doc2vec, q_w, c_w, \
-                { 'qid' : q[0], 'cid' : c[0], 'rank' : j }, config)
+                { 'qid' : q[0], 'cid' : c[0], 'rank' : j })
             score, pred = predictAux(q_v, c_v, ac_v, f_v, mlp)
             scores.append( [ score, j, 0, pred ] )
         scores = sorted(scores, key=lambda score: score[0], reverse=True)
@@ -137,7 +145,8 @@ if __name__ == '__main__':
     debug('======= TRAIN MODE =======')
     dataPath = config['TRAIN_NN']['path']
     fileList = config['TRAIN_NN']['files']
-    data = constructData(dataPath, fileList)
+    data = constructData(dataPath, fileList) \
+        if not os.path.isfile('out/trainNN.npz') else None
     mlp = trainNN(doc2vec, data)
     """ VALIDATION MODE """
     debug('======= VALIDATION =======')
