@@ -67,10 +67,10 @@ def vfilter(vocab, meta, x_w, tag_xw):
             x_wp.append(w)
             tag_xwp.append(t)
         # else:
-        #     print '<< features.py >>', '|',
-        #     print 'non-vocabulary word', ( w, ), '|',
-        #     print 'qid', meta['qid'], '|',
-        #     print 'cid', meta['cid'], '|'
+            # print '<< features.py >>', '|',
+            # print 'non-vocabulary word', ( w, ), '|',
+            # print 'qid', meta['qid'], '|',
+            # print 'cid', meta['cid'], '|'
     return x_wp, tag_xwp
 
 """ Get semantic and metadata features """
@@ -189,7 +189,7 @@ def getFeatures(model, q_w, c_w, meta):
         if q_w_clus[i][0] > c_w_clus[j][0]:
             j += 1
             continue
-        wc_sim += (q_w_clus[i][1] / q_w_norm) * (c_w_clus[i][1] / c_w_norm)
+        wc_sim += (q_w_clus[i][1] / q_w_norm) * (c_w_clus[j][1] / c_w_norm)
         i += 1
         j += 1
     feature_vector.append(wc_sim)
@@ -229,6 +229,6 @@ def getFeatures(model, q_w, c_w, meta):
     # Question category (x33)
     q_cat = [ 0 ] * len(ALL_CATS)
     q_cat[ALL_CATS[ meta_cache[meta['qid']]['category'] ] - 1] = 1
-    feature_vector.append(q_cat)
+    feature_vector.extend(q_cat)
 
-    return feature_vector
+    return [ float(f) for f in feature_vector ]
