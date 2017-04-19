@@ -32,7 +32,4 @@
 | test/              | test data and results                                        |
 
 # TODO
-* Cite SemanticZ for Semantic and Metadata features
-* Stanford POS Tagger citation
-* Cite SemEval for Datasets (test, train sources might be different)
-* Update the thesis Appendix A and (PV-DBOW vs PV-DM)'s PV-DBOW results ?
+* Add network's image in Thesis

@@ -1,14 +1,14 @@
 \select@language {english}
-\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus from SemEval-2017 Task 3 (Subtask A)\relax }}{8}{table.caption.34}
-\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{10}{table.caption.41}
-\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, a)$ inputs -- Best results.\relax }}{11}{table.caption.44}
-\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, a, avg\_ans_q)$ inputs -- Best results.\relax }}{11}{table.caption.46}
-\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- Best results.\relax }}{12}{table.caption.48}
+\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus from SemEval-2017 Task 3 (Subtask A)\relax }}{11}{table.caption.39}
+\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{13}{table.caption.46}
+\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }}{14}{table.caption.49}
+\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, c, avg\_ans_q)$ inputs -- Best results.\relax }}{14}{table.caption.51}
+\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, c, avg\_ans_q, ft_{(q,c)})$ inputs -- Best results.\relax }}{15}{table.caption.53}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{14}{table.caption.52}
+\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{17}{table.caption.57}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, a) inputs -- All results.\relax }}{15}{table.caption.54}
+\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results.\relax }}{18}{table.caption.59}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, a, avg\_ans_q)$ inputs -- All results.\relax }}{19}{table.caption.59}
+\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }}{22}{table.caption.64}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- All results.\relax }}{22}{table.caption.63}
+\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{25}{table.caption.68}

@@ -241,7 +241,7 @@
 
 
 \normalsize{\coursecds report submitted to \par
-\univname \par
+% \univname \par
 in partial fulfilment for the award of the degree of \par 
 \degreename \par
  in \par 
@@ -432,14 +432,14 @@ Under the supervision of \par
     %\bigskip
     {\centering{\huge{\textit{Abstract}}} \par}
     \bigskip
-    \HRule \\[0.4cm] % Horizontal line
-		Name of the student:	 \textbf{\authornames}	\hfill Roll No: \textbf{\rollnumber} \\
-		Degree for which submitted:  \textbf{\degreename} \\
-		Department:  \textbf{\deptname} \\
-		Thesis title: \textbf{\@title}\\
-		Thesis supervisor:  \textbf{\supname}\\
-		Month and year of thesis submission: \textbf{{{\datesubs}}\\[0.4cm] }
-		\HRule \\[1.5cm] % Horizontal line	
+%    \HRule \\[0.4cm] % Horizontal line
+%		Name of the student:	 \textbf{\authornames}	\hfill Roll No: \textbf{\rollnumber} \\
+%		Degree for which submitted:  \textbf{\degreename} \\
+%		Department:  \textbf{\deptname} \\
+%		Thesis title: \textbf{\@title}\\
+%		Thesis supervisor:  \textbf{\supname}\\
+%		Month and year of thesis submission: \textbf{{{\datesubs}}\\[0.4cm] }
+%		\HRule \\[1.5cm] % Horizontal line	
 	
   \end{flushleft}
 }
@@ -473,7 +473,7 @@ This is to certify that the project report entitled \enquote{\textbf{\ul\ttitle}
 \vfill
 \renewcommand{\arraystretch}{0.75}
 %\begin{tabularx}{\textwidth}{|l|>{\raggedleft\arraybackslash}X|}
-\begin{tabu} to \textwidth{X[l]X[1.15c]}
+\begin{tabu} to \textwidth{X[l]X[2c]}
 &\supname\\
 Date: \datesign&\deptname\\
 Place: \placesh&\univname\\                                                                                                                &\placeln\\

@@ -73,64 +73,75 @@
 \newlabel{section:learning-algo}{{3.1}{6}{Learning Algorithm}{section.28}{}}
 \citation{le2014distributed}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Document Representations}{7}{section.29}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Syntactic--Features}{7}{section.30}}
-\newlabel{section:super-features}{{3.3}{7}{Syntactic--Features}{section.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Feature Set}{7}{section.30}}
+\newlabel{subsection:feature-set}{{3.3}{7}{Feature Set}{section.30}{}}
+\citation{mihaylov2016semanticz}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{8}{subsection.31}}
+\newlabel{subsection:centroidal-comment}{{3.3.1}{8}{Centroidal Comment}{subsection.31}{}}
+\newlabel{equation:1}{{{1}}{8}{Centroidal Comment}{AMS.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{8}{subsection.33}}
+\newlabel{equation:2}{{{2}}{8}{Syntactic and Metadata Features}{AMS.34}{}}
+\newlabel{equation:3}{{{3}}{8}{Syntactic and Metadata Features}{AMS.35}{}}
+\citation{tran2015jaist}
+\citation{toutanova2003feature}
+\citation{rehurek2010software}
 \citation{bogdanova2016we}
-\@writefile{toc}{\contentsline {chapter}{Experiments}{8}{chapter*.31}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data}{8}{section.32}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus  from SemEval-2017 Task 3 (Subtask A)\relax }}{8}{table.caption.34}}
+\citation{nakov-EtAl:2016:SemEval}
+\@writefile{toc}{\contentsline {chapter}{Experiments}{11}{chapter*.36}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data}{11}{section.37}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus  from SemEval-2017 Task 3 (Subtask A)\relax }}{11}{table.caption.39}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{table:data}{{1}{8}{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)\relax }{table.caption.34}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Experimental Setup}{9}{section.35}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Results}{9}{section.39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{9}{subsection.40}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{10}{table.caption.41}}
-\newlabel{table:pv-train-best}{{2}{10}{Training document vector representations PV-DM and PV-DBOW -- Best results\relax }{table.caption.41}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{10}{subsection.42}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, a) inputs}{11}{subsubsection.43}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, a)$ inputs -- Best results.\relax }}{11}{table.caption.44}}
-\newlabel{table:ann-stage-1-best}{{3}{11}{Preliminary experiments using only $(q, a)$ inputs -- Best results.\relax }{table.caption.44}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Average Answer}{11}{subsubsection.45}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, a, avg\_ans_q)$ inputs -- Best results.\relax }}{11}{table.caption.46}}
-\newlabel{table:ann-stage-2-best}{{4}{11}{Experiments using $(q, a, avg\_ans_q)$ inputs -- Best results.\relax }{table.caption.46}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic Features}{12}{subsubsection.47}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- Best results.\relax }}{12}{table.caption.48}}
-\newlabel{table:ann-stage-3-best}{{5}{12}{Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- Best results.\relax }{table.caption.48}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Analysis}{12}{section.49}}
+\newlabel{table:data}{{1}{11}{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)\relax }{table.caption.39}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Experimental Setup}{12}{section.40}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Results}{12}{section.44}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{12}{subsection.45}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{13}{table.caption.46}}
+\newlabel{table:pv-train-best}{{2}{13}{Training document vector representations PV-DM and PV-DBOW -- Best results\relax }{table.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{13}{subsection.47}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{14}{subsubsection.48}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }}{14}{table.caption.49}}
+\newlabel{table:ann-stage-1-best}{{3}{14}{Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }{table.caption.49}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{14}{subsubsection.50}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, c, avg\_ans_q)$ inputs -- Best results.\relax }}{14}{table.caption.51}}
+\newlabel{table:ann-stage-2-best}{{4}{14}{Experiments using $(q, c, avg\_ans_q)$ inputs -- Best results.\relax }{table.caption.51}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{15}{subsubsection.52}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, c, avg\_ans_q, ft_{(q,c)})$ inputs -- Best results.\relax }}{15}{table.caption.53}}
+\newlabel{table:ann-stage-3-best}{{5}{15}{Experiments using $(q, c, avg\_ans_q, ft_{(q,c)})$ inputs -- Best results.\relax }{table.caption.53}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Analysis}{15}{section.54}}
 \@writefile{toc}{\vspace  {2em}}
-\@writefile{toc}{\contentsline {chapter}{Conclusions}{13}{chapter*.50}}
+\@writefile{toc}{\contentsline {chapter}{Conclusions}{16}{chapter*.55}}
 \@writefile{toc}{\vspace  {2em}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{14}{appendix.51}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{17}{appendix.56}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:A}{{A}{14}{Training PV-DM and PV-DBOW}{appendix.51}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{14}{table.caption.52}}
-\newlabel{table:pv-train-full}{{6}{14}{Training document vector representations PV-DM and PV-DBOW -- All results\relax }{table.caption.52}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Preliminary experiments}{15}{appendix.53}}
+\newlabel{appendix:A}{{A}{17}{Training PV-DM and PV-DBOW}{appendix.56}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{17}{table.caption.57}}
+\newlabel{table:pv-train-full}{{6}{17}{Training document vector representations PV-DM and PV-DBOW -- All results\relax }{table.caption.57}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Preliminary experiments}{18}{appendix.58}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:B}{{B}{15}{Preliminary experiments}{appendix.53}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, a) inputs -- All results.\relax }}{15}{table.caption.54}}
-\newlabel{table:ann-stage-1-full-1}{{7}{15}{Preliminary experiments using only (q, a) inputs -- All results.\relax }{table.caption.54}{}}
-\newlabel{table:ann-stage-1-full-2}{{\caption@xref {table:ann-stage-1-full-2}{ on input line 149}}{16}{Preliminary experiments}{table.caption.55}{}}
-\newlabel{table:ann-stage-1-full-3}{{\caption@xref {table:ann-stage-1-full-3}{ on input line 241}}{17}{Preliminary experiments}{table.caption.56}{}}
-\newlabel{table:ann-stage-1-full-4}{{\caption@xref {table:ann-stage-1-full-4}{ on input line 334}}{18}{Preliminary experiments}{table.caption.57}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{19}{appendix.58}}
+\newlabel{appendix:B}{{B}{18}{Preliminary experiments}{appendix.58}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results.\relax }}{18}{table.caption.59}}
+\newlabel{table:ann-stage-1-full-1}{{7}{18}{Preliminary experiments using only (q, c) inputs -- All results.\relax }{table.caption.59}{}}
+\newlabel{table:ann-stage-1-full-2}{{\caption@xref {table:ann-stage-1-full-2}{ on input line 149}}{19}{Preliminary experiments}{table.caption.60}{}}
+\newlabel{table:ann-stage-1-full-3}{{\caption@xref {table:ann-stage-1-full-3}{ on input line 241}}{20}{Preliminary experiments}{table.caption.61}{}}
+\newlabel{table:ann-stage-1-full-4}{{\caption@xref {table:ann-stage-1-full-4}{ on input line 334}}{21}{Preliminary experiments}{table.caption.62}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{22}{appendix.63}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:C}{{C}{19}{Experiments post inclusion of Average Answer}{appendix.58}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, a, avg\_ans_q)$ inputs -- All results.\relax }}{19}{table.caption.59}}
-\newlabel{table:ann-stage-2-full-1}{{8}{19}{Experiments using $(q, a, avg\_ans_q)$ inputs -- All results.\relax }{table.caption.59}{}}
-\newlabel{table:ann-stage-2-full-2}{{\caption@xref {table:ann-stage-2-full-2}{ on input line 154}}{20}{Experiments post inclusion of Average Answer}{table.caption.60}{}}
-\newlabel{table:ann-stage-2-full-3}{{\caption@xref {table:ann-stage-2-full-3}{ on input line 251}}{21}{Experiments post inclusion of Average Answer}{table.caption.61}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}Further experiments with syntactic features}{22}{appendix.62}}
+\newlabel{appendix:C}{{C}{22}{Experiments post inclusion of Average Answer}{appendix.63}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }}{22}{table.caption.64}}
+\newlabel{table:ann-stage-2-full-1}{{8}{22}{Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }{table.caption.64}{}}
+\newlabel{table:ann-stage-2-full-2}{{\caption@xref {table:ann-stage-2-full-2}{ on input line 154}}{23}{Experiments post inclusion of Average Answer}{table.caption.65}{}}
+\newlabel{table:ann-stage-2-full-3}{{\caption@xref {table:ann-stage-2-full-3}{ on input line 251}}{24}{Experiments post inclusion of Average Answer}{table.caption.66}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{25}{appendix.67}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:D}{{D}{22}{Further experiments with syntactic features}{appendix.62}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- All results.\relax }}{22}{table.caption.63}}
-\newlabel{table:ann-stage-3-full-1}{{9}{22}{Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- All results.\relax }{table.caption.63}{}}
-\newlabel{table:ann-stage-3-full-2}{{\caption@xref {table:ann-stage-3-full-2}{ on input line 34}}{22}{Further experiments with syntactic features}{table.caption.64}{}}
-\newlabel{table:ann-stage-3-full-3}{{\caption@xref {table:ann-stage-3-full-3}{ on input line 50}}{22}{Further experiments with syntactic features}{table.caption.65}{}}
+\newlabel{appendix:D}{{D}{25}{Further experiments with Syntactic \& Metadata features}{appendix.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{25}{table.caption.68}}
+\newlabel{table:ann-stage-3-full-1}{{9}{25}{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }{table.caption.68}{}}
+\newlabel{table:ann-stage-3-full-2}{{\caption@xref {table:ann-stage-3-full-2}{ on input line 34}}{25}{Further experiments with Syntactic \& Metadata features}{table.caption.69}{}}
+\newlabel{table:ann-stage-3-full-3}{{\caption@xref {table:ann-stage-3-full-3}{ on input line 50}}{25}{Further experiments with Syntactic \& Metadata features}{table.caption.70}{}}
 \@writefile{toc}{\vspace  {2em}}
 \bibstyle{apalike}
 \bibdata{Bibliography}
@@ -141,22 +152,27 @@
 \bibcite{jeon2005finding}{{5}{2005}{{Jeon et~al.}}{{}}}
 \bibcite{joty2015global}{{6}{2015}{{Joty et~al.}}{{}}}
 \bibcite{lafferty2001conditional}{{7}{2001}{{Lafferty et~al.}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{23}{dummy.66}}
-\newlabel{Bibliography}{{9}{23}{Further experiments with syntactic features}{dummy.66}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{26}{dummy.71}}
+\newlabel{Bibliography}{{9}{26}{Further experiments with Syntactic \& Metadata features}{dummy.71}{}}
 \bibcite{le2014distributed}{{8}{2014}{{Le and Mikolov}}{{}}}
 \bibcite{lin2015icrc}{{9}{2015}{{Lin and Wang}}{{}}}
-\bibcite{moschitti2008kernel}{{10}{2008}{{Moschitti}}{{}}}
-\bibcite{moschitti2007exploiting}{{11}{2007}{{Moschitti et~al.}}{{}}}
-\bibcite{radlinski2005query}{{12}{2005}{{Radlinski and Joachims}}{{}}}
-\bibcite{severyn2012structural}{{13}{2012}{{Severyn and Moschitti}}{{}}}
-\bibcite{severyn2013automatic}{{14}{2013}{{Severyn and Moschitti}}{{}}}
-\bibcite{severyn2015learning}{{15}{2015}{{Severyn and Moschitti}}{{}}}
-\bibcite{shafiq2016joint}{{16}{2016}{{Shafiq~Joty and Nakov}}{{}}}
-\bibcite{shen2007using}{{17}{2007}{{Shen and Lapata}}{{}}}
-\bibcite{surdeanu2008learning}{{18}{2008}{{Surdeanu et~al.}}{{}}}
-\bibcite{tymoshenko2016convolutional}{{19}{2016}{{Tymoshenko et~al.}}{{}}}
-\bibcite{tymoshenko2015assessing}{{20}{2015}{{Tymoshenko and Moschitti}}{{}}}
-\bibcite{wang2010probabilistic}{{21}{2010}{{Wang and Manning}}{{}}}
-\bibcite{wang2007jeopardy}{{22}{2007}{{Wang et~al.}}{{}}}
-\bibcite{yao2013answer}{{23}{2013}{{Yao et~al.}}{{}}}
-\bibcite{zhou2015answer}{{24}{2015}{{Zhou et~al.}}{{}}}
+\bibcite{mihaylov2016semanticz}{{10}{2016}{{Mihaylov and Nakov}}{{}}}
+\bibcite{moschitti2008kernel}{{11}{2008}{{Moschitti}}{{}}}
+\bibcite{moschitti2007exploiting}{{12}{2007}{{Moschitti et~al.}}{{}}}
+\bibcite{nakov-EtAl:2016:SemEval}{{13}{2016}{{Nakov et~al.}}{{}}}
+\bibcite{radlinski2005query}{{14}{2005}{{Radlinski and Joachims}}{{}}}
+\bibcite{rehurek2010software}{{15}{2010}{{Rehurek and Sojka}}{{}}}
+\bibcite{severyn2012structural}{{16}{2012}{{Severyn and Moschitti}}{{}}}
+\bibcite{severyn2013automatic}{{17}{2013}{{Severyn and Moschitti}}{{}}}
+\bibcite{severyn2015learning}{{18}{2015}{{Severyn and Moschitti}}{{}}}
+\bibcite{shafiq2016joint}{{19}{2016}{{Shafiq~Joty and Nakov}}{{}}}
+\bibcite{shen2007using}{{20}{2007}{{Shen and Lapata}}{{}}}
+\bibcite{surdeanu2008learning}{{21}{2008}{{Surdeanu et~al.}}{{}}}
+\bibcite{toutanova2003feature}{{22}{2003}{{Toutanova et~al.}}{{}}}
+\bibcite{tran2015jaist}{{23}{2015}{{Tran et~al.}}{{}}}
+\bibcite{tymoshenko2016convolutional}{{24}{2016}{{Tymoshenko et~al.}}{{}}}
+\bibcite{tymoshenko2015assessing}{{25}{2015}{{Tymoshenko and Moschitti}}{{}}}
+\bibcite{wang2010probabilistic}{{26}{2010}{{Wang and Manning}}{{}}}
+\bibcite{wang2007jeopardy}{{27}{2007}{{Wang et~al.}}{{}}}
+\bibcite{yao2013answer}{{28}{2013}{{Yao et~al.}}{{}}}
+\bibcite{zhou2015answer}{{29}{2015}{{Zhou et~al.}}{{}}}

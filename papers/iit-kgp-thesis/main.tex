@@ -25,6 +25,7 @@
 \usepackage{siunitx}
 %\usepackage[showframe=false]{geometry}
 \usepackage{subfigure}
+\usepackage{amsmath}
 
 \nprounddigits{3}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
@@ -69,12 +70,12 @@
 \authors{Sandesh C}
 \rollno{12CS30041}
 \university{IIT Kharagpur}
-\department{Dept. of Computer Science and Engg.}
+\department{Department of Computer Science and Engineering}
 \unisite{http://www.iitkgp.ac.in}
 \depsite{http://www.cse.iitkgp.ac.in}
 \placeshrt{Kharagpur}
 \placelng{Kharagpur - 721302, India}
-\datesub{April XX, 2017}
+\datesub{April 28, 2017}
 \datesig{April XX, 2017}
 \semsub{Spring Semester, 2016-17}
 %\keywords{Deep learning in Q\&A}
@@ -267,7 +268,7 @@ Enter acknowledgement content here.
 
 \section{Introduction}
 
-CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar Living\footnote{http://www.qatarliving.com/}, are gaining popularity online. These forums are seldom moderated, quite open, and thus they typically have little restrictions, if any, on who can post and who can answer a question. On the positive side, this means that one can freely ask any question and can then expect some good, honest answers. On the negative side, it takes effort to go through all possible answers and to make sense of them. For example, it is not unusual for a question to have hundreds of answers, which makes it very time-consuming for the user to inspect and to winnow through them all. The present work is intended to help automate the process of finding good answers to questions in a community-created discussion forum, by automatically ranking the existing answers.
+CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar Living\footnote{http://www.qatarliving.com/}, are gaining popularity online. These forums are seldom moderated, quite open, and thus they typically have little restrictions, if any, on who can post and who can answer a question. On the positive side, this means that one can freely ask any question and can then expect some good, honest comments. On the negative side, it takes effort to go through all possible comments and to make sense of them. For example, it is not unusual for a question to have hundreds of comments, which makes it very time-consuming for the user to inspect and to winnow through them all. The present work is intended to automate the process of finding good comments to questions in a community-created discussion forum, by automatically ranking the existing comments.
 
 \section{SemEval Task -- 3}
 
@@ -286,7 +287,7 @@ In this project we address the CQA task by exploiting the semantic similarity in
 
 \mychapter{2}{Literature Survey}
 
-The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and answer passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
+The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
 
 In recent years, many advanced models have been developed for automating answer selection, producing a large body of work. For instance, \cite{wang2007jeopardy} proposed a probabilistic quasi synchronous grammar to learn syntactic transformations from the question to the candidate answers; \cite{heilman2010tree} used an algorithm based on Tree Edit Distance (TED) to learn tree transformations in pairs; \cite{wang2010probabilistic} developed a probabilistic model to learn tree-edit operations on dependency parse trees; and \cite{yao2013answer} applied linear chain CRFs with features derived from TED to automatically learn associations between questions and candidate answers. One interesting aspect of the above research is the need for syntactic structures; this is also corroborated in [\cite{severyn2012structural}; \cite{severyn2013automatic}]. Note that answer selection can use models for textual entailment, semantic similarity, and for natural language inference in general.
 
@@ -296,7 +297,7 @@ This research direction was further extended by \cite{joty2015global}, who used 
 
 Finally, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
 
-Thus influenced by the trend we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity; building on the success of previous attempts.
+Thus influenced by the trend we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity; building on the success of previous attempts. Note that we use the terms relevant-comment and answer interchangeably thoughout the document.
 
 
 %----------------------------------------------------------------------------------------
@@ -307,25 +308,73 @@ Thus influenced by the trend we shall tread in the direction of exploring Deep L
 
 For this task, we adopt a neural approach to open-domain non-factoid QA developed by \cite{bogdanova2016we}, which focused on “answer re-ranking”, i.e. given a list of candidate answers to a question, order the answers according to their relevance to the question. The approach is very simple and requires no feature engineering. Question-answer pairs are represented by concatenated distributed representation vectors and a multilayer perceptron is used to compute the score for an answer (the probability of an answer being the best answer to the question). Despite its simplicity, their work achieved state-of-the-art performance on the Yahoo! Answers dataset of manner or How questions introduced by \cite{jansen2014discourse}. This improved performance was attributed to the use of paragraph vector representations instead of averaging over word vectors, and to the use of suitable data for training these representations. This project aims at improving the simplistic model proposed by \cite{bogdanova2016we} with a few enhancements to achieve state-of-art performance at the \textbf{SemEval Task 3 - Subtask A} of finding Question -- Comment similarity.
 
-Paragraph Vectors (\cite{le2014distributed}) are hence used for quantifying the question-answer text documents. Paragraph Vector is an unsupervised framework that learns continuous distributed vector representations for pieces of texts. The texts can be of variable-length, ranging from sentences to documents. The name Paragraph Vector is to emphasize the fact that the method can be applied to variable-length pieces of texts, anything from a phrase or sentence to a large document. In this model, the vector representation is trained to be useful for predicting words in a paragraph. More precisely, we concatenate the paragraph vector with several word vectors from a paragraph and predict the following word in the given context. Both word vectors and paragraph vectors are trained by the stochastic gradient descent and backpropagation. Furthermore the following two subsections shall shed some light on the approach adopted to solve the different subtasks developing on the Paragraph Vector representations of the question-answer text documents.
+It is for this reason we use Paragraph Vectors (\cite{le2014distributed}) for quantifying the question-comment text documents. Paragraph Vector is an unsupervised framework that learns continuous distributed vector representations for pieces of texts. The texts can be of variable-length, ranging from sentences to documents. The name Paragraph Vector is to emphasize the fact that the method can be applied to variable-length pieces of texts, anything from a phrase or sentence to a large document.
 
 \section{Learning Algorithm}
 \label{section:learning-algo}
 
-We use a simple feedforward neural network, i.e. a multilayer perceptron, to predict the best answer just like in \cite{bogdanova2016we}. As shown in Figure 1 [TODO], the first layer of the network is a projection layer that transforms question-answer pairs into their vector representations. The vector representation for a question-answer pair (q, a) is a concatenation of the distributed representations q and a for the question and the answer respectively. Each representation is a real-valued vector of a fixed dimensionality d, which is a parameter to be tuned. The projection layer is concatenated with another d dimensional vector, namely the averaged distributed representation of all the answers to the question q. This is further concatenated with another set of features generated from the pair (q, a) as described in \autoref{section:super-features}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer as performed by \cite{bogdanova2016we}. As shown in Figure 1 [TODO], the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c} for the question and the comment respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
 
-This layer is then followed by one or more hidden layers, the number of layers and units in each of these layers are also parameters to be experimentally tuned. We consider the activation function as well to be a parameter to be tuned by exprimentation. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not best answer) and positive (i.e. best answer) classes respectively. For each question, all its user-generated answers are ranked according to their probability of being the best answer, as predicted by the network.
+This layer is then followed by one or more hidden layers, the number of layers and units in each of these layers are also parameters to be experimentally tuned. We consider the activation function as well to be a parameter to be tuned by exprimentation. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not best answer) and positive (i.e. best answer) classes respectively. For each question, all its user-generated comments are ranked according to their probability of being the best answer, as predicted by the network.
 
-Given a question-answer pair (q, a), the possible values for the ground-truth label are 1 (best answer) and 0 (not a best answer). The network is trained by minimizing the L2-regularized cross-entropy loss function between the ground-truth labels and the network predictions on the training set. We use either stochastic gradient descent (SGD) or Adam solver and early stopping to minimize the loss over the training set.
+Given a question-comment pair (q, c), the possible values for the ground-truth label are 1 (best answer) and 0 (not a best answer). The network is trained by minimizing the L2-regularized cross-entropy loss function between the ground-truth labels and the network predictions on the training set. We use either stochastic gradient descent (SGD) or Adam solver and early stopping to minimize the loss over the training set.
 
 \section{Document Representations}
 
-This approach requires question-answer pairs to be represented as a fixed-size vector. We experimentally evaluate the Paragraph Vector model (PV) proposed by \cite{le2014distributed}. The PV is an extension of the widely used continuous bag-of-words (CBOW) and skip-gram word embedding models, known as word2vec. However, in contrast to CBOW and skip-gram models that only learn word embeddings, the PV is able to learn representations for pieces of text of arbitrary length, e.g. sentences, paragraphs or documents. The PV includes (1) the distributed memory (DM) model, that predicts the next word using the concatenation of the previous words and the paragraph vector, that is shared among all words in the same paragraph (or sentence); (2) the distributed bag-of-words (DBOW) model, that – similar to the skip-gram model – predicts words randomly sampled from the paragraph, given the paragraph vector. We experiment with both DM and DBOW models. Also, note that we shall use the terms paragraph vector (PV) and document vector/representation interchangeably.
+This approach requires question-comment pairs to be represented as a fixed-size vector. We experimentally evaluate the Paragraph Vector model (PV) proposed by \cite{le2014distributed}. The PV is an extension of the widely used continuous bag-of-words (CBOW) and skip-gram word embedding models, known as word2vec. However, in contrast to CBOW and skip-gram models that only learn word embeddings, the PV is able to learn representations for pieces of text of arbitrary length, e.g. sentences, paragraphs or documents. The PV includes (1) the distributed memory (DM) model, that predicts the next word using the concatenation of the previous words and the paragraph vector, that is shared among all words in the same paragraph (or sentence); (2) the distributed bag-of-words (DBOW) model, that – similar to the skip-gram model – predicts words randomly sampled from the paragraph, given the paragraph vector. We experiment with both DM and DBOW models. Also, note that we shall use the terms paragraph vector (PV) and document vector/representation interchangeably.
 
-\section{Syntactic--Features}
-\label{section:super-features}
-% [TODO]
+\section{Feature Set}
+\label{subsection:feature-set}
 
+Apart from paragraph vectors of the Question (q) and Comment (c) that the feedforward network takes as input, we describe below the surplus features incorporated in our model:
+
+\subsection{Centroidal Comment}
+\label{subsection:centroidal-comment}
+
+Inorder to rank the comments, it is only intuition that we must use the information in other comment texts to accurately provide relative relevance scores, which in turn reflects the rank, for comment texts. It is for this reason we introduced the centroidal comment, denoted as $avg\_com_q$, computed as:
+\[ avg\_com_q = \frac{\sum\limits_{c \in q} c}{||\sum\limits_{c \in q} c||} \tag{1} \label{equation:1} \]
+
+\subsection{Syntactic and Metadata Features}
+
+We used several semantic vector similarity and metadata feature groups as mentioned in \cite{mihaylov2016semanticz}. For the ease of the reader, we shall describe the same feature groups below. 
+
+Note that for the similarity measures mentioned below, we used cosine similarity:
+\[ 1 - \frac{u.v}{||u||.||v||} \tag{2} \label{equation:2} \]
+
+\textbf{Semantic Word Embeddings.} We used semantic word embeddings obtained from Word2Vec models trained on the unannotated data set from QatarLiving. For each piece of text such as comment text, question body and question subject, we constructed the centroid vector from the vectors of all words in that text (excluding stopwords).
+\[ centroid(w_{1...n}) = \frac{\sum\limits_{i=1}^{n} w_i}{n} \tag{3} \label{equation:3} \]
+We construct centroid vectors (3) from the question text (subject + body) and the comment text to design various features as described below.
+
+\textbf{Semantic Vector Similarities.} We used various similarity features calculated using the centroid word vectors on the question text (subject + body) and on the comment text, as well as on parts thereof:
+
+\textbf{Question to Answer similarity.} We assume that a relevant answer should have a centroid vector that is close to that for the question. We used the question text to comment text vector similarities.
+
+\textbf{Maximized similarity.} We ranked each word in the comment text to the question text centroid vector according to their similarity and we took the average similarity of the top N words. We took the top 1, 2, 3, 4 and 5 words similarities as features. The assumption here is that if the average similarity for the top N most similar words is high, then the comment might be relevant.
+
+\textbf{Aligned similarity.} For each word in the question text, we chose the most similar word from the comment text and we took the average of all best word pair similarities as suggested in \cite{tran2015jaist}.
+
+\textbf{Part of speech (POS) based word vector similarities.} We performed part of speech tagging using the Stanford tagger \cite{toutanova2003feature}, and we took similarities between centroid vectors of words with a specific tag from the comment text and the centroid vector of the words with a specific tag from the question text. The assumption is that some parts of speech between the question and the comment might be closer than other parts of speech.
+
+\textbf{Word clusters (WC) similarity.} We clustered the word vectors from the Word2Vec vocabulary in 1,000 clusters using K-Means clustering. We then calculated the cluster similarity between the question body word clusters and the answer text word clusters. For all experiments, we used clusters obtained from the Word2Vec model trained on QatarLiving forums with vector size of 100, window size 10.
+
+\textbf{LDA topic similarity.} We performed topic clustering using Latent Dirichlet Allocation (LDA) as implemented in the gensim toolkit \cite{rehurek2010software} on Train1 + Train2 + Dev questions and comments. We built topic models with 100 topics. For each word in the question text and for the comment text, we built a bag-of-topics with corresponding distribution, and calculated similarity. The assumption here is that if the question and the comment share similar topics, they are more likely to be relevant to each other
+
+
+\textbf{Metadata.} In addition to the semantic features described above, we also used some common sense metadata features:
+
+\textbf{Answer contains a question mark.} If the comment has an question mark, it may be another question, which might indicate a bad answer.
+
+\textbf{Answer length.} The assumption here is that longer answers could bring more useful detail.
+
+\textbf{Question length.} If the question is longer, it may be more clear, which may help users give a more relevant answer.
+
+\textbf{Question to comment length.} If the question is long and the answer is short, it may be less relevant.
+
+\textbf{The answer’s author is the same as the corresponding question’s author.} If the answer is posted by the same user who posted the question and it is relevant, why has he/she asked the question in the first place?
+
+\textbf{Answer rank in the thread.} Earlier answers could be posted by users who visit the forum more often, and they may have read more similar questions and answers. Moreover, discussion in the forum tends to diverge from the question over time.
+
+\textbf{Question category.} We took the category of the question as a sparse binary feature vector (a feature with a value of 1 appears if question is in the category). The assumption here is that the question-comment relevance might depend on the category of the question.
 
 %----------------------------------------------------------------------------------------
 %	EXPERIMENTS
@@ -335,7 +384,7 @@ This approach requires question-answer pairs to be represented as a fixed-size v
 
 \section{Data}
 
-Though \cite{bogdanova2016we} experiments with the \textit{Yahoo! Answers dataset}\footnote{http://webscope.sandbox.yahoo.com/}, we have used the data provided as a part of the popular \textbf{SemEval Task 3} for \textbf{Subtask A} (2016 \& 2015). \autoref{table:data} contains the statistics about the forementioned dataset. This dataset contains about 42K (q, a) pairs to learn from; spreading over about 5.4K questions. We shall refer to this data as the CQA-QL corpus in future. Further we also use a large unannotated dataset, released by the same source, from Qatar Living with 189,941 questions and 1,894,456 comments, which is used for unsupervised learning/training domain-specific word/document embeddings. \\
+Though \cite{bogdanova2016we} experiments with the \textit{Yahoo! Answers dataset}\footnote{http://webscope.sandbox.yahoo.com/}, we have used the data provided as a part of the popular \textbf{SemEval Task 3} for \textbf{Subtask A} (\cite{nakov-EtAl:2016:SemEval}). \autoref{table:data} contains the statistics about the forementioned dataset. This dataset contains about 42K (q, c) pairs to learn from; spreading over about 5.4K questions. We shall refer to this data as the CQA-QL corpus in future. Further we also use a large unannotated dataset, released by the same source, from Qatar Living with 189,941 questions and 1,894,456 comments, which is used for unsupervised learning/training domain-specific word/document embeddings. \\
 
 \setcounter{table}{0}
 \begin{table}[!htbp]
@@ -366,14 +415,14 @@ Comments				&	14,110		&	3,790		&	14,893+1,529+1,876	&	2,440	&	3,270	&	41,908	\\
 
 \section{Experimental Setup}
 
-We use the gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} implementation of DM and DBOW paragraph vector models. The data for training the unsupervised \textit{doc2vec} model (PV model) is the forementioned large unannotated dataset from Qatar Living forums. Each paragraph (q or a) was converted to lowercase, tokenized by space character and cleaned of stop words before training \textit{doc2vec} models. The parameters of training these models being the window size (maximum distance between the predicted word and context words used for prediction within a document) and number of epochs of training, were cross-validated to give low errors on the training dataset. We further use normalized versions of the document vector representations thus generated, to be fed as inputs to the feedforward neural network described in \autoref{section:learning-algo}. \\ \\
+We use the gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} implementation of DM and DBOW paragraph vector models. The data for training the unsupervised \textit{doc2vec} model (PV model) is the forementioned large unannotated dataset from Qatar Living forums. Each paragraph (q or c) was converted to lowercase, tokenized by space character and cleaned of stop words before training \textit{doc2vec} models. The parameters of training these models being the window size (maximum distance between the predicted word and context words used for prediction within a document) and number of epochs of training, were cross-validated to give low errors on the training dataset. We further use normalized versions of the document vector representations thus generated, to be fed as inputs to the feedforward neural network described in \autoref{section:learning-algo}. \\ \\
 For the implementation of the feedforward neural network as described in \autoref{section:learning-algo}, we shall use the popular python library \textit{scikit-learn\footnote{http://scikit-learn.org/stable/index.html}}'s \textit{MLPClassifier}\footnote{http://scikit-learn.org/stable/modules/generated/sklearn.neural\_network.MLPClassifier.html}.
 
 \section{Results}
 
 \subsection{Document Vector Representations}
 
-For training each question/answer text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/answer text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/answer text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/answer text. The squared errors are computed for both normalized and unnormalized document vectors. For comparison purposes normalized and unnormalized squared error between any two random document vector is tabulated beside these errors (averaged over as many iterations as the number of question/answer text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW prove to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments is tabulated under \autoref{appendix:A}.
+For training each question/comment text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/comment text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/comment text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/comment text. The squared errors are computed for both normalized and unnormalized document vectors. For comparison purposes normalized and unnormalized squared error between any two random document vector is tabulated beside these errors (averaged over as many iterations as the number of question/comment text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW prove to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments is tabulated under \autoref{appendix:A}.
 
 %\setcounter{table}{1}
 \begin{table}[!htbp]
@@ -398,15 +447,15 @@ PV-DM & 15 & 10 & 0.93 & 0.22 & 0.98 & 0.98 & 4.47\\
 
 \subsection{SemEval Task 3 -- Subtask A}
 
-The training data comprises of 38,638 comments spanning over 5,124 questions. The neural net input is a tuple of the form $(q, a, avg\_ans_q, ft_{(q,a)})$, where, \\
-\hspace*{1cm}$avg\_ans_q$ is (normalized) average over the PV of all answers to question q \\
-\hspace*{1cm}$ft_{(q,a)}$ is feature vector corresp. to the pair (q,a) as described in \autoref{section:super-features}
+The training data comprises of 38,638 comments spanning over 5,124 questions. The neural net input is a tuple of the form $(q, c, avg\_ans_q, ft_{(q,c)})$, where, \\
+\hspace*{1cm}$avg\_ans_q$ is (normalized) average over the PV of all comments to question q \\
+\hspace*{1cm}$ft_{(q,c)}$ is feature vector corresp. to the pair (q,c) as described in \autoref{subsection:feature-set}
 \\\\
-\textbf{SemEval Task 3} has as an official evaluation measure used to rank the participating systems, the metric of Mean Average Precision (MAP), calculated for the ten comments a participating system has ranked highest. Further metrics such as Mean Reciprocal Rank (MRR) and Average Recall (AvgRec) for top-10 results; Precision (P), Recall (R), F\textsubscript{1} (with respect to the Good/Relevant class) and Accuracy (Acc) are also reported.
+\textbf{SemEval Task 3} has as an official evaluation measure used to rank the participating systems, the metric of Mean Average Precision (\textit{MAP}), calculated for the ten comments a participating system has ranked highest. Further metrics such as Mean Reciprocal Rank (\textit{MRR}) and Average Recall (\textit{AvgRec}) for top-10 results; Precision (\textit{P}), Recall (\textit{R}), \textit{F\textsubscript{1}} (with respect to the Good/Relevant class) and Accuracy (\textit{Acc}) are also reported.
 
-\subsubsection{Preliminary experiments with (q, a) inputs}
+\subsubsection{Preliminary experiments with (q, c) inputs}
 
-Intially experiments were conducted with only (q, a) pair as input to the neural nets. The nets were trained using multiple solvers, activation functions, hidden layer configurations. The best performance for each parameter configuration is as tabulated in \autoref{table:ann-stage-1-best}, while the complete results are tabulated in \autoref{appendix:B}.
+Intially experiments were conducted with only (q, c) pair as input to the neural nets. The nets were trained using multiple solvers, activation functions, hidden layer configurations. The best performance for each parameter configuration is as tabulated in \autoref{table:ann-stage-1-best}, while the complete results are tabulated in \autoref{appendix:B}.
 
 %\setcounter{table}{2}
 \begin{table}[!htbp]
@@ -423,19 +472,19 @@ PV-DBOW & SGD & tanh & 0.7009 & 0.8245 & 76.62 & 0.6339 & 0.5914 & 0.6119 & 0.69
 PV-DBOW & Adam & relu & 0.6993 & 0.8106 & 76.94 & 0.5998 & 0.5741 & 0.5867 & 0.6713 \\
 PV-DBOW & Adam & tanh & 0.698 & 0.8231 & 76.35 & 0.6386 & 0.5546 & 0.5936 & 0.6914 \\
 PV-DM & SGD & relu & 0.6578 & 0.7855 & 74.58 & 0.5793 & 0.5357 & 0.5567 & 0.6532 \\
-PV-DM & SGD & logistic & 0.5671 & 0.6922 & 64.02 & 0 & 0 & 0 & 0.5936 \\
+%TODO,PV-DM & SGD & logistic & 0.5671 & 0.6922 & 64.02 & 0 & 0 & 0 & 0.5936 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Preliminary experiments using only $(q, a)$ inputs -- Best results.}
+\caption{Preliminary experiments using only $(q, c)$ inputs -- Best results.}
 \label{table:ann-stage-1-best}
 \end{table}
 
 PV-DBOW clearly outperforms PV-DM representations in these preliminary runs. Building on this, further experiments where conducted using only the PV-DBOW representations.
 
-\subsubsection{Improvement with inclusion of Average Answer}
+\subsubsection{Improvement with inclusion of Centroidal comment}
 
-Additionally to capture the relative goodness of an answer with respect to other answers to the same question, $avg\_ans_q$ (normalized post averaging over the PV of all answers to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
+As described in \autoref{subsection:centroidal-comment}, additionally, to capture the relative goodness of an comment with respect to other comments to the same question, $avg\_ans_q$ (normalized post averaging over the PV of all comments to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
 
 \begin{table}[!htbp]
 \centering
@@ -453,13 +502,15 @@ PV-DBOW & Adam & relu & 0.7161 & 0.8263 & 79.45 & 0.6298 & 0.6005 & 0.6148 & 0.6
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, a, avg\_ans_q)$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_ans_q)$ inputs -- Best results.}
 \label{table:ann-stage-2-best}
 \end{table}
 
-Clearly there is a significant improvement in MAP scores after inclusion of the averaged answer for each question as an input feature. Further experiments thus is done inclusive of $avg\_ans_q$ in the input tuple.
+Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment for each question as an input feature. Further experiments thus is done inclusive of $avg\_ans_q$ in the input tuple.
 
-\subsubsection{Further improvement with Syntactic Features}
+\subsubsection{Further improvement with Syntactic and Metadata Features}
+
+% TODO
 
 \begin{table}[!htbp]
 \centering
@@ -472,7 +523,7 @@ Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1}
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, a, avg\_ans_q, ft_{(q,a)})$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_ans_q, ft_{(q,c)})$ inputs -- Best results.}
 \label{table:ann-stage-3-best}
 \end{table}
 

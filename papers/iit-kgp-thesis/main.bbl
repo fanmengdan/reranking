@@ -57,6 +57,13 @@ Lin, X. Z. B. H.~J. and Wang, Y. X.~X. (2015).
   answer selection challenge.
 \newblock {\em SemEval-2015}, 210.
 
+\bibitem[Mihaylov and Nakov, 2016]{mihaylov2016semanticz}
+Mihaylov, T. and Nakov, P. (2016).
+\newblock Semanticz at semeval-2016 task 3: Ranking relevant answers in
+  community question answering using semantic similarity based on fine-tuned
+  word embeddings.
+\newblock {\em Proceedings of SemEval}, pages 879--886.
+
 \bibitem[Moschitti, 2008]{moschitti2008kernel}
 Moschitti, A. (2008).
 \newblock Kernel methods, syntax and semantics for relational text
@@ -71,11 +78,25 @@ Moschitti, A., Quarteroni, S., Basili, R., and Manandhar, S. (2007).
 \newblock In {\em Annual meeting-association for computational linguistics},
   volume~45, page 776.
 
+\bibitem[Nakov et~al., 2016]{nakov-EtAl:2016:SemEval}
+Nakov, P., M\`{a}rquez, L., Magdy, W., Moschitti, A., Glass, J., and Randeree,
+  B. (2016).
+\newblock {SemEval}-2016 task 3: Community question answering.
+\newblock In {\em Proceedings of the 10th International Workshop on Semantic
+  Evaluation}, SemEval '16, San Diego, California. Association for
+  Computational Linguistics.
+
 \bibitem[Radlinski and Joachims, 2005]{radlinski2005query}
 Radlinski, F. and Joachims, T. (2005).
 \newblock Query chains: learning to rank from implicit feedback.
 \newblock In {\em Proceedings of the eleventh ACM SIGKDD international
   conference on Knowledge discovery in data mining}, pages 239--248. ACM.
+
+\bibitem[Rehurek and Sojka, 2010]{rehurek2010software}
+Rehurek, R. and Sojka, P. (2010).
+\newblock Software framework for topic modelling with large corpora.
+\newblock In {\em In Proceedings of the LREC 2010 Workshop on New Challenges
+  for NLP Frameworks}. Citeseer.
 
 \bibitem[Severyn and Moschitti, 2012]{severyn2012structural}
 Severyn, A. and Moschitti, A. (2012).
@@ -111,6 +132,21 @@ Shen, D. and Lapata, M. (2007).
 Surdeanu, M., Ciaramita, M., and Zaragoza, H. (2008).
 \newblock Learning to rank answers on large online qa collections.
 \newblock In {\em ACL}, volume~8, pages 719--727.
+
+\bibitem[Toutanova et~al., 2003]{toutanova2003feature}
+Toutanova, K., Klein, D., Manning, C.~D., and Singer, Y. (2003).
+\newblock Feature-rich part-of-speech tagging with a cyclic dependency network.
+\newblock In {\em Proceedings of the 2003 Conference of the North American
+  Chapter of the Association for Computational Linguistics on Human Language
+  Technology-Volume 1}, pages 173--180. Association for Computational
+  Linguistics.
+
+\bibitem[Tran et~al., 2015]{tran2015jaist}
+Tran, Q.~H., Tran, V., Vu, T., Nguyen, M., and Pham, S.~B. (2015).
+\newblock Jaist: Combining multiple features for answer selection in community
+  question answering.
+\newblock In {\em Proceedings of the 9th International Workshop on Semantic
+  Evaluation, SemEval}, volume~15, pages 215--219.
 
 \bibitem[Tymoshenko et~al., 2016]{tymoshenko2016convolutional}
 Tymoshenko, K., Bonadiman, D., and Moschitti, A. (2016).
