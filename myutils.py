@@ -39,7 +39,7 @@ def cosine(vec_a, vec_b):
         vec_a /= norm(vec_a)
     if norm(vec_b):
         vec_b /= norm(vec_b)
-    sim = dot(vec_a, vec_b)
+    sim = 1 - dot(vec_a, vec_b)
     return sim
 
 """ converts a list of tuples of form [ (word, pos_tag) ... ] """
