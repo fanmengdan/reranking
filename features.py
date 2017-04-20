@@ -1,7 +1,12 @@
+import math
+
 import json
 
 # min-heap library
 import heapq as hq
+
+# parsing time/date
+from datetime import datetime as dt
 
 # pre-processing utilities
 from myutils import cosine, stringToTags
@@ -205,7 +210,7 @@ def getFeatures(model, q_w, c_w, meta):
 
     feature_vector.append(cosine(q_w_lda, c_w_lda))
 
-    ## Metadata features (x42)
+    ## Metadata features (x43)
 
     # Comment contains a question mark (x1)
     feature_vector.append(True in [ '?' in w for w in c_w ])
@@ -239,5 +244,11 @@ def getFeatures(model, q_w, c_w, meta):
 
     # Hyperlink in the comment text (x1)
     feature_vector.append( any(w in ' '.join(c_w) for w in ['http', 'www']) )
+
+    # Time difference between Question and Comment posting (x1)
+    Qtime = dt.strptime(meta_cache[meta['qid']]['time'], '%Y-%m-%d %H:%M:%S')
+    Ctime = dt.strptime(meta_cache[meta['cid']]['time'], '%Y-%m-%d %H:%M:%S')
+    delta = math.fabs( ( Ctime - Qtime ).total_seconds() )
+    feature_vector.append( math.log10(delta + 1) )
 
     return [ float(f) for f in feature_vector ]

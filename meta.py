@@ -20,13 +20,15 @@ def constructMetaData(dataPath, fileList):
             relQ = thread.getElementsByTagName('RelQuestion')[0]
             Qid = relQ.getAttribute('RELQ_ID')
             meta_cache[Qid] = { 'author' : relQ.getAttribute('RELQ_USERID'),
-                'category' : relQ.getAttribute('RELQ_CATEGORY') }
+                'category' : relQ.getAttribute('RELQ_CATEGORY'),
+                'time' : relQ.getAttribute('RELQ_DATE') }
             if meta_cache[Qid]['category'] not in unique_cats:
                 unique_cats.append(meta_cache[Qid]['category'])
             user_tracker = {}
             for relC in thread.getElementsByTagName('RelComment'):
                 Cid = relC.getAttribute('RELC_ID')
-                meta_cache[Cid] = { 'author' : relC.getAttribute('RELC_USERID') }
+                meta_cache[Cid] = { 'author' : relC.getAttribute('RELC_USERID'),
+                    'time' : relC.getAttribute('RELC_DATE') }
                 if meta_cache[Cid]['author'] not in user_tracker:
                     user_tracker[ meta_cache[Cid]['author'] ] = 0
                 user_tracker[ meta_cache[Cid]['author'] ] += 1
