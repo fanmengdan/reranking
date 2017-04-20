@@ -173,8 +173,8 @@ Enter acknowledgement content here.
 \lhead{\emph{Contents}} % Set the left side page header to "Contents"
 \tableofcontents % Write out the Table of Contents
 
-\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
-\listoffigures % Write out the List of Figures
+%\lhead{\emph{List of Figures}} % Set the left side page header to "List of Figures"
+%\listoffigures % Write out the List of Figures
 
 \lhead{\emph{List of Tables}} % Set the left side page header to "List of Tables"
 \listoftables % Write out the List of Tables
@@ -313,7 +313,14 @@ It is for this reason we use Paragraph Vectors (\cite{le2014distributed}) for qu
 \section{Learning Algorithm}
 \label{section:learning-algo}
 
-We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer as performed by \cite{bogdanova2016we}. As shown in Figure 1 [TODO], the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c} for the question and the comment respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer as performed by \cite{bogdanova2016we}. As shown in \autoref{fig:ann-arch}, the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c} for the question and the comment respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+
+\begin{figure}[t!]
+  \centering
+  \includegraphics[keepaspectratio, width=0.8\textwidth]{./Pictures/ann-arch.png}
+  \caption{Architecture of proposed Feedforward Neural Network}
+  \label{fig:ann-arch}
+\end{figure}
 
 This layer is then followed by one or more hidden layers, the number of layers and units in each of these layers are also parameters to be experimentally tuned. We consider the activation function as well to be a parameter to be tuned by exprimentation. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not best answer) and positive (i.e. best answer) classes respectively. For each question, all its user-generated comments are ranked according to their probability of being the best answer, as predicted by the network.
 
@@ -359,12 +366,13 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 
 \textbf{LDA topic similarity.} We performed topic clustering using Latent Dirichlet Allocation (LDA) as implemented in the gensim toolkit \cite{rehurek2010software} on Train1 + Train2 + Dev questions and comments. We built topic models with 100 topics. For each word in the question text and for the comment text, we built a bag-of-topics with corresponding distribution, and calculated similarity. The assumption here is that if the question and the comment share similar topics, they are more likely to be relevant to each other
 
+\textbf{Paragraph Vector similarities.} The similarity among the distributed vector representations of question text (\textit{q}), answer text (\textit{a}) and the centroidal answer ($avg\_com_q$), taken two at a time are also included.
 
 \textbf{Metadata.} In addition to the semantic features described above, we also used some common sense metadata features:
 
 \textbf{Answer contains a question mark.} If the comment has an question mark, it may be another question, which might indicate a bad answer.
 
-\textbf{Answer length.} The assumption here is that longer answers could bring more useful detail.
+\textbf{Answer length.} Assumption here is that longer answers could bring useful details.
 
 \textbf{Question length.} If the question is longer, it may be more clear, which may help users give a more relevant answer.
 
@@ -375,6 +383,10 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 \textbf{Answer rank in the thread.} Earlier answers could be posted by users who visit the forum more often, and they may have read more similar questions and answers. Moreover, discussion in the forum tends to diverge from the question over time.
 
 \textbf{Question category.} We took the category of the question as a sparse binary feature vector (a feature with a value of 1 appears if question is in the category). The assumption here is that the question-comment relevance might depend on the category of the question.
+
+\textbf{Comments by the same User.} The number of comments by the author of a given comment to the same question and the order of the comments (first, second, ...) is also included as a feature. If the author produced an incomplete answer in the first attempt, he/she might be obliged to produce another comment subsequently.
+
+\textbf{Time difference between Question and Comment posting.} Immediate comments could reflect incomplete answers to longer questions, while comments posted after substantial time might reflect well-thought answers.
 
 %----------------------------------------------------------------------------------------
 %	EXPERIMENTS
@@ -527,7 +539,8 @@ Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1}
 \label{table:ann-stage-3-best}
 \end{table}
 
-\section{Analysis}
+% \section{Analysis}
+% TODO : Do we need this ? What is Conclusions for then ?
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSIONS

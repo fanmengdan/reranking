@@ -7,37 +7,35 @@
 \contentsline {chapter}{Acknowledgements}{iv}{dummy.8}
 
 \contentsline {chapter}{Contents}{v}{dummy.9}
-\contentsline {chapter}{List of Figures}{vii}{dummy.11}
-\contentsline {chapter}{List of Tables}{viii}{dummy.13}
-\contentsline {chapter}{Abbreviations}{ix}{dummy.15}
-\contentsline {chapter}{Introduction}{1}{chapter*.18}
-\contentsline {section}{\numberline {1.1}Introduction}{1}{section.19}
-\contentsline {section}{\numberline {1.2}SemEval Task -- 3}{1}{section.22}
-\contentsline {subsection}{\numberline {1.2.1}Subtask A -- Question-Comment Similarity}{2}{subsection.24}
-\contentsline {section}{\numberline {1.3}Thesis Organization}{2}{section.25}
-\contentsline {chapter}{Literature Survey}{3}{chapter*.26}
-\contentsline {chapter}{Approach}{5}{chapter*.27}
-\contentsline {section}{\numberline {3.1}Learning Algorithm}{6}{section.28}
-\contentsline {section}{\numberline {3.2}Document Representations}{7}{section.29}
-\contentsline {section}{\numberline {3.3}Feature Set}{7}{section.30}
-\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{8}{subsection.31}
-\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{8}{subsection.33}
-\contentsline {chapter}{Experiments}{11}{chapter*.36}
-\contentsline {section}{\numberline {4.1}Data}{11}{section.37}
-\contentsline {section}{\numberline {4.2}Experimental Setup}{12}{section.40}
-\contentsline {section}{\numberline {4.3}Results}{12}{section.44}
-\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{12}{subsection.45}
-\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{13}{subsection.47}
-\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{14}{subsubsection.48}
-\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{14}{subsubsection.50}
-\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{15}{subsubsection.52}
-\contentsline {section}{\numberline {4.4}Analysis}{15}{section.54}
+\contentsline {chapter}{List of Tables}{vii}{dummy.11}
+\contentsline {chapter}{Abbreviations}{viii}{dummy.13}
+\contentsline {chapter}{Introduction}{1}{chapter*.16}
+\contentsline {section}{\numberline {1.1}Introduction}{1}{section.17}
+\contentsline {section}{\numberline {1.2}SemEval Task -- 3}{1}{section.20}
+\contentsline {subsection}{\numberline {1.2.1}Subtask A -- Question-Comment Similarity}{2}{subsection.22}
+\contentsline {section}{\numberline {1.3}Thesis Organization}{2}{section.23}
+\contentsline {chapter}{Literature Survey}{3}{chapter*.24}
+\contentsline {chapter}{Approach}{5}{chapter*.25}
+\contentsline {section}{\numberline {3.1}Learning Algorithm}{6}{section.26}
+\contentsline {section}{\numberline {3.2}Document Representations}{7}{section.28}
+\contentsline {section}{\numberline {3.3}Feature Set}{8}{section.29}
+\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{8}{subsection.30}
+\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{9}{subsection.32}
+\contentsline {chapter}{Experiments}{12}{chapter*.35}
+\contentsline {section}{\numberline {4.1}Data}{12}{section.36}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{13}{section.39}
+\contentsline {section}{\numberline {4.3}Results}{13}{section.43}
+\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{13}{subsection.44}
+\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{14}{subsection.46}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{15}{subsubsection.47}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{15}{subsubsection.49}
+\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{16}{subsubsection.51}
 \vspace {2em}
-\contentsline {chapter}{Conclusions}{16}{chapter*.55}
+\contentsline {chapter}{Conclusions}{17}{chapter*.53}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{17}{appendix.56}
-\contentsline {chapter}{\numberline {B}Preliminary experiments}{18}{appendix.58}
-\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{22}{appendix.63}
-\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{25}{appendix.67}
+\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{18}{appendix.54}
+\contentsline {chapter}{\numberline {B}Preliminary experiments}{19}{appendix.56}
+\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{23}{appendix.61}
+\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{26}{appendix.65}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{26}{dummy.71}
+\contentsline {chapter}{Bibliography}{27}{dummy.69}
