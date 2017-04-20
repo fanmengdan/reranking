@@ -205,7 +205,7 @@ def getFeatures(model, q_w, c_w, meta):
 
     feature_vector.append(cosine(q_w_lda, c_w_lda))
 
-    ## Metadata features (x39)
+    ## Metadata features (x42)
 
     # Comment contains a question mark (x1)
     feature_vector.append(True in [ '?' in w for w in c_w ])
@@ -230,5 +230,14 @@ def getFeatures(model, q_w, c_w, meta):
     q_cat = [ 0 ] * len(ALL_CATS)
     q_cat[ALL_CATS[ meta_cache[meta['qid']]['category'] ] - 1] = 1
     feature_vector.extend(q_cat)
+
+    # Number of comments by the same user on question thread (x1)
+    feature_vector.append(int( meta_cache[meta['cid']]['#comment'] ))
+
+    # Order of the comment by the same user (x1)
+    feature_vector.append(int( meta_cache[meta['cid']]['comment#'] ))
+
+    # Hyperlink in the comment text (x1)
+    feature_vector.append( any(w in ' '.join(c_w) for w in ['http', 'www']) )
 
     return [ float(f) for f in feature_vector ]

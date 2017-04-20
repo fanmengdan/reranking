@@ -88,6 +88,7 @@ def trainNN(doc2vec, data):
                 c_v /= norm(c_v)
                 f_v = getFeatures(doc2vec, q_w, c_w, \
                     { 'qid' : q[0], 'cid' : c[0], 'rank' : j })
+                f_v.extend([ cosine(q_v, c_v), cosine(q_v, ac_v), cosine(c_v, ac_v) ])
                 X.append(np.append( np.append(q_v, c_v), np.append(ac_v, f_v) ))
                 Y.append(transformLabel(c[2]))
         np.savez('out/trainNN.npz', x=X, y=Y)
@@ -127,6 +128,7 @@ def predict(doc2vec, data, output, mlp = None):
             c_v = doc2vec.infer_vector(c_w)
             f_v = getFeatures(doc2vec, q_w, c_w, \
                 { 'qid' : q[0], 'cid' : c[0], 'rank' : j })
+            f_v.extend([ cosine(q_v, c_v), cosine(q_v, ac_v), cosine(c_v, ac_v) ])
             score, pred = predictAux(q_v, c_v, ac_v, f_v, mlp)
             scores.append( [ score, j, 0, pred ] )
         scores = sorted(scores, key=lambda score: score[0], reverse=True)

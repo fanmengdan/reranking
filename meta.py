@@ -23,9 +23,17 @@ def constructMetaData(dataPath, fileList):
                 'category' : relQ.getAttribute('RELQ_CATEGORY') }
             if meta_cache[Qid]['category'] not in unique_cats:
                 unique_cats.append(meta_cache[Qid]['category'])
+            user_tracker = {}
             for relC in thread.getElementsByTagName('RelComment'):
                 Cid = relC.getAttribute('RELC_ID')
                 meta_cache[Cid] = { 'author' : relC.getAttribute('RELC_USERID') }
+                if meta_cache[Cid]['author'] not in user_tracker:
+                    user_tracker[ meta_cache[Cid]['author'] ] = 0
+                user_tracker[ meta_cache[Cid]['author'] ] += 1
+                meta_cache[Cid]['comment#'] = user_tracker[ meta_cache[Cid]['author'] ]
+            for relC in thread.getElementsByTagName('RelComment'):
+                Cid = relC.getAttribute('RELC_ID')
+                meta_cache[Cid]['#comment'] = user_tracker[ meta_cache[Cid]['author'] ]
 
 debug('======= TRAIN DATA =======')
 dataPath = config['TRAIN_NN']['path']
