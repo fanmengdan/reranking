@@ -28,8 +28,8 @@
 | model.sh           | shell script for batch runs of neuralnet model training      |
 |                    |                                                              |
 | out/               | results folder (output)                                      |
-| papers/            | base research papers                                         |
+| papers/            | base research papers and latex documents (thesis, ...)       |
 | test/              | test data and results                                        |
 
 # TODO
-* Add network's image in Thesis
+* Thesis - Abstract, Acknowledgements, Thesis Organization, Results (in Appendix as well), Conclusion... Finally proof read !
