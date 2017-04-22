@@ -4,46 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: Bibliography.bib
 Warning--empty journal in bogdanova2016we
-Warning--can't use both volume and number fields in moschitti2007exploiting
-You've used 29 entries,
+You've used 20 entries,
             1935 wiz_defined-function locations,
-            629 strings with 10004 characters,
-and the built_in function-call counts, 15227 in all, are:
-= -- 1587
-> -- 536
-< -- 46
-+ -- 180
-- -- 180
-* -- 1118
-:= -- 2320
-add.period$ -- 99
-call.type$ -- 29
-change.case$ -- 234
-chr.to.int$ -- 29
-cite$ -- 31
-duplicate$ -- 721
-empty$ -- 1117
-format.name$ -- 237
-if$ -- 3297
+            583 strings with 8171 characters,
+and the built_in function-call counts, 10461 in all, are:
+= -- 1078
+> -- 400
+< -- 30
++ -- 136
+- -- 136
+* -- 783
+:= -- 1619
+add.period$ -- 67
+call.type$ -- 20
+change.case$ -- 167
+chr.to.int$ -- 20
+cite$ -- 21
+duplicate$ -- 480
+empty$ -- 748
+format.name$ -- 176
+if$ -- 2239
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 147
-num.names$ -- 87
-pop$ -- 298
+missing$ -- 20
+newline$ -- 102
+num.names$ -- 60
+pop$ -- 207
 preamble$ -- 1
-purify$ -- 234
+purify$ -- 167
 quote$ -- 0
-skip$ -- 579
+skip$ -- 387
 stack$ -- 0
-substring$ -- 1106
-swap$ -- 254
-text.length$ -- 31
+substring$ -- 736
+swap$ -- 163
+text.length$ -- 20
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 174
-warning$ -- 2
-while$ -- 128
+type$ -- 120
+warning$ -- 1
+while$ -- 85
 width$ -- 0
-write$ -- 395
-(There were 2 warnings)
+write$ -- 271
+(There was 1 warning)

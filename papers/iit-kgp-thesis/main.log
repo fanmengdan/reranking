@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.5)  20 APR 2017 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.8.5)  22 APR 2017 22:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1624,7 +1624,7 @@ OT1/cmr/m/n/12 " sub-mit-ted by []\OT1/cmr/bx/n/12 Sandesh [][]C \OT1/cmr/m/n/1
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 278--280
+Underfull \hbox (badness 10000) in paragraph at lines 284--286
 
  []
 
@@ -1632,39 +1632,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 278--280
 
 ] [4] [5
 
-] <./Pictures/ann-arch.png, id=370, 723.70375pt x 707.64375pt>
+] <./Pictures/ann-arch.png, id=340, 723.70375pt x 707.64375pt>
 File: ./Pictures/ann-arch.png Graphic file (type png)
 
 <use ./Pictures/ann-arch.png>
-Package pdftex.def Info: ./Pictures/ann-arch.png used on input line 320.
+Package pdftex.def Info: ./Pictures/ann-arch.png used on input line 326.
 (pdftex.def)             Requested size: 341.94652pt x 334.36345pt.
  [6] [7 <./Pictures/ann-arch.png>] [8] [9]
-Overfull \hbox (5.98615pt too wide) in paragraph at lines 365--366
+Overfull \hbox (5.98615pt too wide) in paragraph at lines 371--372
 []\OT1/cmr/bx/n/12 Word clus-ters (WC) sim-i-lar-ity. \OT1/cmr/m/n/12 We clus-t
 ered the word vec-tors from the Word2Vec
  []
 
 [10] [11]
-Overfull \hbox (4.04709pt too wide) in paragraph at lines 399--400
+Overfull \hbox (4.04709pt too wide) in paragraph at lines 405--406
 \OT1/cmr/m/n/12 Though [][]Bog-danova and Fos-ter[][] ([][]2016[][]) ex-per-i-m
 ents with the \OT1/cmr/m/it/12 Ya-hoo! An-swers dataset[][][][][]\OT1/cmr/m/n/1
 2 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--432
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
 [12
 
 ] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 462--467
+Underfull \hbox (badness 10000) in paragraph at lines 468--473
 
  []
 
@@ -1711,21 +1711,21 @@ Appendix D.
 (./main.bbl [27
 
 
-] [28] [29])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 586.
- [30]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 586.
+] [28])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 592.
+ [29]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 592.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 586.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 586.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 592.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 592.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 71ABA3416EDCBA5028A4D7402E5F1CA7;6067.
  ) 
 Here is how much of TeX's memory you used:
- 27022 strings out of 494901
- 462141 string characters out of 6179487
- 758069 words of memory out of 5000000
- 29804 multiletter control sequences out of 15000+600000
+ 26985 strings out of 494901
+ 461165 string characters out of 6179487
+ 757696 words of memory out of 5000000
+ 29777 multiletter control sequences out of 15000+600000
  19743 words of font info for 76 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  49i,13n,77p,10377b,968s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1744,10 +1744,10 @@ pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb>
-Output written on main.pdf (39 pages, 704650 bytes).
+Output written on main.pdf (38 pages, 701641 bytes).
 PDF statistics:
- 621 PDF objects out of 1000 (max. 8388607)
- 555 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 520 compressed objects within 6 object streams
+ 129 named destinations out of 1000 (max. 500000)
  283 words of extra memory for PDF output out of 10000 (max. 10000000)
 

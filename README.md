@@ -32,4 +32,6 @@
 | test/              | test data and results                                        |
 
 # TODO
-* Thesis - Abstract, Acknowledgements, Thesis Organization, Results (in Appendix as well), Conclusion... Finally proof read !
+* Thesis - Thesis Organization, Results (in Appendix as well), Conclusion... Finally proof read !
+* Add SemEval '16 in Literature Survey (Tree Kernel and SVM)
+* Explain PV-DM PV-DBOW in Doc Rep (Thesis)

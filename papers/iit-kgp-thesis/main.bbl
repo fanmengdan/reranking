@@ -26,12 +26,6 @@ Jansen, P., Surdeanu, M., and Clark, P. (2014).
   reranking.
 \newblock In {\em ACL (1)}, pages 977--986.
 
-\bibitem[Jeon et~al., 2005]{jeon2005finding}
-Jeon, J., Croft, W.~B., and Lee, J.~H. (2005).
-\newblock Finding similar questions in large question and answer archives.
-\newblock In {\em Proceedings of the 14th ACM international conference on
-  Information and knowledge management}, pages 84--90. ACM.
-
 \bibitem[Joty et~al., 2015]{joty2015global}
 Joty, S.~R., Barr{\'o}n-Cedeno, A., Da~San~Martino, G., Filice, S.,
   M{\`a}rquez, L., Moschitti, A., and Nakov, P. (2015).
@@ -64,20 +58,6 @@ Mihaylov, T. and Nakov, P. (2016).
   word embeddings.
 \newblock {\em Proceedings of SemEval}, pages 879--886.
 
-\bibitem[Moschitti, 2008]{moschitti2008kernel}
-Moschitti, A. (2008).
-\newblock Kernel methods, syntax and semantics for relational text
-  categorization.
-\newblock In {\em Proceedings of the 17th ACM conference on Information and
-  knowledge management}, pages 253--262. ACM.
-
-\bibitem[Moschitti et~al., 2007]{moschitti2007exploiting}
-Moschitti, A., Quarteroni, S., Basili, R., and Manandhar, S. (2007).
-\newblock Exploiting syntactic and shallow semantic kernels for question answer
-  classification.
-\newblock In {\em Annual meeting-association for computational linguistics},
-  volume~45, page 776.
-
 \bibitem[Nakov et~al., 2016]{nakov-EtAl:2016:SemEval}
 Nakov, P., M\`{a}rquez, L., Magdy, W., Moschitti, A., Glass, J., and Randeree,
   B. (2016).
@@ -85,12 +65,6 @@ Nakov, P., M\`{a}rquez, L., Magdy, W., Moschitti, A., Glass, J., and Randeree,
 \newblock In {\em Proceedings of the 10th International Workshop on Semantic
   Evaluation}, SemEval '16, San Diego, California. Association for
   Computational Linguistics.
-
-\bibitem[Radlinski and Joachims, 2005]{radlinski2005query}
-Radlinski, F. and Joachims, T. (2005).
-\newblock Query chains: learning to rank from implicit feedback.
-\newblock In {\em Proceedings of the eleventh ACM SIGKDD international
-  conference on Knowledge discovery in data mining}, pages 239--248. ACM.
 
 \bibitem[Rehurek and Sojka, 2010]{rehurek2010software}
 Rehurek, R. and Sojka, P. (2010).
@@ -110,28 +84,11 @@ Severyn, A. and Moschitti, A. (2013).
 \newblock Automatic feature engineering for answer selection and extraction.
 \newblock In {\em EMNLP}, volume~13, pages 458--467.
 
-\bibitem[Severyn and Moschitti, 2015]{severyn2015learning}
-Severyn, A. and Moschitti, A. (2015).
-\newblock Learning to rank short text pairs with convolutional deep neural
-  networks.
-\newblock In {\em Proceedings of the 38th International ACM SIGIR Conference on
-  Research and Development in Information Retrieval}, pages 373--382. ACM.
-
 \bibitem[Shafiq~Joty and Nakov, 2016]{shafiq2016joint}
 Shafiq~Joty, L. and Nakov, P. (2016).
 \newblock Joint learning with global inference for comment classification in
   community question answering.
 \newblock In {\em Proceedings of NAACL-HLT}, pages 703--713.
-
-\bibitem[Shen and Lapata, 2007]{shen2007using}
-Shen, D. and Lapata, M. (2007).
-\newblock Using semantic roles to improve question answering.
-\newblock In {\em EMNLP-CoNLL}, pages 12--21.
-
-\bibitem[Surdeanu et~al., 2008]{surdeanu2008learning}
-Surdeanu, M., Ciaramita, M., and Zaragoza, H. (2008).
-\newblock Learning to rank answers on large online qa collections.
-\newblock In {\em ACL}, volume~8, pages 719--727.
 
 \bibitem[Toutanova et~al., 2003]{toutanova2003feature}
 Toutanova, K., Klein, D., Manning, C.~D., and Singer, Y. (2003).
@@ -147,19 +104,6 @@ Tran, Q.~H., Tran, V., Vu, T., Nguyen, M., and Pham, S.~B. (2015).
   question answering.
 \newblock In {\em Proceedings of the 9th International Workshop on Semantic
   Evaluation, SemEval}, volume~15, pages 215--219.
-
-\bibitem[Tymoshenko et~al., 2016]{tymoshenko2016convolutional}
-Tymoshenko, K., Bonadiman, D., and Moschitti, A. (2016).
-\newblock Convolutional neural networks vs. convolution kernels: Feature
-  engineering for answer sentence reranking.
-\newblock In {\em Proceedings of NAACL-HLT}, pages 1268--1278.
-
-\bibitem[Tymoshenko and Moschitti, 2015]{tymoshenko2015assessing}
-Tymoshenko, K. and Moschitti, A. (2015).
-\newblock Assessing the impact of syntactic and semantic structures for answer
-  passages reranking.
-\newblock In {\em Proceedings of the 24th ACM International on Conference on
-  Information and Knowledge Management}, pages 1451--1460. ACM.
 
 \bibitem[Wang and Manning, 2010]{wang2010probabilistic}
 Wang, M. and Manning, C.~D. (2010).

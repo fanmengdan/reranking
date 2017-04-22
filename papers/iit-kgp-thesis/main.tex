@@ -144,7 +144,9 @@
 
 \abstract{\addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
 
-Enter content here. 
+Community Question Answering (CQA) forums have since long been plagued with the problem of answer reranking, to automate the process of finding good comments to a question. Here in this work, we take up the problem of Question-Comment similarity with a simple approach where a question-comment pair is represented as concatenation of: distributed paragraph vector representations of question text, comment text and centroidal comment (of that question), along with various syntactic and metadata features. A multilayer perceptron is used to compute the similarity scores for such a question-commnet pair. 
+
+Despite it's simplicity the model attains competitive results compared to the best submissions at SemEval '16 Task 3 - Community Question Answering (Subtask A).
 }
 
 \clearpage % Start a new page
@@ -159,7 +161,11 @@ Enter content here.
 
 \acknowledgements{\addtocontents{toc}{}%\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-Enter acknowledgement content here.
+First and foremost I would like to thank my guide, Prof. Pawan Goyal, for providing an opportunity to work on a challenging and relevant problem, that has blossomed to be a great learning experience. I also thank Prof. Pawan Goyal, for the constant support and guidance over the course of the project.
+
+I would like to thank our faculty advisor, Prof. Rajat Subhra Chakraborty, for his continued efforts to help and enrich the academic experience our batch on vairous occasions. Also to acknowledge, the Department of Computer Science and Engineering, IIT Kharagpur, has been helpful through providing easy access to substantial resources for computation.
+
+Finally I would like to thank my parents, family and friends for their continued belief and support through out the course of the programme.
 
 }
 \clearpage % Start a new page
@@ -287,7 +293,7 @@ In this project we address the CQA task by exploiting the semantic similarity in
 
 \mychapter{2}{Literature Survey}
 
-The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
+The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. %For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
 
 In recent years, many advanced models have been developed for automating answer selection, producing a large body of work. For instance, \cite{wang2007jeopardy} proposed a probabilistic quasi synchronous grammar to learn syntactic transformations from the question to the candidate answers; \cite{heilman2010tree} used an algorithm based on Tree Edit Distance (TED) to learn tree transformations in pairs; \cite{wang2010probabilistic} developed a probabilistic model to learn tree-edit operations on dependency parse trees; and \cite{yao2013answer} applied linear chain CRFs with features derived from TED to automatically learn associations between questions and candidate answers. One interesting aspect of the above research is the need for syntactic structures; this is also corroborated in [\cite{severyn2012structural}; \cite{severyn2013automatic}]. Note that answer selection can use models for textual entailment, semantic similarity, and for natural language inference in general.
 
@@ -460,7 +466,7 @@ PV-DM & 15 & 10 & 0.93 & 0.22 & 0.98 & 0.98 & 4.47\\
 \subsection{SemEval Task 3 -- Subtask A}
 
 The training data comprises of 38,638 comments spanning over 5,124 questions. The neural net input is a tuple of the form $(q, c, avg\_ans_q, ft_{(q,c)})$, where, \\
-\hspace*{1cm}$avg\_ans_q$ is (normalized) average over the PV of all comments to question q \\
+\hspace*{1cm}$avg\_com_q$ is (normalized) average over the PV of all comments to question q \\
 \hspace*{1cm}$ft_{(q,c)}$ is feature vector corresp. to the pair (q,c) as described in \autoref{subsection:feature-set}
 \\\\
 \textbf{SemEval Task 3} has as an official evaluation measure used to rank the participating systems, the metric of Mean Average Precision (\textit{MAP}), calculated for the ten comments a participating system has ranked highest. Further metrics such as Mean Reciprocal Rank (\textit{MRR}) and Average Recall (\textit{AvgRec}) for top-10 results; Precision (\textit{P}), Recall (\textit{R}), \textit{F\textsubscript{1}} (with respect to the Good/Relevant class) and Accuracy (\textit{Acc}) are also reported.
@@ -496,7 +502,7 @@ PV-DBOW clearly outperforms PV-DM representations in these preliminary runs. Bui
 
 \subsubsection{Improvement with inclusion of Centroidal comment}
 
-As described in \autoref{subsection:centroidal-comment}, additionally, to capture the relative goodness of an comment with respect to other comments to the same question, $avg\_ans_q$ (normalized post averaging over the PV of all comments to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
+As described in \autoref{subsection:centroidal-comment}, additionally, to capture the relative goodness of an comment with respect to other comments to the same question, $avg\_com_q$ (normalized post averaging over the PV of all comments to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
 
 \begin{table}[!htbp]
 \centering
@@ -514,11 +520,11 @@ PV-DBOW & Adam & relu & 0.7161 & 0.8263 & 79.45 & 0.6298 & 0.6005 & 0.6148 & 0.6
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, c, avg\_ans_q)$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.}
 \label{table:ann-stage-2-best}
 \end{table}
 
-Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment for each question as an input feature. Further experiments thus is done inclusive of $avg\_ans_q$ in the input tuple.
+Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment for each question as an input feature. Further experiments thus is done inclusive of $avg\_com_q$ in the input tuple.
 
 \subsubsection{Further improvement with Syntactic and Metadata Features}
 
@@ -535,7 +541,7 @@ Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1}
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, c, avg\_ans_q, ft_{(q,c)})$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.}
 \label{table:ann-stage-3-best}
 \end{table}
 

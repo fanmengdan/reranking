@@ -240,7 +240,7 @@
 \vfill
 
 
-\normalsize{\coursecds report submitted to \par
+\normalsize{\coursecds report submitted \par
 % \univname \par
 in partial fulfilment for the award of the degree of \par 
 \degreename \par
