@@ -366,7 +366,7 @@ Inorder to rank the comments, it is only intuition that we must use the informat
 \[ avg\_com_q = \frac{\sum\limits_{c \in q} c}{||\sum\limits_{c \in q} c||} \tag{1} \label{equation:1} \]
 
 \subsection{Syntactic and Metadata Features}
-
+\label{subsection:extra-feat}
 We used several semantic vector similarity and metadata feature groups as mentioned in \cite{mihaylov2016semanticz}. For the ease of the reader, we shall describe the same feature groups below. 
 
 Note that for the similarity measures mentioned below, we used cosine similarity:
@@ -459,7 +459,7 @@ For the implementation of the feedforward neural network as described in \autore
 
 \subsection{Document Vector Representations}
 
-For training each question/comment text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/comment text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/comment text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/comment text. The squared errors are computed for both normalized and unnormalized document vectors. For comparison purposes normalized and unnormalized squared error between any two random document vector is tabulated beside these errors (averaged over as many iterations as the number of question/comment text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW prove to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments is tabulated under \autoref{appendix:A}.
+For training each question/comment text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/comment text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/comment text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/comment text. The squared errors are computed for normalizeddocument vectors. For comparison purposes squared error between any two random (normalized) document vector is tabulated beside these errors (averaged over as many iterations as the number of question/comment text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW proves to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments are tabulated under \autoref{table:pv-train-full} in \autoref{appendix:A}.
 
 %\setcounter{table}{1}
 \begin{table}[!htbp]
@@ -467,19 +467,41 @@ For training each question/comment text was treated as a document/paragraph and 
 \begin{adjustbox}{max width=\textwidth,center}
 \begin{tabular}{`c^c^c^c^c^c^c^c}
 \rowstyle{\bfseries}
-Category 			&	Window 	&	Epochs	&	Squared	&	Normalized	&	Sq. Error	&	Norm. Sq. Error	&	Ratio\\
+Category 			&	Window 	&	Epochs	&	Normalized	&	Norm. Sq. Error	&	Ratio\\
 \rowstyle{\bfseries}
-					&	Size		&			&	Error	&	Sq. Error (A)	&	(Random)		&	(Random)	(B)		&	(B/A)\\
+					&	Size		&			&	Sq. Error (A)	&	(Random)	(B)		&	(B/A)\\
 \\\hline\\
-PV-DBOW & 10 & 5 & 10.79 & 0.12 & 0.56 & 0.80 & 6.74\\
-PV-DBOW & 10 & 10 & 13.16 & 0.12 & 0.61 & 0.82 & 6.61\\
-PV-DM & 10 & 5 & 0.66 & 0.21 & 0.98 & 0.99 & 4.67\\
-PV-DM & 15 & 10 & 0.93 & 0.22 & 0.98 & 0.98 & 4.47\\
+PV-DBOW & 10 & 5 & 0.14 & 0.80 & 5.89 \\
+PV-DBOW & 10 & 10 & 0.14 & 0.83 & 5.84 \\
+PV-DM & 10 & 5 & 0.21 & 0.99 & 4.67 \\
+PV-DM & 15 & 10 & 0.22 & 0.98 & 4.47 \\
 \hline
 \end{tabular}
 \end{adjustbox}
 \caption{Training document vector representations PV-DM and PV-DBOW -- Best results}
 \label{table:pv-train-best}
+\end{table}
+
+To decide upon the dimension of the paragraph vectors we conduct similar experiments by testing on PV-DBOW document vectors of size 100 and 200. The best results tabulated in \autoref{table:pv-dimen-best}, show that 100 dimensional paragraph vectors prove to be a better choice owing to having both: higher accuracy and low computational complexity. The complete list of experiments are tabulated under \autoref{table:pv-dimen-full} in \autoref{appendix:A}.
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Dimension 			&	Window 	&	Epochs	&	Normalized	&	Norm. Sq. Error	&	Ratio\\
+\rowstyle{\bfseries}
+					&	Size		&			&	Sq. Error (A)	&	(Random)	(B)		&	(B/A)\\
+\\\hline\\
+100 & 10 & 5 & 0.14 & 0.80 & 5.89 \\
+100 & 10 & 10 & 0.14 & 0.83 & 5.84 \\
+200 & 10 & 10 & 0.15 & 0.84 & 5.65 \\
+200 & 10 & 5 & 0.15 & 0.82 & 5.47 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Training PV-DBOW document vectors of sizes 100 and 200 -- Best results}
+\label{table:pv-dimen-best}
 \end{table}
 
 \subsection{SemEval Task 3 -- Subtask A}
@@ -502,18 +524,17 @@ Intially experiments were conducted with only (q, c) pair as input to the neural
 \rowstyle{\bfseries}
 Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
 \\\hline\\
-PV-DBOW & Adam & logistic & 0.7049 & 0.8292 & 77.62 & 0.6601 & 0.5508 & 0.6005 & 0.7021 \\
+PV-DBOW & Adam & logistic & \textbf{0.7049} & 0.8292 & 77.62 & 0.6601 & 0.5508 & 0.6005 & 0.7021 \\
 PV-DBOW & SGD & relu & 0.7019 & 0.8251 & 77.16 & 0.6327 & 0.5937 & 0.6126 & 0.6948 \\
 PV-DBOW & SGD & logistic & 0.7018 & 0.8242 & 77.32 & 0.6412 & 0.5877 & 0.6133 & 0.6988 \\
 PV-DBOW & SGD & tanh & 0.7009 & 0.8245 & 76.62 & 0.6339 & 0.5914 & 0.6119 & 0.6951 \\
 PV-DBOW & Adam & relu & 0.6993 & 0.8106 & 76.94 & 0.5998 & 0.5741 & 0.5867 & 0.6713 \\
 PV-DBOW & Adam & tanh & 0.698 & 0.8231 & 76.35 & 0.6386 & 0.5546 & 0.5936 & 0.6914 \\
 PV-DM & SGD & relu & 0.6578 & 0.7855 & 74.58 & 0.5793 & 0.5357 & 0.5567 & 0.6532 \\
-%TODO,PV-DM & SGD & logistic & 0.5671 & 0.6922 & 64.02 & 0 & 0 & 0 & 0.5936 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Preliminary experiments using only $(q, c)$ inputs -- Best results.}
+\caption{Preliminary experiments using only $(q, c)$ inputs -- Best results}
 \label{table:ann-stage-1-best}
 \end{table}
 
@@ -530,7 +551,7 @@ As described in \autoref{subsection:centroidal-comment}, additionally, to captur
 \rowstyle{\bfseries}
 Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
 \\\hline\\
-PV-DBOW & SGD & relu & 0.7306 & 0.8416 & 79.61 & 0.6607 & 0.5786 & 0.6169 & 0.708 \\
+PV-DBOW & SGD & relu & \textbf{0.7306} & 0.8416 & 79.61 & 0.6607 & 0.5786 & 0.6169 & 0.708 \\
 PV-DBOW & SGD & tanh & 0.7188 & 0.8343 & 79.11 & 0.6684 & 0.5658 & 0.6129 & 0.7095 \\
 PV-DBOW & SGD & logistic & 0.7179 & 0.8346 & 79.13 & 0.6652 & 0.553 & 0.6039 & 0.7052 \\
 PV-DBOW & Adam & logistic & 0.7177 & 0.8342 & 78.96 & 0.6635 & 0.5726 & 0.6147 & 0.7083 \\
@@ -539,7 +560,7 @@ PV-DBOW & Adam & relu & 0.7161 & 0.8263 & 79.45 & 0.6298 & 0.6005 & 0.6148 & 0.6
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results}
 \label{table:ann-stage-2-best}
 \end{table}
 
@@ -547,7 +568,7 @@ Clearly there is a significant improvement in MAP scores after inclusion of the 
 
 \subsubsection{Further improvement with Syntactic and Metadata Features}
 
-% TODO
+Finally, we experimented by including a few more features as described in \autoref{subsection:extra-feat}; which includes various thread level metadata features, and features that capture syntactic similarities between the question and comment text. The best results are tabulated in \autoref{table:ann-stage-3-best}. Complete results are tabulated under \autoref{appendix:D}. Further, we excluded the \textit{ADAM} solver from parameters, as \textit{SGD} performs significantly better on all runs (can be seen from \autoref{table:ann-stage-2-best} as well).
 
 \begin{table}[!htbp]
 \centering
@@ -556,16 +577,15 @@ Clearly there is a significant improvement in MAP scores after inclusion of the 
 \rowstyle{\bfseries}
 Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
 \\\hline\\
-%%%%%%%%%%%%%%%%%% DATA HERE %%%%%%%%%%%%%%%%%%%%%%%%%%
+PV-DBOW & SGD & tanh & \textbf{0.7774} & 0.882 & 85.58 & 0.7081 & 0.6351 & 0.6696 & 0.7453 \\
+PV-DBOW & SGD & relu & 0.7743 & 0.8796 & 84.81 & 0.7057 & 0.626 & 0.6635 & 0.7419 \\
+PV-DBOW & SGD & logistic & 0.7726 & 0.8787 & 85.51 & 0.7149 & 0.6358 & 0.673 & 0.7489 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.}
+\caption{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results}
 \label{table:ann-stage-3-best}
 \end{table}
-
-% \section{Analysis}
-% TODO : Do we need this ? What is Conclusions for then ?
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSIONS

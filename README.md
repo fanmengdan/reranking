@@ -32,5 +32,5 @@
 | test/              | test data and results                                        |
 
 # TODO
-* Thesis - Results (in Appendix as well), Conclusion... Finally proof read !
+* Thesis - Conclusion... Finally proof read !
 * Add SemEval '16 in Literature Survey (Tree Kernel and SVM)
