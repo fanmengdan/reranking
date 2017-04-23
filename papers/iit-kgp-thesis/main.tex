@@ -285,13 +285,14 @@ In this project we address the CQA task by exploiting the semantic similarity in
 \textbf{Subtask A} \textit{Given a question from a question-comment thread, rank the comments as per their relevance (similarity) with respect to the question}.
 
 \section{Thesis Organization}
-% TODO
+The thesis is further organized as follows: \hyperref[chap:lit-survery]{Chapter 2} addresses the recent works pertaining to the task of finding question-comment similarity, and also sheds light on a few such works that use Deep Learning methodologies to solve this problem; \hyperref[chap:approach]{Chapter 3} then provides a detailed explanation of the multilayer perceptron based prediction model approach adopted in our work, using distributed document representations and various syntactic, metadata features. Finally, \hyperref[chap:exp]{Chapter 4} tabulates the results obtained with our approach on SemEval '16 Task 3 - Subtask A dataset, which we shall see are competitive with the best results published at the same event.
 
 %----------------------------------------------------------------------------------------
 %	LITERATURE SURVEY
 %----------------------------------------------------------------------------------------
 
 \mychapter{2}{Literature Survey}
+\label{chap:lit-survery}
 
 The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. %For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
 
@@ -301,7 +302,9 @@ Although recently quite a few work in this domain have started to adopt Deep Lea
 
 This research direction was further extended by \cite{joty2015global}, who used the output structure at the thread level in order to make more consistent global decisions. For this purpose, they modeled the relations between pairs of comments at any distance in the thread, and they combined the predictions of local classifiers in a graph-cut and in an ILP frameworks.
 
-Finally, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
+Noteably, at SemEval-2015 Task 3, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
+
+% TODO: SemEval '16
 
 Thus influenced by the trend we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity; building on the success of previous attempts. Note that we use the terms relevant-comment and answer interchangeably thoughout the document.
 
@@ -311,6 +314,7 @@ Thus influenced by the trend we shall tread in the direction of exploring Deep L
 %----------------------------------------------------------------------------------------
 
 \mychapter{3}{Approach}
+\label{chap:approach}
 
 For this task, we adopt a neural approach to open-domain non-factoid QA developed by \cite{bogdanova2016we}, which focused on “answer re-ranking”, i.e. given a list of candidate answers to a question, order the answers according to their relevance to the question. The approach is very simple and requires no feature engineering. Question-answer pairs are represented by concatenated distributed representation vectors and a multilayer perceptron is used to compute the score for an answer (the probability of an answer being the best answer to the question). Despite its simplicity, their work achieved state-of-the-art performance on the Yahoo! Answers dataset of manner or How questions introduced by \cite{jansen2014discourse}. This improved performance was attributed to the use of paragraph vector representations instead of averaging over word vectors, and to the use of suitable data for training these representations. This project aims at improving the simplistic model proposed by \cite{bogdanova2016we} with a few enhancements to achieve state-of-art performance at the \textbf{SemEval Task 3 - Subtask A} of finding Question -- Comment similarity.
 
@@ -334,7 +338,21 @@ Given a question-comment pair (q, c), the possible values for the ground-truth l
 
 \section{Document Representations}
 
-This approach requires question-comment pairs to be represented as a fixed-size vector. We experimentally evaluate the Paragraph Vector model (PV) proposed by \cite{le2014distributed}. The PV is an extension of the widely used continuous bag-of-words (CBOW) and skip-gram word embedding models, known as word2vec. However, in contrast to CBOW and skip-gram models that only learn word embeddings, the PV is able to learn representations for pieces of text of arbitrary length, e.g. sentences, paragraphs or documents. The PV includes (1) the distributed memory (DM) model, that predicts the next word using the concatenation of the previous words and the paragraph vector, that is shared among all words in the same paragraph (or sentence); (2) the distributed bag-of-words (DBOW) model, that – similar to the skip-gram model – predicts words randomly sampled from the paragraph, given the paragraph vector. We experiment with both DM and DBOW models. Also, note that we shall use the terms paragraph vector (PV) and document vector/representation interchangeably.
+This approach requires question-comment pairs to be represented as a fixed-size vector. We experimentally evaluate the Paragraph Vector model (PV) proposed by \cite{le2014distributed}. The PV is an extension of the widely used continuous bag-of-words (CBOW) and skip-gram word embedding models, known as word2vec. However, in contrast to CBOW and skip-gram models that only learn word embeddings, the PV is able to learn representations for pieces of text of arbitrary length, e.g. sentences, paragraphs or documents. The types of PV include (1) the distributed memory (DM) model, that predicts the next word in a text window using the concatenation of the word vectors of previous words and the paragraph vector; (2) the distributed bag-of-words (DBOW) model, that – similar to the skip-gram model – predicts words (in a small window) randomly sampled from the paragraph, given the paragraph vector. We experiment with both DM and DBOW models. \autoref{fig:pv-dm} and \autoref{fig:pv-dbow} provide an illustration for these paragraph vector models. Also, note that we shall use the terms paragraph vector (PV) and document vector/representation interchangeably.
+
+\begin{figure}[t!]
+  \centering
+  \includegraphics[keepaspectratio, width=0.8\textwidth]{./Pictures/pv-dm.png}
+  \caption{Distributed Memory (DM) framework for learning paragraph vector. In this model, the concatenation or average of word vectors with a context of few words is used to predict the next word. The paragraph vector represents the missing information from the current context and can act as a memory of the topic of the paragraph.}
+  \label{fig:pv-dm}
+\end{figure}
+
+\begin{figure}[t!]
+  \centering
+  \includegraphics[keepaspectratio, width=0.8\textwidth]{./Pictures/pv-dbow.png}
+  \caption{Distributed Bag of Words (DBOW) version of paragraph vectors. The paragraph vector is trained to predict the words in a small window}
+  \label{fig:pv-dbow}
+\end{figure}
 
 \section{Feature Set}
 \label{subsection:feature-set}
@@ -399,6 +417,7 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 %----------------------------------------------------------------------------------------
 
 \mychapter{4}{Experiments}
+\label{chap:exp}
 
 \section{Data}
 

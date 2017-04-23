@@ -50,6 +50,7 @@
 \citation{barron2015thread}
 \citation{lafferty2001conditional}
 \@writefile{toc}{\contentsline {chapter}{Literature Survey}{3}{chapter*.24}}
+\newlabel{chap:lit-survery}{{1.3}{3}{Literature Survey}{chapter*.24}{}}
 \citation{joty2015global}
 \citation{shafiq2016joint}
 \citation{bogdanova2016we}
@@ -57,6 +58,7 @@
 \citation{bogdanova2016we}
 \citation{le2014distributed}
 \@writefile{toc}{\contentsline {chapter}{Approach}{5}{chapter*.25}}
+\newlabel{chap:approach}{{1.3}{5}{Approach}{chapter*.25}{}}
 \citation{bogdanova2016we}
 \citation{bogdanova2016we}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Learning Algorithm}{6}{section.26}}
@@ -66,73 +68,78 @@
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:ann-arch}{{3.1}{7}{Architecture of proposed Feedforward Neural Network\relax }{figure.caption.27}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Document Representations}{7}{section.28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Distributed Memory (DM) framework for learning paragraph vector. In this model, the concatenation or average of word vectors with a context of few words is used to predict the next word. The paragraph vector represents the missing information from the current context and can act as a memory of the topic of the paragraph.\relax }}{8}{figure.caption.29}}
+\newlabel{fig:pv-dm}{{3.2}{8}{Distributed Memory (DM) framework for learning paragraph vector. In this model, the concatenation or average of word vectors with a context of few words is used to predict the next word. The paragraph vector represents the missing information from the current context and can act as a memory of the topic of the paragraph.\relax }{figure.caption.29}{}}
 \citation{mihaylov2016semanticz}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Feature Set}{8}{section.29}}
-\newlabel{subsection:feature-set}{{3.3}{8}{Feature Set}{section.29}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{8}{subsection.30}}
-\newlabel{subsection:centroidal-comment}{{3.3.1}{8}{Centroidal Comment}{subsection.30}{}}
-\newlabel{equation:1}{{{1}}{8}{Centroidal Comment}{AMS.31}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{9}{subsection.32}}
-\newlabel{equation:2}{{{2}}{9}{Syntactic and Metadata Features}{AMS.33}{}}
-\newlabel{equation:3}{{{3}}{9}{Syntactic and Metadata Features}{AMS.34}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Distributed Bag of Words (DBOW) version of paragraph vectors. The paragraph vector is trained to predict the words in a small window\relax }}{9}{figure.caption.30}}
+\newlabel{fig:pv-dbow}{{3.3}{9}{Distributed Bag of Words (DBOW) version of paragraph vectors. The paragraph vector is trained to predict the words in a small window\relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Feature Set}{9}{section.31}}
+\newlabel{subsection:feature-set}{{3.3}{9}{Feature Set}{section.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{9}{subsection.32}}
+\newlabel{subsection:centroidal-comment}{{3.3.1}{9}{Centroidal Comment}{subsection.32}{}}
+\newlabel{equation:1}{{{1}}{9}{Centroidal Comment}{AMS.33}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{10}{subsection.34}}
+\newlabel{equation:2}{{{2}}{10}{Syntactic and Metadata Features}{AMS.35}{}}
+\newlabel{equation:3}{{{3}}{10}{Syntactic and Metadata Features}{AMS.36}{}}
 \citation{tran2015jaist}
 \citation{toutanova2003feature}
 \citation{rehurek2010software}
 \citation{bogdanova2016we}
 \citation{nakov-EtAl:2016:SemEval}
-\@writefile{toc}{\contentsline {chapter}{Experiments}{12}{chapter*.35}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data}{12}{section.36}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus  from SemEval-2017 Task 3 (Subtask A)\relax }}{12}{table.caption.38}}
-\newlabel{table:data}{{1}{12}{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)\relax }{table.caption.38}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Experimental Setup}{13}{section.39}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Results}{13}{section.43}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{13}{subsection.44}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{14}{table.caption.45}}
-\newlabel{table:pv-train-best}{{2}{14}{Training document vector representations PV-DM and PV-DBOW -- Best results\relax }{table.caption.45}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{14}{subsection.46}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{15}{subsubsection.47}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }}{15}{table.caption.48}}
-\newlabel{table:ann-stage-1-best}{{3}{15}{Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }{table.caption.48}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{15}{subsubsection.49}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.\relax }}{15}{table.caption.50}}
-\newlabel{table:ann-stage-2-best}{{4}{15}{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.\relax }{table.caption.50}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{16}{subsubsection.51}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.\relax }}{16}{table.caption.52}}
-\newlabel{table:ann-stage-3-best}{{5}{16}{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.\relax }{table.caption.52}{}}
+\@writefile{toc}{\contentsline {chapter}{Experiments}{13}{chapter*.37}}
+\newlabel{chap:exp}{{3.3.2}{13}{Experiments}{chapter*.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Data}{13}{section.38}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Statistics on English CQA-QL corpus  from SemEval-2017 Task 3 (Subtask A)\relax }}{13}{table.caption.40}}
+\newlabel{table:data}{{1}{13}{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)\relax }{table.caption.40}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Experimental Setup}{14}{section.41}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Results}{14}{section.45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{14}{subsection.46}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- Best results\relax }}{15}{table.caption.47}}
+\newlabel{table:pv-train-best}{{2}{15}{Training document vector representations PV-DM and PV-DBOW -- Best results\relax }{table.caption.47}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{15}{subsection.48}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{16}{subsubsection.49}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }}{16}{table.caption.50}}
+\newlabel{table:ann-stage-1-best}{{3}{16}{Preliminary experiments using only $(q, c)$ inputs -- Best results.\relax }{table.caption.50}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{16}{subsubsection.51}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.\relax }}{16}{table.caption.52}}
+\newlabel{table:ann-stage-2-best}{{4}{16}{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results.\relax }{table.caption.52}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{17}{subsubsection.53}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.\relax }}{17}{table.caption.54}}
+\newlabel{table:ann-stage-3-best}{{5}{17}{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results.\relax }{table.caption.54}{}}
 \@writefile{toc}{\vspace  {2em}}
-\@writefile{toc}{\contentsline {chapter}{Conclusions}{17}{chapter*.53}}
+\@writefile{toc}{\contentsline {chapter}{Conclusions}{18}{chapter*.55}}
 \@writefile{toc}{\vspace  {2em}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{18}{appendix.54}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{19}{appendix.56}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:A}{{A}{18}{Training PV-DM and PV-DBOW}{appendix.54}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{18}{table.caption.55}}
-\newlabel{table:pv-train-full}{{6}{18}{Training document vector representations PV-DM and PV-DBOW -- All results\relax }{table.caption.55}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {B}Preliminary experiments}{19}{appendix.56}}
+\newlabel{appendix:A}{{A}{19}{Training PV-DM and PV-DBOW}{appendix.56}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{19}{table.caption.57}}
+\newlabel{table:pv-train-full}{{6}{19}{Training document vector representations PV-DM and PV-DBOW -- All results\relax }{table.caption.57}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {B}Preliminary experiments}{20}{appendix.58}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:B}{{B}{19}{Preliminary experiments}{appendix.56}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results.\relax }}{19}{table.caption.57}}
-\newlabel{table:ann-stage-1-full-1}{{7}{19}{Preliminary experiments using only (q, c) inputs -- All results.\relax }{table.caption.57}{}}
-\newlabel{table:ann-stage-1-full-2}{{\caption@xref {table:ann-stage-1-full-2}{ on input line 149}}{20}{Preliminary experiments}{table.caption.58}{}}
-\newlabel{table:ann-stage-1-full-3}{{\caption@xref {table:ann-stage-1-full-3}{ on input line 241}}{21}{Preliminary experiments}{table.caption.59}{}}
-\newlabel{table:ann-stage-1-full-4}{{\caption@xref {table:ann-stage-1-full-4}{ on input line 334}}{22}{Preliminary experiments}{table.caption.60}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{23}{appendix.61}}
+\newlabel{appendix:B}{{B}{20}{Preliminary experiments}{appendix.58}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results.\relax }}{20}{table.caption.59}}
+\newlabel{table:ann-stage-1-full-1}{{7}{20}{Preliminary experiments using only (q, c) inputs -- All results.\relax }{table.caption.59}{}}
+\newlabel{table:ann-stage-1-full-2}{{\caption@xref {table:ann-stage-1-full-2}{ on input line 149}}{21}{Preliminary experiments}{table.caption.60}{}}
+\newlabel{table:ann-stage-1-full-3}{{\caption@xref {table:ann-stage-1-full-3}{ on input line 241}}{22}{Preliminary experiments}{table.caption.61}{}}
+\newlabel{table:ann-stage-1-full-4}{{\caption@xref {table:ann-stage-1-full-4}{ on input line 334}}{23}{Preliminary experiments}{table.caption.62}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{24}{appendix.63}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:C}{{C}{23}{Experiments post inclusion of Average Answer}{appendix.61}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }}{23}{table.caption.62}}
-\newlabel{table:ann-stage-2-full-1}{{8}{23}{Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }{table.caption.62}{}}
-\newlabel{table:ann-stage-2-full-2}{{\caption@xref {table:ann-stage-2-full-2}{ on input line 154}}{24}{Experiments post inclusion of Average Answer}{table.caption.63}{}}
-\newlabel{table:ann-stage-2-full-3}{{\caption@xref {table:ann-stage-2-full-3}{ on input line 251}}{25}{Experiments post inclusion of Average Answer}{table.caption.64}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{26}{appendix.65}}
+\newlabel{appendix:C}{{C}{24}{Experiments post inclusion of Average Answer}{appendix.63}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }}{24}{table.caption.64}}
+\newlabel{table:ann-stage-2-full-1}{{8}{24}{Experiments using $(q, c, avg\_com_q)$ inputs -- All results.\relax }{table.caption.64}{}}
+\newlabel{table:ann-stage-2-full-2}{{\caption@xref {table:ann-stage-2-full-2}{ on input line 154}}{25}{Experiments post inclusion of Average Answer}{table.caption.65}{}}
+\newlabel{table:ann-stage-2-full-3}{{\caption@xref {table:ann-stage-2-full-3}{ on input line 251}}{26}{Experiments post inclusion of Average Answer}{table.caption.66}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{27}{appendix.67}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{appendix:D}{{D}{26}{Further experiments with Syntactic \& Metadata features}{appendix.65}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{26}{table.caption.66}}
-\newlabel{table:ann-stage-3-full-1}{{9}{26}{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }{table.caption.66}{}}
-\newlabel{table:ann-stage-3-full-2}{{\caption@xref {table:ann-stage-3-full-2}{ on input line 34}}{26}{Further experiments with Syntactic \& Metadata features}{table.caption.67}{}}
-\newlabel{table:ann-stage-3-full-3}{{\caption@xref {table:ann-stage-3-full-3}{ on input line 50}}{26}{Further experiments with Syntactic \& Metadata features}{table.caption.68}{}}
+\newlabel{appendix:D}{{D}{27}{Further experiments with Syntactic \& Metadata features}{appendix.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{27}{table.caption.68}}
+\newlabel{table:ann-stage-3-full-1}{{9}{27}{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }{table.caption.68}{}}
+\newlabel{table:ann-stage-3-full-2}{{\caption@xref {table:ann-stage-3-full-2}{ on input line 34}}{27}{Further experiments with Syntactic \& Metadata features}{table.caption.69}{}}
+\newlabel{table:ann-stage-3-full-3}{{\caption@xref {table:ann-stage-3-full-3}{ on input line 50}}{27}{Further experiments with Syntactic \& Metadata features}{table.caption.70}{}}
 \@writefile{toc}{\vspace  {2em}}
 \bibstyle{apalike}
 \bibdata{Bibliography}
@@ -143,8 +150,8 @@
 \bibcite{joty2015global}{{5}{2015}{{Joty et~al.}}{{}}}
 \bibcite{lafferty2001conditional}{{6}{2001}{{Lafferty et~al.}}{{}}}
 \bibcite{le2014distributed}{{7}{2014}{{Le and Mikolov}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{27}{dummy.69}}
-\newlabel{Bibliography}{{8}{27}{Further experiments with Syntactic \& Metadata features}{dummy.69}{}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{28}{dummy.71}}
+\newlabel{Bibliography}{{8}{28}{Further experiments with Syntactic \& Metadata features}{dummy.71}{}}
 \bibcite{lin2015icrc}{{8}{2015}{{Lin and Wang}}{{}}}
 \bibcite{mihaylov2016semanticz}{{9}{2016}{{Mihaylov and Nakov}}{{}}}
 \bibcite{nakov-EtAl:2016:SemEval}{{10}{2016}{{Nakov et~al.}}{{}}}
