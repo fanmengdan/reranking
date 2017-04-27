@@ -5,12 +5,15 @@
 \contentsline {table}{\numberline {4}{\ignorespaces Preliminary experiments using only $(q, c)$ inputs -- Best results\relax }}{16}{table.caption.51}
 \contentsline {table}{\numberline {5}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- Best results\relax }}{17}{table.caption.53}
 \contentsline {table}{\numberline {6}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results\relax }}{17}{table.caption.55}
+\contentsline {table}{\numberline {7}{\ignorespaces Experiments using $(q, c, ft_{(q,c)})$ inputs -- Best results\relax }}{18}{table.caption.57}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{19}{table.caption.58}
-\contentsline {table}{\numberline {8}{\ignorespaces Training PV-DBOW document vectors of sizes 100 and 200 -- All results\relax }}{20}{table.caption.59}
+\contentsline {table}{\numberline {8}{\ignorespaces Training document vector representations PV-DM and PV-DBOW -- All results\relax }}{20}{table.caption.60}
+\contentsline {table}{\numberline {9}{\ignorespaces Training PV-DBOW document vectors of sizes 100 and 200 -- All results\relax }}{21}{table.caption.61}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {9}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results (\textit {MAP}\textgreater 0.6).\relax }}{21}{table.caption.61}
+\contentsline {table}{\numberline {10}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results (\textit {MAP}\textgreater 0.6).\relax }}{22}{table.caption.63}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {10}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results (\textit {MAP}\textgreater 0.6).\relax }}{25}{table.caption.66}
+\contentsline {table}{\numberline {11}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results (\textit {MAP}\textgreater 0.6).\relax }}{26}{table.caption.68}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {11}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{28}{table.caption.70}
+\contentsline {table}{\numberline {12}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results.\relax }}{29}{table.caption.72}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {13}{\ignorespaces Experiments using $(q, c, ft_{(q,c)})$ inputs -- All results.\relax }}{32}{table.caption.76}

@@ -30,12 +30,14 @@
 \contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{16}{subsubsection.50}
 \contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{17}{subsubsection.52}
 \contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{17}{subsubsection.54}
+\contentsline {subsubsection}{\numberline {4.3.2.4}Analysis with $(q, c, ft_{(q,c)})$ inputs}{18}{subsubsection.56}
 \vspace {2em}
-\contentsline {chapter}{Conclusions}{18}{chapter*.56}
+\contentsline {chapter}{Conclusions}{19}{chapter*.58}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{19}{appendix.57}
-\contentsline {chapter}{\numberline {B}Preliminary experiments}{21}{appendix.60}
-\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{25}{appendix.65}
-\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{28}{appendix.69}
+\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{20}{appendix.59}
+\contentsline {chapter}{\numberline {B}Preliminary experiments}{22}{appendix.62}
+\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{26}{appendix.67}
+\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{29}{appendix.71}
+\contentsline {chapter}{\numberline {E}Analysis with $(q, c, ft_{(q,c)})$ inputs}{32}{appendix.75}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{31}{dummy.73}
+\contentsline {chapter}{Bibliography}{35}{dummy.79}
