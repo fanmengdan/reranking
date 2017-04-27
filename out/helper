@@ -30,7 +30,7 @@ process(open('validation.accuracy.csv', 'r'), open('validation.csv', 'w'))
 process(open('testing.accuracy.csv', 'r'), open('testing.csv', 'w'))
 
 Find What: \$(.*),(.*),(.*)\$
-Replace With: ($1 $2 $3)
+Replace With: [ $1 $2 $3 ]
 
 Best Result So-far
 ==================
