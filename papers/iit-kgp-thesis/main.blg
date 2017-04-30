@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: apalike.bst
 Database file #1: Bibliography.bib
 Warning--empty journal in bogdanova2016we
-You've used 20 entries,
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            583 strings with 8171 characters,
-and the built_in function-call counts, 10461 in all, are:
-= -- 1078
-> -- 400
+            591 strings with 8712 characters,
+and the built_in function-call counts, 11670 in all, are:
+= -- 1193
+> -- 486
 < -- 30
-+ -- 136
-- -- 136
-* -- 783
-:= -- 1619
-add.period$ -- 67
-call.type$ -- 20
-change.case$ -- 167
-chr.to.int$ -- 20
-cite$ -- 21
-duplicate$ -- 480
-empty$ -- 748
-format.name$ -- 176
-if$ -- 2239
++ -- 168
+- -- 168
+* -- 898
+:= -- 1833
+add.period$ -- 73
+call.type$ -- 22
+change.case$ -- 192
+chr.to.int$ -- 22
+cite$ -- 23
+duplicate$ -- 509
+empty$ -- 800
+format.name$ -- 208
+if$ -- 2465
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 20
-newline$ -- 102
-num.names$ -- 60
-pop$ -- 207
+missing$ -- 22
+newline$ -- 112
+num.names$ -- 66
+pop$ -- 223
 preamble$ -- 1
-purify$ -- 167
+purify$ -- 192
 quote$ -- 0
-skip$ -- 387
+skip$ -- 421
 stack$ -- 0
-substring$ -- 736
-swap$ -- 163
-text.length$ -- 20
+substring$ -- 823
+swap$ -- 174
+text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 120
+type$ -- 132
 warning$ -- 1
-while$ -- 85
+while$ -- 94
 width$ -- 0
-write$ -- 271
+write$ -- 297
 (There was 1 warning)

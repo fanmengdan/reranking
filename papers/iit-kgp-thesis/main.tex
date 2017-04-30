@@ -76,7 +76,7 @@
 \placeshrt{Kharagpur}
 \placelng{Kharagpur - 721302, India}
 \datesub{April 28, 2017}
-\datesig{April XX, 2017}
+\datesig{April 28, 2017}
 \semsub{Spring Semester, 2016-17}
 %\keywords{Deep learning in Q\&A}
 \coursecd{Master's Thesis Project }
@@ -163,9 +163,9 @@ Despite it's simplicity the model attains competitive results compared to the be
 
 First and foremost I would like to thank my guide, Prof. Pawan Goyal, for providing an opportunity to work on a challenging and relevant problem, that has blossomed to be a great learning experience. I also thank Prof. Pawan Goyal, for the constant support and guidance over the course of the project.
 
-I would like to thank our faculty advisor, Prof. Rajat Subhra Chakraborty, for his continued efforts to help and enrich the academic experience our batch on vairous occasions. Also to acknowledge, the Department of Computer Science and Engineering, IIT Kharagpur, has been helpful through providing easy access to substantial resources for computation.
+I would like to thank our faculty advisor, Prof. Rajat Subhra Chakraborty, for his continued efforts to help and enrich the academic experience our batch on various occasions. Also, to acknowledge, the Department of Computer Science and Engineering, IIT Kharagpur, has been helpful through providing easy access to substantial resources for computation.
 
-Finally I would like to thank my parents, family and friends for their continued belief and support through out the course of the programme.
+Finally, I would like to thank my parents, family and friends for their continued belief and support throughout the course of the programme.
 
 }
 \clearpage % Start a new page
@@ -200,7 +200,7 @@ Finally I would like to thank my parents, family and friends for their continued
 \textbf{QL} & \textbf{Q}atar \textbf{L}iving \\
 \textbf{SGD} & \textbf{S}tochastic \textbf{G}radient \textbf{D}escent \\
 \textbf{PV} & \textbf{P}aragraph \textbf{V}ector \\
-\textbf{CBOW} & \textbf{C}ontinious \textbf{B}ag-\textbf{O}f-\textbf{W}ords \\
+\textbf{CBOW} & \textbf{C}ontinuous \textbf{B}ag-\textbf{O}f-\textbf{W}ords \\
 \textbf{DM} & \textbf{D}istributed \textbf{M}emory \\
 \textbf{DBOW} & \textbf{D}istributed \textbf{B}ag-\textbf{O}f-\textbf{W}ords \\
 \textbf{MAP} & \textbf{M}ean \textbf{A}veraged \textbf{P}recision \\
@@ -208,7 +208,7 @@ Finally I would like to thank my parents, family and friends for their continued
 \textbf{AvgRec} & \textbf{Av}era\textbf{g}e \textbf{Rec}all \\
 \textbf{P} & \textbf{P}recision \\
 \textbf{R} & \textbf{R}ecall \\
-\textbf{Acc} & \textbf{Acc}uraccy \\
+\textbf{Acc} & \textbf{Acc}uracy \\
 %\textbf{Acronym} & \textbf{W}hat (it) \textbf{S}tands \textbf{F}or \\
 }
 
@@ -272,19 +272,14 @@ Finally I would like to thank my parents, family and friends for their continued
 
 \mychapter{1}{Introduction}
 
-\section{Introduction}
-
 CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar Living\footnote{http://www.qatarliving.com/}, are gaining popularity online. These forums are seldom moderated, quite open, and thus they typically have little restrictions, if any, on who can post and who can answer a question. On the positive side, this means that one can freely ask any question and can then expect some good, honest comments. On the negative side, it takes effort to go through all possible comments and to make sense of them. For example, it is not unusual for a question to have hundreds of comments, which makes it very time-consuming for the user to inspect and to winnow through them all. The present work is intended to automate the process of finding good comments to questions in a community-created discussion forum, by automatically ranking the existing comments.
-
-\section{SemEval Task -- 3}
 
 \textbf{SemEval Tasks}\footnote{http://alt.qcri.org/semeval2017/} (Semantic Evaluation) are an ongoing series of evaluations of computational semantic analysis systems. The \textbf{SemEval Task 3} in particular deals with semantic comparison for words and texts in the domain of Community Question Answering (CQA). In essence, the main CQA task can be defined as follows: \textit{“given (i) a new question and (ii) a large collection of question-comment threads created by a user community, rank the comments that are most useful for answering the new question”}.
 
-\subsection{Subtask A -- Question-Comment Similarity}
-In this project we address the CQA task by exploiting the semantic similarity in Q\&A using Deep learning techniques. In particular we focus on a single subtask under \textbf{SemEval - Task 3}, namely the \textbf{Subtask A}. \\ \\
+\textbf{Subtask A -- Question-Comment Similarity.} In this project we address the CQA task of finding question-comment similarity, by exploiting the semantic similarity in Q\&A using Deep learning techniques. In particular we focus on a single subtask under \textbf{SemEval - Task 3}, namely the \textbf{Subtask A}, defined below.
+
 \textbf{Subtask A} \textit{Given a question from a question-comment thread, rank the comments as per their relevance (similarity) with respect to the question}.
 
-\section{Thesis Organization}
 The thesis is further organized as follows: \hyperref[chap:lit-survery]{Chapter 2} addresses the recent works pertaining to the task of finding question-comment similarity, and also sheds light on a few such works that use Deep Learning methodologies to solve this problem; \hyperref[chap:approach]{Chapter 3} then provides a detailed explanation of the multilayer perceptron based prediction model approach adopted in our work, using distributed document representations and various syntactic, metadata features. Finally, \hyperref[chap:exp]{Chapter 4} tabulates the results obtained with our approach on SemEval '16 Task 3 - Subtask A dataset, which we shall see are competitive with the best results published at the same event.
 
 %----------------------------------------------------------------------------------------
@@ -294,19 +289,25 @@ The thesis is further organized as follows: \hyperref[chap:lit-survery]{Chapter 
 \mychapter{2}{Literature Survey}
 \label{chap:lit-survery}
 
-The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. This is in other words the task of Answer re-ranking. %For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
+The tasks falling under the Community Question \& Answering section of SemEval goes in the direction of passage reranking, where automatic classifiers are normally applied to pairs of questions and comment passages to derive a relative order between passages. In other words, this is the task of Answer re-ranking. %For example we have works by \cite{radlinski2005query}; \cite{jeon2005finding}; \cite{shen2007using}; \cite{moschitti2007exploiting}; \cite{moschitti2008kernel}; \cite{severyn2015learning}; \cite{tymoshenko2015assessing}; \cite{tymoshenko2016convolutional}; \cite{surdeanu2008learning}.
 
 In recent years, many advanced models have been developed for automating answer selection, producing a large body of work. For instance, \cite{wang2007jeopardy} proposed a probabilistic quasi synchronous grammar to learn syntactic transformations from the question to the candidate answers; \cite{heilman2010tree} used an algorithm based on Tree Edit Distance (TED) to learn tree transformations in pairs; \cite{wang2010probabilistic} developed a probabilistic model to learn tree-edit operations on dependency parse trees; and \cite{yao2013answer} applied linear chain CRFs with features derived from TED to automatically learn associations between questions and candidate answers. One interesting aspect of the above research is the need for syntactic structures; this is also corroborated in [\cite{severyn2012structural}; \cite{severyn2013automatic}]. Note that answer selection can use models for textual entailment, semantic similarity, and for natural language inference in general.
 
-Although recently quite a few work in this domain have started to adopt Deep Learning Techniques to solve the problem of answer re-ranking. For eg. \cite{lin2015icrc} treated the answer selection task as a sequence labeling problem and proposed recurrent convolutional neural networks to recognize good comments. In a follow-up work, \cite{zhou2015answer} included long-short term memory (LSTM) units in their convolutional neural network to learn the classification sequence for the thread. In parallel, \cite{barron2015thread} exploited the dependencies between the thread comments to tackle the same task. This was done by designing features that look globally at the thread and by applying structured prediction models, such as Conditional Random Fields \cite{lafferty2001conditional}.
+Quite a few works in this domain have also started to adopt Deep Learning Techniques to solve the problem of answer re-ranking. For eg. \cite{lin2015icrc} treated the answer selection task as a sequence labeling problem and proposed recurrent convolutional neural networks to recognize good comments. In a follow-up work, \cite{zhou2015answer} included long-short term memory (LSTM) units in their convolutional neural network to learn the classification sequence for the thread. In parallel, \cite{barron2015thread} exploited the dependencies between the thread comments to tackle the same task. This was done by designing features that look globally at the thread and by applying structured prediction models, such as Conditional Random Fields \cite{lafferty2001conditional}.
 
-This research direction was further extended by \cite{joty2015global}, who used the output structure at the thread level in order to make more consistent global decisions. For this purpose, they modeled the relations between pairs of comments at any distance in the thread, and they combined the predictions of local classifiers in a graph-cut and in an ILP frameworks.
+%This research direction was further extended by \cite{joty2015global}, who used the output structure at the thread level in order to make more consistent global decisions. For this purpose, they modeled the relations between pairs of comments at any distance in the thread, and they combined the predictions of local classifiers in a graph-cut and in an ILP frameworks.
 
-Noteably, at SemEval-2015 Task 3, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
+%At SemEval-2015 Task 3, \cite{shafiq2016joint} proposed two novel joint learning models that are on-line and integrate inference within the learning process. The first one jointly learns two node- and edge-level MaxEnt classifiers with stochastic gradient descent and integrates the inference step with loopy belief propagation. The second model is an instance of fully connected pairwise CRFs (FCCRF). The FCCRF model significantly outperformed all other approaches and yielded the best results on the task (SemEval-2015 Task 3). Crucial elements for its success were the global normalization and an Ising-like edge potential.
 
-% TODO: SemEval '16
+Notably, at SemEval '16 Task 3 -- Subtask A, whose dataset has been used for training and evaluation in this project, provided a great set of Tree Kernel based approaches, that proved to give best results, out performing various LSTM based approaches. Although the reason for this could be for the lack of substantial data for an LSTM to be trained over.
 
-Thus influenced by the trend we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity; building on the success of previous attempts. Note that we use the terms relevant-comment and answer interchangeably thoughout the document.
+\cite{filice2016kelp}, being the best submission at SemEval '16 Task 3 -- Subtask A, gave an SVM learning algorithm that operates on a linear combination of kernel functions, each one applied over a specific representation of the targeted examples: (i) feature vectors containing linguistic similarities between the texts in a pair; (ii) shallow syntactic trees that encode the lexical and morpho-syntactic information shared between text pairs; (iii) feature vectors capturing task-specific information. On similar lines, \cite{joty2016convkn} trained a binary SVM classifier using partial tree kernels defined over shallow syntactic trees, along with few other metadata and ranking features.
+
+\cite{mihaylov2016semanticz} on the other hand constructs various syntactic and metadata features and trains an SVM to the solve the classification problem of comment relevance. This idea of using various helpful features from metadata and constructing scores for the similarity between the syntax of question and comment text, is quite simplistic and has been adopted in our approach as well. Very similar to this approach, \cite{mihaylova2016super} builds variety of features -- like question and comment metadata, question and comment lexical features, distance measures between the question and the comment, text readability measures applied to the question and to the comment, lexical semantics vectors for the question and for the comment, features modeling the likelihood of a user being a troll and so on -- to be trained on an SVM classifier. Notably, both these approaches build word embeddings as a means to understand the sematics of the question/comment text.
+
+Note that \cite{filice2016kelp}, \cite{joty2016convkn}, \cite{mihaylov2016semanticz}, \cite{mihaylova2016super} were top submissions at SemEval '16 Task 3 -- Subtask A. \cite{alessandromoschitti2016semeval} provide the task description and evaluation results paper published for SemEval '16 Task 3, which is a detailed entry on the task, data and submissions at the event.
+
+Building on the success of previous attempts, we shall tread in the direction of exploring Deep Learning Techniques to effectively solve the problem of finding Question - Comment similarity. More specifically we intend to exploit the lexical, semantic similarities between question-comment pairs and information in metadata, all the while designing a simple approach. Note that we use the terms relevant-comment and answer interchangeably thoughout the document.
 
 
 %----------------------------------------------------------------------------------------
@@ -316,14 +317,14 @@ Thus influenced by the trend we shall tread in the direction of exploring Deep L
 \mychapter{3}{Approach}
 \label{chap:approach}
 
-For this task, we adopt a neural approach to open-domain non-factoid QA developed by \cite{bogdanova2016we}, which focused on “answer re-ranking”, i.e. given a list of candidate answers to a question, order the answers according to their relevance to the question. The approach is very simple and requires no feature engineering. Question-answer pairs are represented by concatenated distributed representation vectors and a multilayer perceptron is used to compute the score for an answer (the probability of an answer being the best answer to the question). Despite its simplicity, their work achieved state-of-the-art performance on the Yahoo! Answers dataset of manner or How questions introduced by \cite{jansen2014discourse}. This improved performance was attributed to the use of paragraph vector representations instead of averaging over word vectors, and to the use of suitable data for training these representations. This project aims at improving the simplistic model proposed by \cite{bogdanova2016we} with a few enhancements to achieve state-of-art performance at the \textbf{SemEval Task 3 - Subtask A} of finding Question -- Comment similarity.
+For this task, we adopt a neural approach to open-domain non-factoid QA developed by \cite{bogdanova2016we}; which focused on “answer re-ranking”, i.e. given a list of candidate answers to a question, order the answers according to their relevance to the question. This approach was simplistic owing to the fact that it required no feature engineering. Question-answer pairs are represented by concatenated distributed representation vectors and a multilayer perceptron is used to compute the score for an answer (the probability of an answer being the best answer to the question). Despite its simplicity, their work achieved state-of-the-art performance on the Yahoo! Answers dataset of manner or How questions introduced by \cite{jansen2014discourse}. This improved performance was attributed to the use of paragraph vector representations instead of averaging over word vectors, and to the use of suitable data for training these representations. This project aims at improving the simplistic model proposed by \cite{bogdanova2016we} with a few enhancements to achieve state-of-art performance at the \textbf{SemEval Task 3 - Subtask A} of finding Question -- Comment similarity.
 
 It is for this reason we use Paragraph Vectors (\cite{le2014distributed}) for quantifying the question-comment text documents. Paragraph Vector is an unsupervised framework that learns continuous distributed vector representations for pieces of texts. The texts can be of variable-length, ranging from sentences to documents. The name Paragraph Vector is to emphasize the fact that the method can be applied to variable-length pieces of texts, anything from a phrase or sentence to a large document.
 
 \section{Learning Algorithm}
 \label{section:learning-algo}
 
-We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer as performed by \cite{bogdanova2016we}. As shown in \autoref{fig:ann-arch}, the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c} for the question and the comment respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer, similar to the apporach in \cite{bogdanova2016we}. As shown in \autoref{fig:ann-arch}, the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c}, the question and the comment text respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features, that capture syntactic and metadata information, generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
 
 \begin{figure}[t!]
   \centering
@@ -332,9 +333,9 @@ We used a simple feedforward neural network, i.e. a multilayered perceptron, to 
   \label{fig:ann-arch}
 \end{figure}
 
-This layer is then followed by one or more hidden layers, the number of layers and units in each of these layers are also parameters to be experimentally tuned. We consider the activation function as well to be a parameter to be tuned by exprimentation. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not best answer) and positive (i.e. best answer) classes respectively. For each question, all its user-generated comments are ranked according to their probability of being the best answer, as predicted by the network.
+The input layer is then followed by one or more hidden layers; the number of layers and units in each of these layers being the parameters to be experimentally tuned. We consider the activation function to be a parameter as well. Finally, a softmax layer is used to compute the output probability p, i.e. the probabilities p1 and p2 of the negative (i.e. not a relevant comment) and positive (i.e. relevant comment) classes respectively. For each question, all its user-generated comments are ranked according to their probability of being the best answer, as predicted by the network.
 
-Given a question-comment pair (q, c), the possible values for the ground-truth label are 1 (best answer) and 0 (not a best answer). The network is trained by minimizing the L2-regularized cross-entropy loss function between the ground-truth labels and the network predictions on the training set. We use either stochastic gradient descent (SGD) or Adam solver and early stopping to minimize the loss over the training set.
+Given a question-comment pair (q, c), the possible values for the ground-truth label are 1 (relevant) and 0 (not relevant). The network is trained by minimizing the L2-regularized cross-entropy loss function between the ground-truth labels and the network predictions on the training set. We use either stochastic gradient descent (SGD) or Adam solver and early stopping to minimize the loss over the training set.
 
 \section{Document Representations}
 
@@ -362,17 +363,17 @@ Apart from paragraph vectors of the Question (q) and Comment (c) that the feedfo
 \subsection{Centroidal Comment}
 \label{subsection:centroidal-comment}
 
-Inorder to rank the comments, it is only intuition that we must use the information in other comment texts to accurately provide relative relevance scores, which in turn reflects the rank, for comment texts. It is for this reason we introduced the centroidal comment, denoted as $avg\_com_q$, computed as:
+In order to rank the comments, it is only intuition that we must use the information in other comment texts to capture the inter-dependency at thread level and accurately provide relative relevance scores; since the output probability is the inverse rank for comment texts. It is for this reason we introduced the centroidal comment, denoted by $avg\_com_q$, which is computed as:
 \[ avg\_com_q = \frac{\sum\limits_{c \in q} c}{||\sum\limits_{c \in q} c||} \tag{1} \label{equation:1} \]
 
 \subsection{Syntactic and Metadata Features}
 \label{subsection:extra-feat}
-We used several semantic vector similarity and metadata feature groups as mentioned in \cite{mihaylov2016semanticz}. For the ease of the reader, we shall describe the same feature groups below. 
+We used several semantic vector similarity and metadata feature groups as mentioned in \cite{mihaylov2016semanticz} to better capture the relevance of each comment to a question text. For the ease of the reader, we shall describe the same feature groups below. 
 
 Note that for the similarity measures mentioned below, we used cosine similarity:
-\[ 1 - \frac{u.v}{||u||.||v||} \tag{2} \label{equation:2} \]
+\[ sim(u, v) = 1 - \frac{u.v}{||u||.||v||} \tag{2} \label{equation:2} \]
 
-\textbf{Semantic Word Embeddings.} We used semantic word embeddings obtained from Word2Vec models trained on the unannotated data set from QatarLiving. For each piece of text such as comment text, question body and question subject, we constructed the centroid vector from the vectors of all words in that text (excluding stopwords).
+\textbf{Semantic Word Embeddings.} We used semantic word embeddings obtained from Word2Vec models trained on the unannotated data set from QatarLiving. For each piece of text we constructed the centroid vector from the vectors of all words in that text (excluding stopwords).
 \[ centroid(w_{1...n}) = \frac{\sum\limits_{i=1}^{n} w_i}{n} \tag{3} \label{equation:3} \]
 We construct centroid vectors (3) from the question text (subject + body) and the comment text to design various features as described below.
 
@@ -390,7 +391,7 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 
 \textbf{LDA topic similarity.} We performed topic clustering using Latent Dirichlet Allocation (LDA) as implemented in the gensim toolkit \cite{rehurek2010software} on Train1 + Train2 + Dev questions and comments. We built topic models with 100 topics. For each word in the question text and for the comment text, we built a bag-of-topics with corresponding distribution, and calculated similarity. The assumption here is that if the question and the comment share similar topics, they are more likely to be relevant to each other
 
-\textbf{Paragraph Vector similarities.} The similarity among the distributed vector representations of question text (\textit{q}), answer text (\textit{a}) and the centroidal answer ($avg\_com_q$), taken two at a time are also included.
+\textbf{Paragraph Vector similarities.} The similarity between the distributed vector representations of question text (\textit{q}), answer text (\textit{a}) and the centroidal comment ($avg\_com_q$), taken two at a time are also included.
 
 \textbf{Metadata.} In addition to the semantic features described above, we also used some common sense metadata features:
 
@@ -421,7 +422,7 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 
 \section{Data}
 
-Though \cite{bogdanova2016we} experiments with the \textit{Yahoo! Answers dataset}\footnote{http://webscope.sandbox.yahoo.com/}, we have used the data provided as a part of the popular \textbf{SemEval Task 3} for \textbf{Subtask A} (\cite{nakov-EtAl:2016:SemEval}). \autoref{table:data} contains the statistics about the forementioned dataset. This dataset contains about 42K (q, c) pairs to learn from; spreading over about 5.4K questions. We shall refer to this data as the CQA-QL corpus in future. Further we also use a large unannotated dataset, released by the same source, from Qatar Living with 189,941 questions and 1,894,456 comments, which is used for unsupervised learning/training domain-specific word/document embeddings. \\
+Though \cite{bogdanova2016we} experiments with the \textit{Yahoo! Answers dataset}\footnote{http://webscope.sandbox.yahoo.com/}, we have used the data provided as a part of the popular \textbf{SemEval '16 Task 3} for \textbf{Subtask A} (\cite{nakov-EtAl:2016:SemEval}). \autoref{table:data} contains the statistics about the forementioned dataset. This dataset contains about 42K (q, c) pairs to learn from; spreading over about 5.4K questions. We shall refer to this data as the CQA-QL corpus in future. Further we also use a large unannotated dataset, released by the same source, from Qatar Living with 189,941 questions and 1,894,456 comments; which is used for unsupervised learning/training of domain-specific word/document embeddings. \\
 
 \setcounter{table}{0}
 \begin{table}[!htbp]
@@ -449,17 +450,18 @@ Comments				&	14,110		&	3,790		&	14,893+1,529+1,876	&	2,440	&	3,270	&	41,908	\\
 \caption{Statistics on English CQA-QL corpus \\from SemEval-2017 Task 3 (Subtask A)}
 \label{table:data}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
 \section{Experimental Setup}
 
 We use the gensim\footnote{https://radimrehurek.com/gensim/models/doc2vec.html} implementation of DM and DBOW paragraph vector models. The data for training the unsupervised \textit{doc2vec} model (PV model) is the forementioned large unannotated dataset from Qatar Living forums. Each paragraph (q or c) was converted to lowercase, tokenized by space character and cleaned of stop words before training \textit{doc2vec} models. The parameters of training these models being the window size (maximum distance between the predicted word and context words used for prediction within a document) and number of epochs of training, were cross-validated to give low errors on the training dataset. We further use normalized versions of the document vector representations thus generated, to be fed as inputs to the feedforward neural network described in \autoref{section:learning-algo}. \\ \\
-For the implementation of the feedforward neural network as described in \autoref{section:learning-algo}, we shall use the popular python library \textit{scikit-learn\footnote{http://scikit-learn.org/stable/index.html}}'s \textit{MLPClassifier}\footnote{http://scikit-learn.org/stable/modules/generated/sklearn.neural\_network.MLPClassifier.html}.
+For the implementation of the feedforward neural network as described in \autoref{section:learning-algo}, we used the popular python library \textit{scikit-learn\footnote{http://scikit-learn.org/stable/index.html}}'s \textit{MLPClassifier}\footnote{http://scikit-learn.org/stable/modules/generated/sklearn.neural\_network.MLPClassifier.html}.
 
 \section{Results}
 
 \subsection{Document Vector Representations}
 
-For training each question/comment text was treated as a document/paragraph and assigned a label, which can be used as a key to retrieve the document vector. Furthermore post training the doc2vec model is able to infer a document vector for any new question/comment text whose vocabulary is from the original corpus. The errors post training is computed as averaged squared error over all question/comment text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the question/comment text. The squared errors are computed for normalizeddocument vectors. For comparison purposes squared error between any two random (normalized) document vector is tabulated beside these errors (averaged over as many iterations as the number of question/comment text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors post normalization. Further more, PV-DBOW proves to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results has rows sorted by the value of \textit{column \lq{Ratio}\rq}, as it is the indicator of how good the representation is. The complete list of experiments are tabulated under \autoref{table:pv-train-full} in \autoref{appendix:A}.
+For training the document vectors, each question/comment text was treated as a document/paragraph and assigned a label, which was used as a key to retrieve the document vector. Furthermore, post training the doc2vec model is able to infer a document vector for any new question/comment text whose vocabulary is from the original corpus. The errors were computed as averaged squared error over all question/comment text, by computing squared error between the document vector learnt by the model corresponding to the text’s label and the document vector inferred from the corresponding question/comment text. These squared errors are computed for normalized document vectors. For comparison purposes squared error between any two random (normalized) document vector is tabulated beside these errors (averaged over as many iterations as the number of question/comment text). Experiments show that 100-dimensional PV trained over the $\sim$2.3M samples from the unannotated QL corpus, gives sufficiently low errors. Further more, PV-DBOW proves to outperform the PV-DM representations as seen in \autoref{table:pv-train-best}. It contains few of the best results and has the rows sorted by the value of column \textit{\lq{Ratio}\rq}, as it is an indicator of how good the representation is. The complete list of experiments are tabulated under \autoref{table:pv-train-full} in \autoref{appendix:A}.
 
 %\setcounter{table}{1}
 \begin{table}[!htbp]
@@ -478,11 +480,12 @@ PV-DM & 15 & 10 & 0.22 & 0.98 & 4.47 \\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Training document vector representations PV-DM and PV-DBOW -- Best results}
+\caption{Training document vector representations -- Best results}
 \label{table:pv-train-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
-To decide upon the dimension of the paragraph vectors we conduct similar experiments by testing on PV-DBOW document vectors of size 100 and 200. The best results tabulated in \autoref{table:pv-dimen-best}, show that 100 dimensional paragraph vectors prove to be a better choice owing to having both: higher accuracy and low computational complexity. The complete list of experiments are tabulated under \autoref{table:pv-dimen-full} in \autoref{appendix:A}.
+To decide upon the dimension of the paragraph vectors we conduct similar experiments by testing on PV-DBOW document vectors of size 100 and 200. The best results tabulated in \autoref{table:pv-dimen-best}, show that 100 dimensional paragraph vectors prove to be a better choice, owing to having both: higher accuracy and low computational complexity. The complete list of experiments are tabulated under \autoref{table:pv-dimen-full} in \autoref{appendix:A}.
 
 \begin{table}[!htbp]
 \centering
@@ -500,21 +503,22 @@ Dimension 			&	Window 	&	Epochs	&	Normalized	&	Norm. Sq. Error	&	Ratio\\
 \hline
 \end{tabular}
 \end{adjustbox}
-\caption{Training PV-DBOW document vectors of sizes 100 and 200 -- Best results}
+\caption{Training PV-DBOW document vectors of sizes 100 \& 200 -- Best results}
 \label{table:pv-dimen-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
 \subsection{SemEval Task 3 -- Subtask A}
 
 The training data comprises of 38,638 comments spanning over 5,124 questions. The neural net input is a tuple of the form $(q, c, avg\_ans_q, ft_{(q,c)})$, where, \\
 \hspace*{1cm}$avg\_com_q$ is (normalized) average over the PV of all comments to question q \\
-\hspace*{1cm}$ft_{(q,c)}$ is feature vector corresp. to the pair (q,c) as described in \autoref{subsection:feature-set}
+\hspace*{1cm}$ft_{(q,c)}$ is feature vector corresp. to the pair (q,c) as described in \autoref{subsection:extra-feat}
 \\\\
 \textbf{SemEval Task 3} has as an official evaluation measure used to rank the participating systems, the metric of Mean Average Precision (\textit{MAP}), calculated for the ten comments a participating system has ranked highest. Further metrics such as Mean Reciprocal Rank (\textit{MRR}) and Average Recall (\textit{AvgRec}) for top-10 results; Precision (\textit{P}), Recall (\textit{R}), \textit{F\textsubscript{1}} (with respect to the Good/Relevant class) and Accuracy (\textit{Acc}) are also reported.
 
 \subsubsection{Preliminary experiments with (q, c) inputs}
 
-Intially experiments were conducted with only (q, c) pair as input to the neural nets. The nets were trained using multiple solvers, activation functions, hidden layer configurations. The best performance for each parameter configuration is as tabulated in \autoref{table:ann-stage-1-best}, while the complete results are tabulated in \autoref{appendix:B}.
+Initially experiments were conducted with only (q, c) concatenation as input to the neural nets. The nets were trained while varying solvers, activation functions, hidden layer configurations. The best performance for each parameter configuration is as tabulated in \autoref{table:ann-stage-1-best}, while the complete results are tabulated in \autoref{appendix:B}.
 
 %\setcounter{table}{2}
 \begin{table}[!htbp]
@@ -537,12 +541,14 @@ PV-DM & SGD & relu & 65.78 & 78.55 & 74.58 & 57.93 & 53.57 & 55.67 & 65.32 \\
 \caption{Preliminary experiments using only $(q, c)$ inputs -- Best results}
 \label{table:ann-stage-1-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
 PV-DBOW clearly outperforms PV-DM representations in these preliminary runs. Building on this, further experiments where conducted using only the PV-DBOW representations.
 
 \subsubsection{Improvement with inclusion of Centroidal comment}
+\label{subsec:centroidal-comment-results}
 
-As described in \autoref{subsection:centroidal-comment}, additionally, to capture the relative goodness of an comment with respect to other comments to the same question, $avg\_com_q$ (normalized post averaging over the PV of all comments to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
+As described in \autoref{subsection:centroidal-comment}, additionally, to capture the relative goodness of a comment with respect to other comments of the same question, $avg\_com_q$ (normalized post averaging over the PV of all comments to question q) was fed as an input to the neural net. The best results for these experiments are tabulated in \autoref{table:ann-stage-2-best}. Complete results are tabulated under \autoref{appendix:C}.
 
 \begin{table}[!htbp]
 \centering
@@ -563,12 +569,13 @@ PV-DBOW & Adam & relu & 71.61 & 82.63 & 79.45 & 62.98 & 60.05 & 61.48 & 69.42 \\
 \caption{Experiments using $(q, c, avg\_com_q)$ inputs -- Best results}
 \label{table:ann-stage-2-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
-Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment for each question as an input feature. Further experiments thus is done inclusive of $avg\_com_q$ in the input tuple.
+Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment of a question as an input feature.
 
 \subsubsection{Further improvement with Syntactic and Metadata Features}
 
-Finally, we experimented by including a few more features as described in \autoref{subsection:extra-feat}; which includes various thread level metadata features, and features that capture syntactic similarities between the question and comment text. The best results are tabulated in \autoref{table:ann-stage-3-best}. Complete results are tabulated under \autoref{appendix:D}. Further, we excluded the \textit{ADAM} solver from parameters, as \textit{SGD} performs significantly better on all runs (can be seen from \autoref{table:ann-stage-2-best} as well).
+In addition, we experimented by including a few more features as described in \autoref{subsection:extra-feat}; which includes various thread level metadata features, and features that capture syntactic similarities between the question and comment text. The best results are tabulated in \autoref{table:ann-stage-3-best}. Complete results are tabulated under \autoref{appendix:D}. To note, we excluded the \textit{ADAM} solver from parameters, as \textit{SGD} performs significantly better on all runs (can be seen from \autoref{table:ann-stage-2-best} as well).
 
 \begin{table}[!htbp]
 \centering
@@ -586,10 +593,11 @@ PV-DBOW & SGD & logistic & 77.26 & 87.87 & 85.51 & 71.49 & 63.58 & 67.3 & 74.89 
 \caption{Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- Best results}
 \label{table:ann-stage-3-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
 \subsubsection{Analysis with $(q, c, ft_{(q,c)})$ inputs}
 
-To get more insight into the contribution of each set of features, we remove the $avg\_com_q$ features and test the model. The best results are tabulated in \autoref{table:ann-stage-2half-best}, while the complete results can be found in \autoref{appendix:E}.
+To get more insight into the contribution of each set of features, we remove the $avg\_com_q$ features and test the model. The best results are tabulated in \autoref{table:ann-stage-2half-best}, while the complete results can be found in \autoref{appendix:E}. In this case, we do not use the similarities of $(q, avg\_com_q)$ and $(c, avg\_com_q)$ pairs, in our syntactic feature set contained in $ft_{(q,c)}$. That is, we are removing all contributions of centroidal comments from our feature set.
 
 \begin{table}[!htbp]
 \centering
@@ -607,6 +615,29 @@ PV-DBOW & SGD & relu & 77.03 & 87.39 & 84.8 & 70.32 & 62.75 & 66.32 & 74.10 \\
 \caption{Experiments using $(q, c, ft_{(q,c)})$ inputs -- Best results}
 \label{table:ann-stage-2half-best}
 \end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
+
+\subsubsection{Analysis with only $(ft_{(q,c)})$ inputs}
+
+Finally, to see more clearly how much impact the $ft_{(q,c)}$ feature set has, we experimented with these features alone as our inputs. Though this feature set doesn't manage to clock the best results, it manages to out perform the feature set containing concatenation of document vector representations for question text, comment text and centroidal comment (\autoref{subsec:centroidal-comment-results}). The best resutls of these experiments are in \autoref{table:ann-stage-only-ft-best}, while the complete results are tabulated under \autoref{appendix:F}.
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Category & Solver & Activation & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+PV-DBOW & SGD & tanh & \textbf{75.11} & 86.63 & 81.78 & 69.93 & 59.14 & 64.08 & 73.06 \\
+PV-DBOW & SGD & relu & 74.84 & 86.25 & 81.61 & 70.09 & 59.59 & 64.42 & 73.24 \\
+PV-DBOW & SGD & logistic & 74.33 & 85.98 & 81.35 & 68.96 & 59.67 & 63.98 & 72.69 \\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Experiments using $(ft_{(q,c)})$ inputs -- Best results}
+\label{table:ann-stage-only-ft-best}
+\end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
 
 %----------------------------------------------------------------------------------------
 %	CONCLUSIONS
@@ -614,8 +645,64 @@ PV-DBOW & SGD & relu & 77.03 & 87.39 & 84.8 & 70.32 & 62.75 & 66.32 & 74.10 \\
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 
-\mychapter{5}{Conclusions}
+\mychapter{5}{Discussion and Future Work}
 
+Summarizing our efforts, experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ prove to produce the best results with a MAP score of 77.74, only being second to the best submission (primary) at SemEval '16 Task 3 -- Subtask A, who managed to achieve a MAP of 79.19. \autoref{table:conclusion} summarizes the best results produced for each type of feature set attained by us, for comparison with best results and baselines at SemEval '16 Task 3 -- Subtask A, which is tabulated under \autoref{table:semeval-best}. \autoref{appendix:G} contains the complete list of submissions published at the event, for our subtask. Note that our model performs slightly better than the approach suggested by \cite{mihaylova2016super} on which our symantic and metadata features are based on.  \\
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Features & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+$(q, c)$ & \textbf{70.49} & 82.92 & 77.62 & 66.01 & 55.08 & 60.05 & 70.21 \\\\
+$(q, c, avg\_com_q)$ & \textbf{73.06} & 84.16 & 79.61 & 66.07 & 57.86 & 61.69 & 70.8 \\\\
+$(ft_{(q,c)})$ & \textbf{75.11} & 86.63 & 81.78 & 69.93 & 59.14 & 64.08 & 73.06 \\\\
+$(q, c, ft_{(q,c)})$ & \textbf{77.22} & 87.44 & 84.67 & 69.62 & 62.75 & 66.01 & 73.73 \\\\
+$(q, c, avg\_com_q, ft_{(q,c)})$ & \textbf{77.74} & 88.2 & 85.58 & 70.81 & 63.51 & 66.96 & 74.53 \\\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Best results corresponding to each of the feature sets}
+\label{table:conclusion}
+\end{table}
+\addtocontents{lot}{\protect\addvspace{12pt}}
+
+\begin{table}[!htbp]
+\centering
+\begin{adjustbox}{max width=\textwidth,center}
+\begin{tabular}{`c^c^c^c^c^c^c^c^c^c}
+\rowstyle{\bfseries}
+Submission & MAP & AvgRec & MRR & P & R & F\textsubscript{1} & Acc \\
+\\\hline\\
+Kelp-primary & 79.19 & 88.82 & 86.42 & 76.96 & 55.30 & 64.36 & 75.11 \\
+\cite{filice2016kelp} \\\\
+ConvKN-contrastive1 & 78.71 & 88.98 & 86.15 & 77.78 & 53.72 & 63.55 & 74.95 \\
+\cite{joty2016convkn} \\\\
+SUper\_team-contrastive1 & 77.68 & 88.06 & 84.76 & 75.59 & 55.00 & 63.68 & 74.50 \\
+\cite{mihaylova2016super} \\\\
+ConvKN-primary & 77.66 & 88.05 & 84.93 & 75.56 & 58.84 & 66.16 & 75.54 \\
+\cite{joty2016convkn} \\\\
+SemanticZ-primary & 77.58 & 88.14 & 85.21 & 74.13 & 53.05 & 61.84 & 73.39 \\
+\cite{mihaylov2016semanticz} \\\\
+\\ \hline \\
+Baseline (chronological) & 59.53 & 72.60 & 67.83 & — & — & — & — \\\\
+Baseline (random) & 52.80 & 66.52 & 58.71 & 40.56 & 74.57 & 52.55 & 45.26 \\\\
+Baseline (all ‘true’) & — & — & — & 40.64 & 100.00 & 57.80 & 40.64 \\\\
+Baseline (all ‘false’) & — & — & — & — & — & — & 59.36 \\\\
+\hline
+\end{tabular}
+\end{adjustbox}
+\caption{Best submissions and Baselines for SemEval '16 Task 3 -- Subtask A}
+\label{table:semeval-best}
+\end{table}
+
+Starting with concatenation of document representations for question and comment texts, while achieving a MAP of 70.49, we analyse the contribution of each feature set for their impact in providing more accurate question-comment similarity scores. While with inclusion of the centroidal comment we see an improvement of $\sim$2.5\% in the MAP score, there has been a significant rise in the MAP score of $\sim$7\% with the introduction of syntactic and metadata features to this concatenation of document representations. Interesting fact to note is that the syntactic and metadata features alone (which also contain the pair-wise similarity scores amongst question text, comment text, centroidal comment) give of about $\sim$4.5\% better MAP than that with the concatenation of question, comment text embeddings. Finally, the fact remains that the best results are obtained with the usage of all the fore-mentioned feature sets.
+
+It is interesting to note that our best results have a higher recall value compared to the best submissions at the event (\autoref{table:semeval-best}). This could possibly be due to the fact that our method, with the document vector representations is able to capture more semantic similarities to factor into the relevance scores. Infact our method produces the best $F_{1}$ score out of all the submissions at the event (tabulated in \autoref{appendix:G}).
+
+The model, with each inclusion of a new set of features has responded on the postive side with an improvement in the MAP score. Further work on improving these results are hence highly likely to be fruitful. The inclusion of various other features related to syntactic similarity amongst the question, comment text and possibly the centroidal comment, could impact highly on the MAP; owing to the substantial rise in score post inclusion of $ft_{(q,c)}$ feature set. Using syntax trees of question/comment/centroidal-comment text, to find more similarity metrics, on the lines of the tree kernel approach as adopted by \cite{filice2016kelp} (Best submission at SemEval '16 Task 3 -- Subtask A), \cite{joty2016convkn} is such an example.
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
@@ -633,6 +720,8 @@ PV-DBOW & SGD & relu & 77.03 & 87.39 & 84.8 & 70.32 & 62.75 & 66.32 & 74.10 \\
 \input{Appendices/AppendixC}
 \input{Appendices/AppendixD}
 \input{Appendices/AppendixE}
+\input{Appendices/AppendixF}
+\input{Appendices/AppendixG}
 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
 

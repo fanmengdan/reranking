@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[AlessandroMoschitti et~al., 2016]{alessandromoschitti2016semeval}
+AlessandroMoschitti, P.~L., AbedAlhakimFreihat, W.~H., Glass, J., and Randeree,
+  B. (2016).
+\newblock Semeval-2016 task 3: Community question answering.
+\newblock {\em Proceedings of SemEval}, pages 525--545.
+
 \bibitem[Barr{\'o}n-Cedeno et~al., 2015]{barron2015thread}
 Barr{\'o}n-Cedeno, A., Filice, S., Da~San~Martino, G., Joty, S.~R.,
   M{\`a}rquez, L., Nakov, P., and Moschitti, A. (2015).
@@ -11,6 +17,12 @@ Barr{\'o}n-Cedeno, A., Filice, S., Da~San~Martino, G., Joty, S.~R.,
 Bogdanova, D. and Foster, J. (2016).
 \newblock This is how we do it: Answer reranking for open-domain how questions
   with paragraph vectors and minimal feature engineering.
+
+\bibitem[Filice et~al., 2016]{filice2016kelp}
+Filice, S., Croce, D., Moschitti, A., and Basili, R. (2016).
+\newblock Kelp at semeval-2016 task 3: Learning semantic relations between
+  questions and answers.
+\newblock {\em Proceedings of SemEval}, 16:1116--1123.
 
 \bibitem[Heilman and Smith, 2010]{heilman2010tree}
 Heilman, M. and Smith, N.~A. (2010).
@@ -26,12 +38,12 @@ Jansen, P., Surdeanu, M., and Clark, P. (2014).
   reranking.
 \newblock In {\em ACL (1)}, pages 977--986.
 
-\bibitem[Joty et~al., 2015]{joty2015global}
-Joty, S.~R., Barr{\'o}n-Cedeno, A., Da~San~Martino, G., Filice, S.,
-  M{\`a}rquez, L., Moschitti, A., and Nakov, P. (2015).
-\newblock Global thread-level inference for comment classification in community
-  question answering.
-\newblock In {\em EMNLP}, pages 573--578.
+\bibitem[Joty et~al., 2016]{joty2016convkn}
+Joty, S., Moschitti, A., Al~Obaidli, F.~A., Romeo, S., Tymoshenko, K., and Uva,
+  A. (2016).
+\newblock Convkn at semeval-2016 task 3: Answer and question selection for
+  question answering on arabic and english fora.
+\newblock {\em Proceedings of SemEval}, pages 896--903.
 
 \bibitem[Lafferty et~al., 2001]{lafferty2001conditional}
 Lafferty, J., McCallum, A., Pereira, F., et~al. (2001).
@@ -58,6 +70,13 @@ Mihaylov, T. and Nakov, P. (2016).
   word embeddings.
 \newblock {\em Proceedings of SemEval}, pages 879--886.
 
+\bibitem[Mihaylova et~al., 2016]{mihaylova2016super}
+Mihaylova, T., Gencheva, P., Boyanov, M., Yovcheva, I., Mihaylov, T., Hardalov,
+  M., Kiprov, Y., Balchev, D., Koychev, I., Nakov, P., et~al. (2016).
+\newblock Super team at semeval-2016 task 3: Building a feature-rich system for
+  community question answering.
+\newblock {\em Proceedings of SemEval}, pages 836--843.
+
 \bibitem[Nakov et~al., 2016]{nakov-EtAl:2016:SemEval}
 Nakov, P., M\`{a}rquez, L., Magdy, W., Moschitti, A., Glass, J., and Randeree,
   B. (2016).
@@ -83,12 +102,6 @@ Severyn, A. and Moschitti, A. (2012).
 Severyn, A. and Moschitti, A. (2013).
 \newblock Automatic feature engineering for answer selection and extraction.
 \newblock In {\em EMNLP}, volume~13, pages 458--467.
-
-\bibitem[Shafiq~Joty and Nakov, 2016]{shafiq2016joint}
-Shafiq~Joty, L. and Nakov, P. (2016).
-\newblock Joint learning with global inference for comment classification in
-  community question answering.
-\newblock In {\em Proceedings of NAACL-HLT}, pages 703--713.
 
 \bibitem[Toutanova et~al., 2003]{toutanova2003feature}
 Toutanova, K., Klein, D., Manning, C.~D., and Singer, Y. (2003).

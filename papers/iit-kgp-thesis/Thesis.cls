@@ -242,7 +242,7 @@
 
 \normalsize{\coursecds report submitted \par
 % \univname \par
-in partial fulfilment for the award of the degree of \par 
+in partial fulfillment for the award of the degree of \par 
 \degreename \par
  in \par 
 \degreenamemajor \par
@@ -379,7 +379,7 @@ Place: \placesh \hfill (\rollnumber)%\vskip 60\p@
 
 \normalsize{{\coursecds} report submitted to \par
 \univname \par
-in partial fulfilment for the award of the degree of \par 
+in partial fulfillment for the award of the degree of \par 
 \degreename \par
  in \par 
 \degreenamemajor \par
@@ -467,7 +467,7 @@ Under the supervision of \par
 %\soulregister\together{1}
 %\soulregister{\authornames}{0}
 
-This is to certify that the project report entitled \enquote{\textbf{\ul\ttitle}} submitted by \textbf{\ul\authornames} (Roll No. \rollnumber) to {\univname} towards partial fulfilment of requirements for the award of degree of {\degreename} in {\degreenamemajor} is a record of bona fide work carried out by him under my supervision and guidance during \semsubs.
+This is to certify that the project report entitled \enquote{\textbf{\ul\ttitle}} submitted by \textbf{\ul\authornames} (Roll No. \rollnumber) to {\univname} towards partial fulfillment of requirements for the award of degree of {\degreename} in {\degreenamemajor} is a record of bona fide work carried out by him under my supervision and guidance during \semsubs.
 
 %\vspace{4cm}
 \vfill

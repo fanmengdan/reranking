@@ -10,34 +10,33 @@
 \contentsline {chapter}{List of Tables}{vii}{dummy.11}
 \contentsline {chapter}{Abbreviations}{viii}{dummy.13}
 \contentsline {chapter}{Introduction}{1}{chapter*.16}
-\contentsline {section}{\numberline {1.1}Introduction}{1}{section.17}
-\contentsline {section}{\numberline {1.2}SemEval Task -- 3}{1}{section.20}
-\contentsline {subsection}{\numberline {1.2.1}Subtask A -- Question-Comment Similarity}{2}{subsection.22}
-\contentsline {section}{\numberline {1.3}Thesis Organization}{2}{section.23}
-\contentsline {chapter}{Literature Survey}{3}{chapter*.24}
-\contentsline {chapter}{Approach}{5}{chapter*.25}
-\contentsline {section}{\numberline {3.1}Learning Algorithm}{6}{section.26}
-\contentsline {section}{\numberline {3.2}Document Representations}{7}{section.28}
-\contentsline {section}{\numberline {3.3}Feature Set}{9}{section.31}
-\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{9}{subsection.32}
-\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{10}{subsection.34}
-\contentsline {chapter}{Experiments}{13}{chapter*.37}
-\contentsline {section}{\numberline {4.1}Data}{13}{section.38}
-\contentsline {section}{\numberline {4.2}Experimental Setup}{14}{section.41}
-\contentsline {section}{\numberline {4.3}Results}{14}{section.45}
-\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{14}{subsection.46}
-\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{16}{subsection.49}
-\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{16}{subsubsection.50}
-\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{17}{subsubsection.52}
-\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{17}{subsubsection.54}
-\contentsline {subsubsection}{\numberline {4.3.2.4}Analysis with $(q, c, ft_{(q,c)})$ inputs}{18}{subsubsection.56}
+\contentsline {chapter}{Literature Survey}{3}{chapter*.20}
+\contentsline {chapter}{Approach}{6}{chapter*.21}
+\contentsline {section}{\numberline {3.1}Learning Algorithm}{7}{section.22}
+\contentsline {section}{\numberline {3.2}Document Representations}{8}{section.24}
+\contentsline {section}{\numberline {3.3}Feature Set}{10}{section.27}
+\contentsline {subsection}{\numberline {3.3.1}Centroidal Comment}{10}{subsection.28}
+\contentsline {subsection}{\numberline {3.3.2}Syntactic and Metadata Features}{11}{subsection.30}
+\contentsline {chapter}{Experiments}{14}{chapter*.33}
+\contentsline {section}{\numberline {4.1}Data}{14}{section.34}
+\contentsline {section}{\numberline {4.2}Experimental Setup}{15}{section.37}
+\contentsline {section}{\numberline {4.3}Results}{15}{section.41}
+\contentsline {subsection}{\numberline {4.3.1}Document Vector Representations}{15}{subsection.42}
+\contentsline {subsection}{\numberline {4.3.2}SemEval Task 3 -- Subtask A}{17}{subsection.45}
+\contentsline {subsubsection}{\numberline {4.3.2.1}Preliminary experiments with (q, c) inputs}{17}{subsubsection.46}
+\contentsline {subsubsection}{\numberline {4.3.2.2}Improvement with inclusion of Centroidal comment}{18}{subsubsection.48}
+\contentsline {subsubsection}{\numberline {4.3.2.3}Further improvement with Syntactic and Metadata Features}{18}{subsubsection.50}
+\contentsline {subsubsection}{\numberline {4.3.2.4}Analysis with $(q, c, ft_{(q,c)})$ inputs}{19}{subsubsection.52}
+\contentsline {subsubsection}{\numberline {4.3.2.5}Analysis with only $(ft_{(q,c)})$ inputs}{19}{subsubsection.54}
 \vspace {2em}
-\contentsline {chapter}{Conclusions}{19}{chapter*.58}
+\contentsline {chapter}{Discussion and Future Work}{20}{chapter*.56}
 \vspace {2em}
-\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{20}{appendix.59}
-\contentsline {chapter}{\numberline {B}Preliminary experiments}{22}{appendix.62}
-\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{26}{appendix.67}
-\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{29}{appendix.71}
-\contentsline {chapter}{\numberline {E}Analysis with $(q, c, ft_{(q,c)})$ inputs}{32}{appendix.75}
+\contentsline {chapter}{\numberline {A}Training PV-DM and PV-DBOW}{23}{appendix.59}
+\contentsline {chapter}{\numberline {B}Preliminary experiments}{25}{appendix.62}
+\contentsline {chapter}{\numberline {C}Experiments post inclusion of Average Answer}{29}{appendix.67}
+\contentsline {chapter}{\numberline {D}Further experiments with Syntactic \& Metadata features}{32}{appendix.71}
+\contentsline {chapter}{\numberline {E}Analysis with $(q, c, ft_{(q,c)})$ inputs}{35}{appendix.75}
+\contentsline {chapter}{\numberline {F}Analysis with only $(ft_{(q,c)})$ inputs}{38}{appendix.79}
+\contentsline {chapter}{\numberline {G}SemEval '16 Task 3 -- Subtask A}{41}{appendix.83}
 \vspace {2em}
-\contentsline {chapter}{Bibliography}{35}{dummy.79}
+\contentsline {chapter}{Bibliography}{42}{dummy.85}
