@@ -1,0 +1,9 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{SemEval '16 Task 3 (Subtask A)}{5}{0}{2}
+\beamer@sectionintoc {3}{Gimplse at relevant Literature}{9}{0}{3}
+\beamer@sectionintoc {4}{Approach}{13}{0}{4}
+\beamer@sectionintoc {5}{Paragraph Vector Representation}{22}{0}{5}
+\beamer@sectionintoc {6}{Experimental Setup}{29}{0}{6}
+\beamer@sectionintoc {7}{Results}{32}{0}{7}
+\beamer@sectionintoc {8}{Conclusion}{38}{0}{8}

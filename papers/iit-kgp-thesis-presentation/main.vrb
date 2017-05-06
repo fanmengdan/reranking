@@ -1,0 +1,12 @@
+\frametitle{Motivation}
+\begin{itemize}
+	% CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar Living\footnote{http://www.qatarliving.com/}, have huge popularity online
+	\item Community Q\&A forums are seldom moderated and quite open
+	% thus they typically have little restrictions, if any, on who can post and who can answer a question
+	% On the positive side, this means that one can freely ask any question and can then expect some good, honest comments
+	% On the negative side, it takes effort to go through all possible comments and to make sense of them
+	\item Need to automate the process of finding good/relevant comments to questions
+	\item Ranking the comments according to relevance to the corresponding question
+	\end{itemize}
+
+	This problem is also referred to as \textbf{Answer Reranking}.

@@ -1,0 +1,72 @@
+\begin{thebibliography}{}
+
+\bibitem[Bogdanova and Foster, 2016]{bogdanova2016we}
+Bogdanova, D. and Foster, J. (2016).
+\newblock This is how we do it: Answer reranking for open-domain how questions
+  with paragraph vectors and minimal feature engineering.
+
+\bibitem[Filice et~al., 2016]{filice2016kelp}
+Filice, S., Croce, D., Moschitti, A., and Basili, R. (2016).
+\newblock Kelp at semeval-2016 task 3: Learning semantic relations between
+  questions and answers.
+\newblock {\em Proceedings of SemEval}, 16:1116--1123.
+
+\bibitem[Jansen et~al., 2014]{jansen2014discourse}
+Jansen, P., Surdeanu, M., and Clark, P. (2014).
+\newblock Discourse complements lexical semantics for non-factoid answer
+  reranking.
+\newblock In {\em ACL (1)}, pages 977--986.
+
+\bibitem[Joty et~al., 2016]{joty2016convkn}
+Joty, S., Moschitti, A., Al~Obaidli, F.~A., Romeo, S., Tymoshenko, K., and Uva,
+  A. (2016).
+\newblock Convkn at semeval-2016 task 3: Answer and question selection for
+  question answering on arabic and english fora.
+\newblock {\em Proceedings of SemEval}, pages 896--903.
+
+\bibitem[Le and Mikolov, 2014]{le2014distributed}
+Le, Q.~V. and Mikolov, T. (2014).
+\newblock Distributed representations of sentences and documents.
+\newblock In {\em ICML}, volume~14, pages 1188--1196.
+
+\bibitem[Lin and Wang, 2015]{lin2015icrc}
+Lin, X. Z. B. H.~J. and Wang, Y. X.~X. (2015).
+\newblock Icrc-hit: A deep learning based comment sequence labeling system for
+  answer selection challenge.
+\newblock {\em SemEval-2015}, 210.
+
+\bibitem[Mihaylov and Nakov, 2016]{mihaylov2016semanticz}
+Mihaylov, T. and Nakov, P. (2016).
+\newblock Semanticz at semeval-2016 task 3: Ranking relevant answers in
+  community question answering using semantic similarity based on fine-tuned
+  word embeddings.
+\newblock {\em Proceedings of SemEval}, pages 879--886.
+
+\bibitem[Mihaylova et~al., 2016]{mihaylova2016super}
+Mihaylova, T., Gencheva, P., Boyanov, M., Yovcheva, I., Mihaylov, T., Hardalov,
+  M., Kiprov, Y., Balchev, D., Koychev, I., Nakov, P., et~al. (2016).
+\newblock Super team at semeval-2016 task 3: Building a feature-rich system for
+  community question answering.
+\newblock {\em Proceedings of SemEval}, pages 836--843.
+
+\bibitem[Rehurek and Sojka, 2010]{rehurek2010software}
+Rehurek, R. and Sojka, P. (2010).
+\newblock Software framework for topic modelling with large corpora.
+\newblock In {\em In Proceedings of the LREC 2010 Workshop on New Challenges
+  for NLP Frameworks}. Citeseer.
+
+\bibitem[Toutanova et~al., 2003]{toutanova2003feature}
+Toutanova, K., Klein, D., Manning, C.~D., and Singer, Y. (2003).
+\newblock Feature-rich part-of-speech tagging with a cyclic dependency network.
+\newblock In {\em Proceedings of the 2003 Conference of the North American
+  Chapter of the Association for Computational Linguistics on Human Language
+  Technology-Volume 1}, pages 173--180. Association for Computational
+  Linguistics.
+
+\bibitem[Zhou et~al., 2015]{zhou2015answer}
+Zhou, X., Hu, B., Chen, Q., Tang, B., and Wang, X. (2015).
+\newblock Answer sequence learning with neural networks for answer selection in
+  community question answering.
+\newblock {\em arXiv preprint arXiv:1506.06490}.
+
+\end{thebibliography}
