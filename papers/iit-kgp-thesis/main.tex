@@ -63,9 +63,9 @@
 
 \hypersetup{urlcolor=black, colorlinks=true} % Colors hyperlinks in blue - change to black if annoyingv`	
 
-\thesistitle{Semantic similarity in Q\&A using Deep learning techniques}
+\thesistitle{Question-Comment similarity in Community Q\&A forums}
 \supervisor{Professor Pawan Goyal}
-\degree{Masters of Technology}
+\degree{Master of Technology}
 \degreemajor{Computer Science and Engineering}
 \authors{Sandesh C}
 \rollno{12CS30041}
@@ -75,11 +75,11 @@
 \depsite{http://www.cse.iitkgp.ac.in}
 \placeshrt{Kharagpur}
 \placelng{Kharagpur - 721302, India}
-\datesub{April 28, 2017}
-\datesig{April 28, 2017}
+\datesub{April 30, 2017}
+\datesig{}
 \semsub{Spring Semester, 2016-17}
 %\keywords{Deep learning in Q\&A}
-\coursecd{Master's Thesis Project }
+\coursecd{Master's Thesis }
 
 \title{\ttitle} % Defines the thesis title - don't touch this
 \begin{document}
@@ -144,7 +144,7 @@
 
 \abstract{\addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
 
-Community Question Answering (CQA) forums have since long been plagued with the problem of answer reranking, to automate the process of finding good comments to a question. Here in this work, we take up the problem of Question-Comment similarity with a simple approach where a question-comment pair is represented as concatenation of: distributed paragraph vector representations of question text, comment text and centroidal comment (of that question), along with various syntactic and metadata features. A multilayer perceptron is used to compute the similarity scores for such a question-commnet pair. 
+Community Question Answering (CQA) forums have since long been plagued with the problem of answer reranking, to automate the process of finding good comments to a question. Here in this work, we take up the problem of Question-Comment similarity with a simple approach where a question-comment pair is represented as concatenation of: distributed paragraph vector representations of question text, comment text and centroidal comment (of that question), along with various semantic and metadata features. A multilayer perceptron is used to compute the similarity scores for such a question-commnet pair. 
 
 Despite it's simplicity the model attains competitive results compared to the best submissions at SemEval '16 Task 3 - Community Question Answering (Subtask A).
 }
@@ -280,7 +280,7 @@ CQA forums such as Stack Overflow\footnote{https://stackoverflow.com/} and Qatar
 
 \textbf{Subtask A} \textit{Given a question from a question-comment thread, rank the comments as per their relevance (similarity) with respect to the question}.
 
-The thesis is further organized as follows: \hyperref[chap:lit-survery]{Chapter 2} addresses the recent works pertaining to the task of finding question-comment similarity, and also sheds light on a few such works that use Deep Learning methodologies to solve this problem; \hyperref[chap:approach]{Chapter 3} then provides a detailed explanation of the multilayer perceptron based prediction model approach adopted in our work, using distributed document representations and various syntactic, metadata features. Finally, \hyperref[chap:exp]{Chapter 4} tabulates the results obtained with our approach on SemEval '16 Task 3 - Subtask A dataset, which we shall see are competitive with the best results published at the same event.
+The thesis is further organized as follows: \hyperref[chap:lit-survery]{Chapter 2} addresses the recent works pertaining to the task of finding question-comment similarity, and also sheds light on a few such works that use Deep Learning methodologies to solve this problem; \hyperref[chap:approach]{Chapter 3} then provides a detailed explanation of the multilayer perceptron based prediction model approach adopted in our work, using distributed document representations and various semantic, metadata features. Finally, \hyperref[chap:exp]{Chapter 4} tabulates the results obtained with our approach on SemEval '16 Task 3 - Subtask A dataset, which we shall see are competitive with the best results published at the same event.
 
 %----------------------------------------------------------------------------------------
 %	LITERATURE SURVEY
@@ -324,7 +324,7 @@ It is for this reason we use Paragraph Vectors (\cite{le2014distributed}) for qu
 \section{Learning Algorithm}
 \label{section:learning-algo}
 
-We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer, similar to the apporach in \cite{bogdanova2016we}. As shown in \autoref{fig:ann-arch}, the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c}, the question and the comment text respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features, that capture syntactic and metadata information, generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
+We used a simple feedforward neural network, i.e. a multilayered perceptron, to predict the best answer, similar to the apporach in \cite{bogdanova2016we}. As shown in \autoref{fig:ann-arch}, the first layer of network takes the vector representation for a question-comment pair \textit{(q, c)} as input, which is a concatenation of the distributed representations \textit{q} and \textit{c}, the question and the comment text respectively. Each representation is a real-valued vector of a fixed dimensionality \textit{d}, which is a parameter to be tuned. The input layer is concatenated with another \textit{d} dimensional vector, namely the centroidal comment, which is centroid of the distributed representation of all comments to the question q (\autoref{subsection:centroidal-comment}). This is further concatenated with another set of features, that capture semantic and metadata information, generated from the pair (q, c) as described in \autoref{subsection:feature-set}. The latter two enhancements is the reason our approach shall improve upon the performance achieved by \cite{bogdanova2016we}.
 
 \begin{figure}[t!]
   \centering
@@ -366,7 +366,7 @@ Apart from paragraph vectors of the Question (q) and Comment (c) that the feedfo
 In order to rank the comments, it is only intuition that we must use the information in other comment texts to capture the inter-dependency at thread level and accurately provide relative relevance scores; since the output probability is the inverse rank for comment texts. It is for this reason we introduced the centroidal comment, denoted by $avg\_com_q$, which is computed as:
 \[ avg\_com_q = \frac{\sum\limits_{c \in q} c}{||\sum\limits_{c \in q} c||} \tag{1} \label{equation:1} \]
 
-\subsection{Syntactic and Metadata Features}
+\subsection{Semantic and Metadata Features}
 \label{subsection:extra-feat}
 We used several semantic vector similarity and metadata feature groups as mentioned in \cite{mihaylov2016semanticz} to better capture the relevance of each comment to a question text. For the ease of the reader, we shall describe the same feature groups below. 
 
@@ -387,9 +387,9 @@ We construct centroid vectors (3) from the question text (subject + body) and th
 
 \textbf{Part of speech (POS) based word vector similarities.} We performed part of speech tagging using the Stanford tagger \cite{toutanova2003feature}, and we took similarities between centroid vectors of words with a specific tag from the comment text and the centroid vector of the words with a specific tag from the question text. The assumption is that some parts of speech between the question and the comment might be closer than other parts of speech.
 
-\textbf{Word clusters (WC) similarity.} We clustered the word vectors from the Word2Vec vocabulary in 1,000 clusters using K-Means clustering. We then calculated the cluster similarity between the question body word clusters and the answer text word clusters. For all experiments, we used clusters obtained from the Word2Vec model trained on QatarLiving forums with vector size of 100, window size 10.
+\textbf{Word clusters (WC) similarity.} We clustered the word vectors from the Word2Vec vocabulary in 1,000 clusters using K-Means clustering. We then calculated the cluster similarity between the question text word clusters and the answer text word clusters. For all experiments, we used clusters obtained from the Word2Vec model trained on QatarLiving forums with vector size of 100, window size 10.
 
-\textbf{LDA topic similarity.} We performed topic clustering using Latent Dirichlet Allocation (LDA) as implemented in the gensim toolkit \cite{rehurek2010software} on Train1 + Train2 + Dev questions and comments. We built topic models with 100 topics. For each word in the question text and for the comment text, we built a bag-of-topics with corresponding distribution, and calculated similarity. The assumption here is that if the question and the comment share similar topics, they are more likely to be relevant to each other
+\textbf{LDA topic similarity.} We performed topic clustering using Latent Dirichlet Allocation (LDA) as implemented in the gensim toolkit \cite{rehurek2010software} on Train1 + Train2 + Dev questions and comments. We built topic models with 100 topics. For each word in the question text and for the comment text, we built a bag-of-topics with corresponding distribution, and calculated similarity. The assumption here is that if the question and the comment share similar topics, they are more likely to be relevant to each other.
 
 \textbf{Paragraph Vector similarities.} The similarity between the distributed vector representations of question text (\textit{q}), answer text (\textit{a}) and the centroidal comment ($avg\_com_q$), taken two at a time are also included.
 
@@ -573,9 +573,9 @@ PV-DBOW & Adam & relu & 71.61 & 82.63 & 79.45 & 62.98 & 60.05 & 61.48 & 69.42 \\
 
 Clearly there is a significant improvement in MAP scores after inclusion of the centroidal comment of a question as an input feature.
 
-\subsubsection{Further improvement with Syntactic and Metadata Features}
+\subsubsection{Further improvement with Semantic and Metadata Features}
 
-In addition, we experimented by including a few more features as described in \autoref{subsection:extra-feat}; which includes various thread level metadata features, and features that capture syntactic similarities between the question and comment text. The best results are tabulated in \autoref{table:ann-stage-3-best}. Complete results are tabulated under \autoref{appendix:D}. To note, we excluded the \textit{ADAM} solver from parameters, as \textit{SGD} performs significantly better on all runs (can be seen from \autoref{table:ann-stage-2-best} as well).
+In addition, we experimented by including a few more features as described in \autoref{subsection:extra-feat}; which includes various thread level metadata features, and features that capture semantic similarities between the question and comment text. The best results are tabulated in \autoref{table:ann-stage-3-best}. Complete results are tabulated under \autoref{appendix:D}. To note, we excluded the \textit{ADAM} solver from parameters, as \textit{SGD} performs significantly better on all runs (can be seen from \autoref{table:ann-stage-2-best} as well).
 
 \begin{table}[!htbp]
 \centering
@@ -597,7 +597,7 @@ PV-DBOW & SGD & logistic & 77.26 & 87.87 & 85.51 & 71.49 & 63.58 & 67.3 & 74.89 
 
 \subsubsection{Analysis with $(q, c, ft_{(q,c)})$ inputs}
 
-To get more insight into the contribution of each set of features, we remove the $avg\_com_q$ features and test the model. The best results are tabulated in \autoref{table:ann-stage-2half-best}, while the complete results can be found in \autoref{appendix:E}. In this case, we do not use the similarities of $(q, avg\_com_q)$ and $(c, avg\_com_q)$ pairs, in our syntactic feature set contained in $ft_{(q,c)}$. That is, we are removing all contributions of centroidal comments from our feature set.
+To get more insight into the contribution of each set of features, we remove the $avg\_com_q$ features and test the model. The best results are tabulated in \autoref{table:ann-stage-2half-best}, while the complete results can be found in \autoref{appendix:E}. In this case, we do not use the similarities of $(q, avg\_com_q)$ and $(c, avg\_com_q)$ pairs, in our semantic feature set contained in $ft_{(q,c)}$. That is, we are removing all contributions of centroidal comments from our feature set.
 
 \begin{table}[!htbp]
 \centering
@@ -698,11 +698,11 @@ Baseline (all ‘false’) & — & — & — & — & — & — & 59.36 \\\\
 \label{table:semeval-best}
 \end{table}
 
-Starting with concatenation of document representations for question and comment texts, while achieving a MAP of 70.49, we analyse the contribution of each feature set for their impact in providing more accurate question-comment similarity scores. While with inclusion of the centroidal comment we see an improvement of $\sim$2.5\% in the MAP score, there has been a significant rise in the MAP score of $\sim$7\% with the introduction of syntactic and metadata features to this concatenation of document representations. Interesting fact to note is that the syntactic and metadata features alone (which also contain the pair-wise similarity scores amongst question text, comment text, centroidal comment) give of about $\sim$4.5\% better MAP than that with the concatenation of question, comment text embeddings. Finally, the fact remains that the best results are obtained with the usage of all the fore-mentioned feature sets.
+Starting with concatenation of document representations for question and comment texts, while achieving a MAP of 70.49, we analyse the contribution of each feature set for their impact in providing more accurate question-comment similarity scores. While with inclusion of the centroidal comment we see an improvement of $\sim$2.5\% in the MAP score, there has been a significant rise in the MAP score of $\sim$7\% with the introduction of semantic and metadata features to this concatenation of document representations. Interesting fact to note is that the semantic and metadata features alone (which also contain the pair-wise similarity scores amongst question text, comment text, centroidal comment) give of about $\sim$4.5\% better MAP than that with the concatenation of question, comment text embeddings. Finally, the fact remains that the best results are obtained with the usage of all the fore-mentioned feature sets.
 
 It is interesting to note that our best results have a higher recall value compared to the best submissions at the event (\autoref{table:semeval-best}). This could possibly be due to the fact that our method, with the document vector representations is able to capture more semantic similarities to factor into the relevance scores. Infact our method produces the best $F_{1}$ score out of all the submissions at the event (tabulated in \autoref{appendix:G}).
 
-The model, with each inclusion of a new set of features has responded on the postive side with an improvement in the MAP score. Further work on improving these results are hence highly likely to be fruitful. The inclusion of various other features related to syntactic similarity amongst the question, comment text and possibly the centroidal comment, could impact highly on the MAP; owing to the substantial rise in score post inclusion of $ft_{(q,c)}$ feature set. Using syntax trees of question/comment/centroidal-comment text, to find more similarity metrics, on the lines of the tree kernel approach as adopted by \cite{filice2016kelp} (Best submission at SemEval '16 Task 3 -- Subtask A), \cite{joty2016convkn} is such an example.
+The model, with each inclusion of a new set of features has responded on the postive side with an improvement in the MAP score. Further work on improving these results are hence highly likely to be fruitful. The inclusion of various other features related to semantic similarity amongst the question, comment text and possibly the centroidal comment, could impact highly on the MAP; owing to the substantial rise in score post inclusion of $ft_{(q,c)}$ feature set. Using syntax trees of question/comment/centroidal-comment text, to find more similarity metrics, on the lines of the tree kernel approach as adopted by \cite{filice2016kelp} (Best submission at SemEval '16 Task 3 -- Subtask A), \cite{joty2016convkn} is such an example.
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES

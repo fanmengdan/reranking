@@ -23,9 +23,9 @@
 \addvspace {12pt}
 \contentsline {table}{\numberline {12}{\ignorespaces Training PV-DBOW document vectors of sizes 100 \& 200 -- All results\relax }}{24}{table.caption.61}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {13}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results (\textit {MAP}\textgreater 0.6)\relax }}{25}{table.caption.63}
+\contentsline {table}{\numberline {13}{\ignorespaces Preliminary experiments using only (q, c) inputs -- All results (\textit {MAP}\textgreater 60)\relax }}{25}{table.caption.63}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {14}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results (\textit {MAP}\textgreater 0.6)\relax }}{29}{table.caption.68}
+\contentsline {table}{\numberline {14}{\ignorespaces Experiments using $(q, c, avg\_com_q)$ inputs -- All results (\textit {MAP}\textgreater 60)\relax }}{29}{table.caption.68}
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {15}{\ignorespaces Experiments using $(q, c, avg\_com_q, ft_{(q,c)})$ inputs -- All results\relax }}{32}{table.caption.72}
 \addvspace {10\p@ }
