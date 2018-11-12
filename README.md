@@ -30,7 +30,3 @@
 | out/               | results folder (output)                                      |
 | papers/            | base research papers and latex documents (thesis, ...)       |
 | test/              | test data and results                                        |
-
-# TODO
-* Thesis - Conclusion... Finally proof read !
-* Add SemEval '16 in Literature Survey (Tree Kernel and SVM)
